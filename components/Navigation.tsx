@@ -18,30 +18,30 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-[#ca8a04] transition-colors">
+            <Link href="/" className="text-gray-700 hover:text-[#6b21a8] transition-colors">
               Home
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-[#ca8a04] transition-colors">
+            <Link href="/about" className="text-gray-700 hover:text-[#6b21a8] transition-colors">
               About Western Ghats
             </Link>
-            <Link href="/trips" className="text-gray-700 hover:text-[#ca8a04] transition-colors">
+            <Link href="/trips" className="text-gray-700 hover:text-[#6b21a8] transition-colors">
               Trips
             </Link>
-            <Link href="/experts" className="text-gray-700 hover:text-[#ca8a04] transition-colors">
+            <Link href="/experts" className="text-gray-700 hover:text-[#6b21a8] transition-colors">
               Our Experts
             </Link>
-            <Link href="/species" className="text-gray-700 hover:text-[#ca8a04] transition-colors">
+            <Link href="/species" className="text-gray-700 hover:text-[#6b21a8] transition-colors">
               Species
             </Link>
-            <Link href="/schools" className="text-gray-700 hover:text-[#ca8a04] transition-colors">
+            <Link href="/schools" className="text-gray-700 hover:text-[#6b21a8] transition-colors">
               For Schools
             </Link>
-            <Link href="/practical" className="text-gray-700 hover:text-[#ca8a04] transition-colors">
+            <Link href="/practical" className="text-gray-700 hover:text-[#6b21a8] transition-colors">
               Practical Info
             </Link>
             <Link
               href="/contact"
-              className="bg-[#fcd34d] text-white px-4 py-2 rounded-md hover:bg-[#fbbf24] transition-colors"
+              className="bg-[#c084fc] text-white px-4 py-2 rounded-md hover:bg-[#a855f7] transition-colors"
             >
               Contact Us
             </Link>
@@ -51,7 +51,7 @@ export default function Navigation() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-[#ca8a04] focus:outline-none"
+              className="text-gray-700 hover:text-[#6b21a8] focus:outline-none"
               aria-label="Toggle menu"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -91,7 +91,7 @@ export default function Navigation() {
             <Link href="/practical" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">
               Practical Info
             </Link>
-            <Link href="/contact" className="block px-3 py-2 bg-[#fcd34d] text-white rounded-md hover:bg-[#fbbf24]">
+            <Link href="/contact" className="block px-3 py-2 bg-[#c084fc] text-white rounded-md hover:bg-[#a855f7]">
               Contact Us
             </Link>
           </div>

@@ -16,7 +16,7 @@ export default function SpeciesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-r from-[#ca8a04] to-[#eab308] text-white py-20">
+      <section className="bg-gradient-to-r from-[#6b21a8] to-[#9333ea] text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">Species We Focus On</h1>
           <p className="text-xl text-gray-100">
@@ -35,7 +35,7 @@ export default function SpeciesPage() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-2 rounded-full font-semibold transition-colors ${
                   selectedCategory === category
-                    ? 'bg-[#fcd34d] text-white'
+                    ? 'bg-[#c084fc] text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-100'
                 }`}
               >
@@ -52,14 +52,14 @@ export default function SpeciesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredSpecies.map((sp) => (
               <div key={sp.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="h-48 bg-gradient-to-br from-[#eab308] to-[#ca8a04]"></div>
+                <div className="h-48 bg-gradient-to-br from-[#9333ea] to-[#6b21a8]"></div>
                 <div className="p-6">
                   <div className="flex flex-wrap gap-2 mb-3">
-                    <span className="bg-[#eab308] text-white text-xs px-2 py-1 rounded">
+                    <span className="bg-[#9333ea] text-white text-xs px-2 py-1 rounded">
                       {sp.category}
                     </span>
                     {sp.endemic && (
-                      <span className="bg-[#fcd34d] text-white text-xs px-2 py-1 rounded">
+                      <span className="bg-[#c084fc] text-white text-xs px-2 py-1 rounded">
                         Endemic
                       </span>
                     )}
@@ -69,7 +69,7 @@ export default function SpeciesPage() {
                       </span>
                     )}
                   </div>
-                  <h3 className="text-xl font-semibold mb-1 text-[#ca8a04]">{sp.commonName}</h3>
+                  <h3 className="text-xl font-semibold mb-1 text-[#6b21a8]">{sp.commonName}</h3>
                   <p className="text-sm text-gray-600 italic mb-3">{sp.scientificName}</p>
                   <div className="text-sm text-gray-700 mb-2">
                     <span className="font-semibold">Habitat:</span> {sp.habitat}
@@ -87,7 +87,7 @@ export default function SpeciesPage() {
       {/* About Endemic Species */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-6 text-center text-[#ca8a04]">
+          <h2 className="text-3xl font-bold mb-6 text-center text-[#6b21a8]">
             Why Endemic Species Matter
           </h2>
           <p className="text-gray-700 mb-4">
@@ -105,7 +105,7 @@ export default function SpeciesPage() {
       {/* Ethical Observation */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-6 text-center text-[#ca8a04]">
+          <h2 className="text-3xl font-bold mb-6 text-center text-[#6b21a8]">
             Ethical Wildlife Observation
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -134,7 +134,7 @@ export default function SpeciesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#ca8a04] text-white">
+      <section className="py-16 bg-[#6b21a8] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">See These Species in the Wild</h2>
           <p className="text-lg mb-8 text-gray-200">
@@ -142,7 +142,7 @@ export default function SpeciesPage() {
           </p>
           <a
             href="/trips"
-            className="inline-block bg-[#fcd34d] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#fbbf24] transition-colors"
+            className="inline-block bg-[#c084fc] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#a855f7] transition-colors"
           >
             Browse Our Trips
           </a>

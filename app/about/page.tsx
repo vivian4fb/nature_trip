@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-r from-[#ca8a04] to-[#eab308] text-white py-20">
+      <section className="bg-gradient-to-r from-[#6b21a8] to-[#9333ea] text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">About the Western Ghats</h1>
           <p className="text-xl text-gray-100">
@@ -21,7 +21,7 @@ export default function AboutPage() {
       {/* Introduction */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-6 text-[#ca8a04]">A Global Biodiversity Treasure</h2>
+          <h2 className="text-3xl font-bold mb-6 text-[#6b21a8]">A Global Biodiversity Treasure</h2>
           <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
             <p>
               The Western Ghats, also known as the Sahyadri Mountains, stretch along the western coast of India for approximately 1,600 km. This ancient mountain range is older than the Himalayas and harbors an extraordinary concentration of biodiversity.
@@ -36,26 +36,26 @@ export default function AboutPage() {
       {/* Understanding Endemism */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-6 text-[#ca8a04]">Understanding Endemism</h2>
-          <div className="bg-white rounded-lg p-6 border-l-4 border-[#fcd34d]">
+          <h2 className="text-3xl font-bold mb-6 text-[#6b21a8]">Understanding Endemism</h2>
+          <div className="bg-white rounded-lg p-6 border-l-4 border-[#c084fc]">
             <p className="text-gray-700 mb-4">
               <span className="font-semibold">Endemic species</span> are those found in a particular geographic area and nowhere else in the world. The Western Ghats are home to an exceptional number of endemic species across all major taxonomic groups.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#fcd34d]">77%</div>
+                <div className="text-3xl font-bold text-[#c084fc]">77%</div>
                 <div className="text-sm text-gray-600">Amphibians</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#fcd34d]">62%</div>
+                <div className="text-3xl font-bold text-[#c084fc]">62%</div>
                 <div className="text-sm text-gray-600">Reptiles</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#fcd34d]">50%</div>
+                <div className="text-3xl font-bold text-[#c084fc]">50%</div>
                 <div className="text-sm text-gray-600">Fish</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#fcd34d]">27%</div>
+                <div className="text-3xl font-bold text-[#c084fc]">27%</div>
                 <div className="text-sm text-gray-600">Birds</div>
               </div>
             </div>
@@ -66,28 +66,28 @@ export default function AboutPage() {
       {/* Forest Types */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center text-[#ca8a04]">Forest Types & Ecosystems</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-[#6b21a8]">Forest Types & Ecosystems</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-3 text-[#eab308]">Evergreen Forests</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#9333ea]">Evergreen Forests</h3>
               <p className="text-gray-700">
                 Found in areas with high rainfall, these dense forests remain green year-round. They host the highest diversity of trees, epiphytes, and forest-floor species. Canopy height can exceed 40 meters.
               </p>
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-3 text-[#eab308]">Shola Forests</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#9333ea]">Shola Forests</h3>
               <p className="text-gray-700">
                 Unique to the high-altitude Western Ghats, shola forests are stunted evergreen patches embedded within rolling grasslands. This mosaic ecosystem supports many endemic species specially adapted to montane conditions.
               </p>
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-3 text-[#eab308]">Riparian Forests</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#9333ea]">Riparian Forests</h3>
               <p className="text-gray-700">
                 Forest corridors along streams and rivers support specialized plant and animal communities. These areas are critical for amphibians and provide water sources for all wildlife during dry seasons.
               </p>
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-3 text-[#eab308]">Plantation Edges</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#9333ea]">Plantation Edges</h3>
               <p className="text-gray-700">
                 While modified habitats, edges between plantations and natural forests create unique microclimates. These areas demonstrate how species adapt to human-altered landscapes and highlight conservation challenges.
               </p>
@@ -99,10 +99,10 @@ export default function AboutPage() {
       {/* Key Taxa */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center text-[#ca8a04]">Key Taxa of the Western Ghats</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-[#6b21a8]">Key Taxa of the Western Ghats</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-[#eab308]">Birds</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#9333ea]">Birds</h3>
               <p className="text-gray-700 text-sm mb-3">
                 Over 500 bird species recorded, with 16 endemic species including the Malabar Trogon, Nilgiri Flycatcher, and Sri Lanka Frogmouth.
               </p>
@@ -111,7 +111,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-[#eab308]">Mammals</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#9333ea]">Mammals</h3>
               <p className="text-gray-700 text-sm mb-3">
                 140 mammal species including the Asian Elephant, Tiger, Lion-tailed Macaque, and endemic Nilgiri Marten and Nilgiri Tahr.
               </p>
@@ -120,7 +120,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-[#eab308]">Reptiles</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#9333ea]">Reptiles</h3>
               <p className="text-gray-700 text-sm mb-3">
                 Over 260 reptile species with exceptional endemism. Includes numerous endemic snake species, geckos, and skinks.
               </p>
@@ -129,7 +129,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-[#eab308]">Amphibians</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#9333ea]">Amphibians</h3>
               <p className="text-gray-700 text-sm mb-3">
                 Over 180 amphibian species with 77% endemism. Many new species still being discovered. Includes dancing frogs and gliding frogs.
               </p>
@@ -138,7 +138,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-[#eab308]">Butterflies</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#9333ea]">Butterflies</h3>
               <p className="text-gray-700 text-sm mb-3">
                 Over 330 butterfly species including spectacular endemics like the Malabar Banded Peacock and Southern Birdwing.
               </p>
@@ -147,7 +147,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-[#eab308]">Flora</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#9333ea]">Flora</h3>
               <p className="text-gray-700 text-sm mb-3">
                 Over 5,000 flowering plant species with high endemism. Includes ancient lineages, spectacular orchids, and economically important species.
               </p>
@@ -162,22 +162,22 @@ export default function AboutPage() {
       {/* Seasons and Climate */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center text-[#ca8a04]">Seasons & Climate</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-[#6b21a8]">Seasons & Climate</h2>
           <div className="space-y-6">
-            <div className="border-l-4 border-[#eab308] pl-6">
-              <h3 className="text-xl font-semibold mb-2 text-[#ca8a04]">Southwest Monsoon (June - September)</h3>
+            <div className="border-l-4 border-[#9333ea] pl-6">
+              <h3 className="text-xl font-semibold mb-2 text-[#6b21a8]">Southwest Monsoon (June - September)</h3>
               <p className="text-gray-700">
                 The Western Ghats receive exceptionally high rainfall during the monsoon, sometimes exceeding 6,000 mm annually. This is the peak breeding season for amphibians. Leeches are common, but the forest is at its most lush and alive.
               </p>
             </div>
-            <div className="border-l-4 border-[#fcd34d] pl-6">
-              <h3 className="text-xl font-semibold mb-2 text-[#ca8a04]">Post-Monsoon (October - January)</h3>
+            <div className="border-l-4 border-[#c084fc] pl-6">
+              <h3 className="text-xl font-semibold mb-2 text-[#6b21a8]">Post-Monsoon (October - January)</h3>
               <p className="text-gray-700">
                 The best season for most wildlife observation. Weather is pleasant, forests are green, and birds are particularly active. Many flowers bloom during this period. Ideal for birding, butterfly watching, and general naturalist trips.
               </p>
             </div>
-            <div className="border-l-4 border-[#eab308] pl-6">
-              <h3 className="text-xl font-semibold mb-2 text-[#ca8a04]">Dry Season (February - May)</h3>
+            <div className="border-l-4 border-[#9333ea] pl-6">
+              <h3 className="text-xl font-semibold mb-2 text-[#6b21a8]">Dry Season (February - May)</h3>
               <p className="text-gray-700">
                 Dry conditions make wildlife more concentrated around water sources. Some species begin breeding. Higher elevations remain comfortable while lowlands can be hot. Good for photography and mammal observation.
               </p>
@@ -187,7 +187,7 @@ export default function AboutPage() {
       </section>
 
       {/* Conservation */}
-      <section className="py-16 bg-[#ca8a04] text-white">
+      <section className="py-16 bg-[#6b21a8] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-6 text-center">Conservation Importance</h2>
           <div className="prose prose-lg max-w-none text-gray-200">
