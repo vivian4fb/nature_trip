@@ -10,7 +10,7 @@ export default function SchoolsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-r from-[#1a4d2e] to-[#4f8a6b] text-white py-20">
+      <section className="bg-gradient-to-r from-[#ca8a04] to-[#eab308] text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">For Schools & Universities</h1>
           <p className="text-xl text-gray-100">
@@ -34,10 +34,10 @@ export default function SchoolsPage() {
       {/* Program Types */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center text-[#1a4d2e]">Program Types</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-[#ca8a04]">Program Types</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-[#4f8a6b]">Short-Term Modules</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#eab308]">Short-Term Modules</h3>
               <p className="text-gray-700 mb-4">3-5 days</p>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li>• Introduction to tropical ecology</li>
@@ -47,7 +47,7 @@ export default function SchoolsPage() {
               </ul>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-[#4f8a6b]">Standard Field Courses</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#eab308]">Standard Field Courses</h3>
               <p className="text-gray-700 mb-4">1-2 weeks</p>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li>• Comprehensive ecosystem study</li>
@@ -57,7 +57,7 @@ export default function SchoolsPage() {
               </ul>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-[#4f8a6b]">Extended Programs</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#eab308]">Extended Programs</h3>
               <p className="text-gray-700 mb-4">3-4 weeks</p>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li>• In-depth research projects</li>
@@ -73,11 +73,11 @@ export default function SchoolsPage() {
       {/* Example Schedule */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#1a4d2e]">Example Weekly Schedule</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#ca8a04]">Example Weekly Schedule</h2>
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-left">
-                <thead className="bg-[#1a4d2e] text-white">
+                <thead className="bg-[#ca8a04] text-white">
                   <tr>
                     <th className="p-4">Time</th>
                     <th className="p-4">Activity</th>
@@ -125,46 +125,46 @@ export default function SchoolsPage() {
       {/* Learning Objectives */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-center text-[#1a4d2e]">Learning Objectives</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center text-[#ca8a04]">Learning Objectives</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-[#4f8a6b]">Knowledge & Understanding</h3>
+              <h3 className="text-xl font-semibold mb-4 text-[#eab308]">Knowledge & Understanding</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
-                  <span className="text-[#e67e22] font-bold">•</span>
+                  <span className="text-[#fcd34d] font-bold">•</span>
                   <span>Tropical forest ecology and ecosystem dynamics</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#e67e22] font-bold">•</span>
+                  <span className="text-[#fcd34d] font-bold">•</span>
                   <span>Biodiversity patterns and endemism</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#e67e22] font-bold">•</span>
+                  <span className="text-[#fcd34d] font-bold">•</span>
                   <span>Conservation biology principles</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#e67e22] font-bold">•</span>
+                  <span className="text-[#fcd34d] font-bold">•</span>
                   <span>Human-wildlife interactions</span>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-[#4f8a6b]">Skills Development</h3>
+              <h3 className="text-xl font-semibold mb-4 text-[#eab308]">Skills Development</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
-                  <span className="text-[#e67e22] font-bold">•</span>
+                  <span className="text-[#fcd34d] font-bold">•</span>
                   <span>Field survey and sampling techniques</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#e67e22] font-bold">•</span>
+                  <span className="text-[#fcd34d] font-bold">•</span>
                   <span>Species identification and documentation</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#e67e22] font-bold">•</span>
+                  <span className="text-[#fcd34d] font-bold">•</span>
                   <span>Data collection, management, and analysis</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#e67e22] font-bold">•</span>
+                  <span className="text-[#fcd34d] font-bold">•</span>
                   <span>Scientific writing and presentation</span>
                 </li>
               </ul>
@@ -176,7 +176,7 @@ export default function SchoolsPage() {
       {/* Safety & Logistics */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#1a4d2e]">Safety & Risk Management</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#ca8a04]">Safety & Risk Management</h2>
           <div className="space-y-4 text-gray-700">
             <p>
               Student safety is our highest priority. All our guides are trained in wilderness first aid, and we maintain comprehensive emergency protocols.
@@ -203,25 +203,25 @@ export default function SchoolsPage() {
       {/* Academic Integration */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-6 text-[#1a4d2e]">Academic Integration</h2>
+          <h2 className="text-3xl font-bold mb-6 text-[#ca8a04]">Academic Integration</h2>
           <p className="text-gray-700 mb-6">
             Our programs can be tailored to integrate with various academic disciplines:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-4 rounded-lg">
-              <h3 className="font-semibold text-[#4f8a6b] mb-2">Biology & Ecology</h3>
+              <h3 className="font-semibold text-[#eab308] mb-2">Biology & Ecology</h3>
               <p className="text-sm text-gray-600">Biodiversity, evolution, ecosystem ecology</p>
             </div>
             <div className="bg-white p-4 rounded-lg">
-              <h3 className="font-semibold text-[#4f8a6b] mb-2">Environmental Science</h3>
+              <h3 className="font-semibold text-[#eab308] mb-2">Environmental Science</h3>
               <p className="text-sm text-gray-600">Conservation, sustainability, climate change</p>
             </div>
             <div className="bg-white p-4 rounded-lg">
-              <h3 className="font-semibold text-[#4f8a6b] mb-2">Zoology</h3>
+              <h3 className="font-semibold text-[#eab308] mb-2">Zoology</h3>
               <p className="text-sm text-gray-600">Animal behavior, taxonomy, ecology</p>
             </div>
             <div className="bg-white p-4 rounded-lg">
-              <h3 className="font-semibold text-[#4f8a6b] mb-2">Botany</h3>
+              <h3 className="font-semibold text-[#eab308] mb-2">Botany</h3>
               <p className="text-sm text-gray-600">Plant ecology, systematics, ethnobotany</p>
             </div>
           </div>
@@ -231,13 +231,13 @@ export default function SchoolsPage() {
       {/* Testimonials */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-center text-[#1a4d2e]">What Educators Say</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center text-[#ca8a04]">What Educators Say</h2>
           <div className="space-y-6">
             <div className="bg-gray-50 rounded-lg p-6">
               <p className="text-gray-700 italic mb-4">
                 &quot;The field course exceeded our expectations. Students gained practical skills they simply cannot learn in a classroom, and the experience sparked genuine passion for conservation in many of them.&quot;
               </p>
-              <p className="text-sm font-semibold text-[#1a4d2e]">
+              <p className="text-sm font-semibold text-[#ca8a04]">
                 — Dr. Michael Chen, Associate Professor of Biology
               </p>
             </div>
@@ -245,7 +245,7 @@ export default function SchoolsPage() {
               <p className="text-gray-700 italic mb-4">
                 &quot;As an educator, I appreciated how the team adapted the program to our learning objectives while maintaining scientific rigor. The balance of structure and flexibility was perfect.&quot;
               </p>
-              <p className="text-sm font-semibold text-[#1a4d2e]">
+              <p className="text-sm font-semibold text-[#ca8a04]">
                 — Prof. Anita Desai, Department of Environmental Studies
               </p>
             </div>
@@ -254,7 +254,7 @@ export default function SchoolsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#1a4d2e] text-white">
+      <section className="py-16 bg-[#ca8a04] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Plan Your Field Course?</h2>
           <p className="text-lg mb-8 text-gray-200">
@@ -262,7 +262,7 @@ export default function SchoolsPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-[#e67e22] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#d35400] transition-colors"
+            className="inline-block bg-[#fcd34d] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#fbbf24] transition-colors"
           >
             Request Academic Info Pack
           </Link>

@@ -3,11 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --forest-green: #1a4d2e;
-  --fern-green: #4f8a6b;
-  --earth-brown: #8b6f47;
-  --sunrise-orange: #e67e22;
-  --bird-red: #c0392b;
+  --forest-green: #ca8a04;
+  --fern-green: #eab308;
+  --earth-brown: #fbbf24;
+  --sunrise-orange: #fcd34d;
+  --bird-red: #fde047;
 }
 
 @theme inline {
