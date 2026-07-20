@@ -1,333 +1,414 @@
 import Link from 'next/link';
-import { trips, experts } from '@/lib/data';
+import { trips, experts, services, reviews, trustSignals } from '@/lib/data';
+
+function Stars({ n }: { n: number }) {
+  return (
+    <div className="flex gap-0.5 text-[#ea580c]" aria-label={`${n} out of 5 stars`}>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg key={i} className="w-4 h-4" viewBox="0 0 20 20" fill={i < n ? 'currentColor' : 'none'} stroke="currentColor">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.955a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.447a1 1 0 00-.364 1.118l1.287 3.955c.3.921-.755 1.688-1.54 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.784.57-1.838-.197-1.539-1.118l1.287-3.955a1 1 0 00-.364-1.118L2.075 9.372c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.274-3.945z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center bg-gradient-to-r from-[#6b21a8] to-[#9333ea] text-white">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            Learn the Western Ghats from the Scientists Who Study It
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-100">
-            Educational nature trips in the Western Ghats led by PhD experts
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/trips"
-              className="bg-[#c084fc] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#a855f7] transition-colors"
+      <section className="relative min-h-[640px] flex items-center home-hero-canopy text-white overflow-hidden">
+        <div className="absolute inset-0 leaf-texture opacity-60"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-7 fade-up">
+            <div
+              className="wildora-brand mb-8 max-w-2xl"
+              aria-label="Wildora Expeditions - Discover Nature Experience the wild"
             >
-              View Upcoming Trips
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-white text-[#6b21a8] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Request Itinerary
-            </Link>
+              <div className="wildora-brand__glow"></div>
+              <div className="wildora-brand__content">
+                <span className="wildora-brand__kicker">Wildora Expeditions</span>
+                <span className="wildora-brand__tagline">Discover Nature. Experience the wild.</span>
+              </div>
+            </div>
+            <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 rounded-full px-4 py-1.5 text-sm font-medium mb-6">
+              <span className="w-2 h-2 rounded-full bg-[#ea580c]"></span>
+              India-wide wildlife expeditions
+            </span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              Experience India&apos;s Wild Places with Expert Naturalists
+            </h1>
+            <p className="text-lg md:text-2xl mb-8 text-green-50/90 max-w-2xl">
+              Leisure-first guided wildlife holidays for travellers, families, photographers, and nature lovers. Explore tiger forests, Himalayan birding routes, wetlands, deserts, rainforests, coasts, butterflies, night walks, and custom India wildlife circuits.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/trips"
+                className="bg-[#ea580c] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#c2410c] transition-colors shadow-lg text-center"
+              >
+                Browse Guided Trips
+              </Link>
+              <Link
+                href="#checklist"
+                className="bg-white/10 backdrop-blur border border-white/40 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-colors text-center"
+              >
+                Get the Wildlife Checklist
+              </Link>
+            </div>
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-green-50/80">
+              <span className="flex items-center gap-2"><Check /> Guided by local field experience</span>
+              <span className="flex items-center gap-2"><Check /> Ethical, low-impact travel</span>
+              <span className="flex items-center gap-2"><Check /> Custom groups on request</span>
+            </div>
+          </div>
+
+          {/* Quick facts card */}
+          <div className="lg:col-span-5 fade-up">
+            <div className="bg-white/95 text-gray-800 rounded-2xl shadow-2xl p-6 md:p-8">
+              <div className="flex items-center gap-1 mb-1">
+                <Stars n={5} />
+                <span className="ml-2 text-sm font-semibold text-gray-700">5.0 - loved by guests worldwide</span>
+              </div>
+              <p className="text-sm text-gray-600 mb-6">Guests from the UK, Europe, USA, Australia &amp; India</p>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  ['25+', 'Years in the field'],
+                  ['500+', 'Species recorded'],
+                  ['10-12', 'Max group size'],
+                  ['1', 'Custom route for your group'],
+                ].map(([n, l]) => (
+                  <div key={l} className="rounded-xl bg-[#faf7f0] p-4">
+                    <div className="text-2xl font-bold text-[#14432a]">{n}</div>
+                    <div className="text-xs text-gray-600">{l}</div>
+                  </div>
+                ))}
+              </div>
+              <Link
+                href="/contact"
+                className="mt-6 block text-center bg-[#14432a] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#1b5e3f] transition-colors"
+              >
+                Plan My Tour
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Quick Stats */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-[#c084fc] mb-2">25+</div>
-              <div className="text-gray-700">Years of Field Tours</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-[#c084fc] mb-2">UNESCO</div>
-              <div className="text-gray-700">Biodiversity Hotspot</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-[#c084fc] mb-2">Endemic</div>
-              <div className="text-gray-700">Species Focus</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-[#c084fc] mb-2">10-12</div>
-              <div className="text-gray-700">Max Group Size</div>
-            </div>
-          </div>
+      {/* Trust marquee */}
+      <section className="bg-[#14432a] text-green-50/90 py-4 overflow-hidden">
+        <div className="flex w-max marquee-track">
+          {[...trustSignals, ...trustSignals].map((s, i) => (
+            <span key={i} className="flex items-center gap-3 px-8 text-sm font-medium whitespace-nowrap">
+              <span className="text-[#ea580c]">*</span> {s}
+            </span>
+          ))}
         </div>
       </section>
 
       {/* Why We're Different */}
-      <section className="py-16">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 text-[#6b21a8]">
-            Why We&apos;re Different
-          </h2>
+          <div className="text-center mb-12">
+            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Why travel with us</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#14432a]">
+              Guided, Enjoyable, and Deeply Local
+            </h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#9333ea] rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
+            {[
+              { t: 'Guided India Wildlife Tours', d: 'Safaris, birding, butterflies, rainforest walks, wetlands, deserts, mountains, and night trails led by experts.', icon: 'book' },
+              { t: 'Routes by Region', d: "Trips are matched to India's best wildlife seasons, habitats, target species, and your comfort level.", icon: 'globe' },
+              { t: 'Leisure-First Pace', d: 'Field time, photography, viewpoints, food, and rest are balanced into every itinerary.', icon: 'check' },
+              { t: 'Custom Groups', d: 'Private tours and group programmes can be built around your dates and interests.', icon: 'heart' },
+            ].map((c) => (
+              <div key={c.t} className="text-center card-lift bg-white rounded-2xl border border-gray-100 p-6">
+                <div className="w-16 h-16 bg-[#15803d] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Icon name={c.icon} />
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-[#14432a]">{c.t}</h3>
+                <p className="text-gray-600">{c.d}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-2">PhD-Level Guides</h3>
-              <p className="text-gray-600">
-                Learn from researchers actively studying Western Ghats ecosystems
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#9333ea] rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Endemic Species Focus</h3>
-              <p className="text-gray-600">
-                Discover species found nowhere else on Earth
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#9333ea] rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Hands-On Learning</h3>
-              <p className="text-gray-600">
-                Field-based education with real research techniques
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#9333ea] rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Ethical Travel</h3>
-              <p className="text-gray-600">
-                Low-impact, conservation-focused tourism
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Featured Trips */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-[#faf7f0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 text-[#6b21a8]">
-            Featured Trips
-          </h2>
+          <div className="text-center mb-12">
+            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Upcoming departures</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#14432a]">Featured Trips</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {trips.map((trip) => (
-              <div key={trip.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="h-48 bg-gradient-to-br from-[#9333ea] to-[#6b21a8]"></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-[#6b21a8]">{trip.title}</h3>
-                  <p className="text-gray-600 mb-4">{trip.description}</p>
-                  <div className="space-y-2 text-sm text-gray-700 mb-4">
-                    <div className="flex items-center gap-2">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      {trip.duration}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                      </svg>
-                      {trip.difficulty}
-                    </div>
-                    <div className="flex flex-wrap gap-2 mt-2">
-                      {trip.focus.map((focus, idx) => (
-                        <span key={idx} className="bg-[#9333ea] text-white text-xs px-2 py-1 rounded">
-                          {focus}
-                        </span>
-                      ))}
-                    </div>
+              <div key={trip.id} className="bg-white rounded-2xl shadow-md overflow-hidden card-lift flex flex-col">
+                <div className="relative h-48 bg-gradient-to-br from-[#1b5e3f] to-[#14432a] leaf-texture">
+                  {typeof trip.spotsLeft === 'number' && trip.spotsLeft <= 6 && (
+                    <span className="absolute top-3 left-3 bg-[#dc2626] text-white text-xs font-semibold px-3 py-1 rounded-full">
+                      Only {trip.spotsLeft} spots left
+                    </span>
+                  )}
+                  {trip.region && (
+                    <span className="absolute bottom-3 left-3 bg-black/40 backdrop-blur text-white text-xs px-3 py-1 rounded-full">
+                      {trip.region}
+                    </span>
+                  )}
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-xl font-semibold mb-2 text-[#14432a]">{trip.title}</h3>
+                  <p className="text-gray-600 mb-4 text-sm">{trip.description}</p>
+                  <div className="space-y-1.5 text-sm text-gray-700 mb-4">
+                    <div className="flex items-center gap-2"><Clock /> {trip.duration}</div>
+                    <div className="flex items-center gap-2"><Signal /> {trip.difficulty} - {trip.targetSpecies}</div>
+                    {trip.nextDeparture && (
+                      <div className="flex items-center gap-2 text-[#ea580c] font-medium"><Calendar /> Next departure: {trip.nextDeparture}</div>
+                    )}
                   </div>
-                  <Link
-                    href={`/trips/${trip.id}`}
-                    className="block text-center bg-[#c084fc] text-white px-4 py-2 rounded hover:bg-[#a855f7] transition-colors"
-                  >
-                    Learn More
-                  </Link>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {trip.focus.map((f, idx) => (
+                      <span key={idx} className="bg-green-50 text-[#14432a] border border-green-100 text-xs px-2 py-1 rounded">{f}</span>
+                    ))}
+                  </div>
+                  <div className="mt-auto">
+                    <div className="mb-3">
+                      <span className="text-2xl font-bold text-[#14432a]">{trip.price}</span>
+                      {trip.priceUSD && <span className="block text-xs text-gray-500">{trip.priceUSD}</span>}
+                    </div>
+                    <Link href={`/trips/${trip.id}`} className="block text-center bg-[#ea580c] text-white px-4 py-3 rounded-lg hover:bg-[#c2410c] transition-colors font-semibold">
+                      View Itinerary
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
-          <div className="text-center mt-8">
-            <Link
-              href="/trips"
-              className="inline-block text-[#6b21a8] font-semibold hover:text-[#9333ea] transition-colors"
-            >
-              View All Trips →
+          <div className="text-center mt-10">
+            <Link href="/trips" className="inline-block text-[#14432a] font-semibold hover:text-[#15803d] transition-colors">
+              View All Trips &amp; Custom Options -&gt;
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Learning Outcomes */}
-      <section className="py-16">
+      {/* Services / Experiences */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 text-[#6b21a8]">
-            What You&apos;ll Learn
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 text-[#9333ea]">For Individuals</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <svg className="w-6 h-6 text-[#c084fc] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Identify key species and understand their ecological roles</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-6 h-6 text-[#c084fc] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Develop field observation and documentation skills</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-6 h-6 text-[#c084fc] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Understand ecosystem dynamics and biodiversity patterns</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-6 h-6 text-[#c084fc] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Learn about conservation challenges and solutions</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-6 h-6 text-[#c084fc] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Connect with like-minded nature enthusiasts</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 text-[#9333ea]">For Educational Groups</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <svg className="w-6 h-6 text-[#c084fc] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Hands-on field course aligned with academic objectives</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-6 h-6 text-[#c084fc] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Learn research methodologies in tropical ecology</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-6 h-6 text-[#c084fc] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Data collection and analysis practice</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-6 h-6 text-[#c084fc] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Customizable curriculum to match learning goals</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-6 h-6 text-[#c084fc] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Certificate of completion for academic credit</span>
-                </li>
-              </ul>
-            </div>
+          <div className="text-center mb-12">
+            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Guided services</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#14432a] mb-3">Experiences &amp; Services We Offer</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">Book a fixed departure, add a guided day tour, or ask us to build a private programme around your target species, group size, and comfort level.</p>
           </div>
-        </div>
-      </section>
-
-      {/* Our Experts */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 text-[#6b21a8]">
-            Meet Our Experts
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {experts.map((expert) => (
-              <div key={expert.id} className="bg-white rounded-lg shadow-md p-6 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-[#9333ea] to-[#6b21a8] rounded-full mx-auto mb-4"></div>
-                <h3 className="text-xl font-semibold mb-1 text-[#6b21a8]">{expert.name}</h3>
-                <p className="text-sm text-gray-600 mb-2">{expert.qualifications}</p>
-                <p className="text-sm text-[#9333ea] font-medium mb-2">{expert.specialization}</p>
-                <p className="text-xs text-gray-500">{expert.experience}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((s) => (
+              <div key={s.id} className="bg-white rounded-2xl border border-gray-100 p-6 card-lift">
+                <ServiceIcon name={s.icon} />
+                <h3 className="font-semibold text-[#14432a] mb-1">{s.title}</h3>
+                <p className="text-xs text-[#ea580c] font-medium mb-2">{s.tagline}</p>
+                <p className="text-sm text-gray-600 mb-3">{s.description}</p>
+                <p className="text-xs text-gray-500"><span className="font-semibold">Best for:</span> {s.forWho}</p>
               </div>
             ))}
           </div>
-          <div className="text-center mt-8">
-            <Link
-              href="/experts"
-              className="inline-block text-[#6b21a8] font-semibold hover:text-[#9333ea] transition-colors"
-            >
-              Learn More About Our Team →
+          <div className="text-center mt-10">
+            <Link href="/contact" className="inline-block bg-[#14432a] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1b5e3f] transition-colors">
+              Design My Guided Experience
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* International visitors band */}
+      <section className="py-16 bg-[#14432a] text-white relative overflow-hidden">
+        <div className="absolute inset-0 leaf-texture opacity-40"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Travelling from abroad?</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Made simple for international visitors</h2>
+            <p className="text-green-50/90 mb-6">
+              Many guests fly in from the UK, Europe, North America and Australia. We handle route planning across India so you can focus on wildlife, scenery, and downtime.
+            </p>
+            <ul className="space-y-3 text-green-50/90">
+              {[
+                'Pricing available in USD, GBP and EUR',
+                'Route planning around Delhi, Mumbai, Bengaluru, Kochi, Chennai, Kolkata, Jaipur, Guwahati, Nagpur and other gateways',
+                'Target-species lists, park timing and route notes before you travel',
+                'Secure deposits, clear cancellation terms and insurance guidance',
+                'Comfortable eco-lodges, vegetarian-friendly food, all transport arranged',
+              ].map((t) => (
+                <li key={t} className="flex items-start gap-3"><span className="text-[#ea580c] mt-1"><Check /></span>{t}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-white/95 text-gray-800 rounded-2xl p-8 shadow-2xl">
+            <h3 className="text-xl font-bold text-[#14432a] mb-2">Plan your visit</h3>
+            <p className="text-sm text-gray-600 mb-5">Tell us your dates, group size, comfort level, and target species. We&apos;ll reply within 24 hours with a tailored plan and quote in your currency.</p>
+            <Link href="/contact" className="block text-center bg-[#ea580c] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#c2410c] transition-colors mb-3">
+              Request a Custom Quote
+            </Link>
+            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="block text-center border border-[#14432a] text-[#14432a] px-6 py-3 rounded-lg font-semibold hover:bg-[#14432a] hover:text-white transition-colors">
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="py-16">
+      <section className="py-20 bg-[#faf7f0]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Reviews</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#14432a]">What Our Guests Say</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {reviews.map((r) => (
+              <div key={r.name} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <Stars n={r.rating} />
+                <p className="text-gray-700 italic my-4 text-sm leading-relaxed">&ldquo;{r.text}&rdquo;</p>
+                <p className="text-sm font-semibold text-[#14432a]">{r.name}</p>
+                <p className="text-xs text-gray-500">{r.country} - {r.trip}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Experts */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">The people who guide you</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#14432a]">Meet Our Experts</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {experts.map((expert) => (
+              <div key={expert.id} className="bg-white rounded-2xl shadow-md p-6 text-center card-lift border border-gray-100">
+                <div className="w-24 h-24 bg-gradient-to-br from-[#1b5e3f] to-[#14432a] rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                  {expert.name.split(' ').filter((w) => w.length > 1)[0]?.[0]}
+                  {expert.name.split(' ').filter((w) => w.length > 1)[1]?.[0]}
+                </div>
+                <h3 className="text-xl font-semibold mb-1 text-[#14432a]">{expert.name}</h3>
+                <p className="text-sm text-gray-600 mb-2">{expert.qualifications}</p>
+                <p className="text-sm text-[#15803d] font-medium mb-2">{expert.specialization}</p>
+                <p className="text-xs text-gray-500">{expert.experience}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/experts" className="inline-block text-[#14432a] font-semibold hover:text-[#15803d] transition-colors">
+              Learn More About Our Team -&gt;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Lead magnet / checklist */}
+      <section id="checklist" className="py-20 bg-[#faf7f0]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 text-[#6b21a8]">
-            What Our Guests Say
-          </h2>
-          <div className="space-y-8">
-            <div className="bg-gray-50 rounded-lg p-6">
-              <p className="text-gray-700 italic mb-4">
-                &quot;This was not just a tour, but a true educational experience. The depth of knowledge our guide shared about endemic species was remarkable. I learned more in one week than I could have from months of reading.&quot;
-              </p>
-              <p className="text-sm font-semibold text-[#6b21a8]">— Dr. Sarah Williams, University Professor</p>
+          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-gray-100 grid md:grid-cols-5 gap-8 items-center">
+            <div className="md:col-span-3">
+              <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Free download</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#14432a] mb-3">The India Wildlife Trip-Planning Checklist</h2>
+              <p className="text-gray-600 mb-4">Get our expert-curated checklist for India wildlife routes, target species, seasons, and region choices. A practical trip-planning companion.</p>
+              <ul className="text-sm text-gray-600 space-y-1 mb-2">
+                <li className="flex items-center gap-2"><Check /> Safaris, birding, wetlands, mountains and rainforests</li>
+                <li className="flex items-center gap-2"><Check /> Seasonal timing guide</li>
+                <li className="flex items-center gap-2"><Check /> Site-by-site notes</li>
+              </ul>
             </div>
-            <div className="bg-gray-50 rounded-lg p-6">
-              <p className="text-gray-700 italic mb-4">
-                &quot;The small group size made all the difference. We could ask questions, take our time observing wildlife, and really absorb the ecology of each habitat. Perfect for serious nature enthusiasts.&quot;
-              </p>
-              <p className="text-sm font-semibold text-[#6b21a8]">— Rajesh Menon, Birding Enthusiast</p>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-6">
-              <p className="text-gray-700 italic mb-4">
-                &quot;As a teacher, I appreciated the educational structure of the trip. My students returned with new skills, a deeper appreciation for biodiversity, and memories that will inspire their future studies.&quot;
-              </p>
-              <p className="text-sm font-semibold text-[#6b21a8]">— Priya Sharma, High School Teacher</p>
-            </div>
+            <form className="md:col-span-2 space-y-3">
+              <input type="text" placeholder="Your name" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15803d] focus:border-transparent" />
+              <input type="email" placeholder="Email address" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15803d] focus:border-transparent" />
+              <button type="submit" className="w-full bg-[#ea580c] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#c2410c] transition-colors">
+                Send Me the Checklist
+              </button>
+              <p className="text-xs text-gray-400 text-center">No spam. Unsubscribe anytime.</p>
+            </form>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#6b21a8] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Explore the Western Ghats?
-          </h2>
-          <p className="text-xl mb-8 text-gray-200">
-            Join us for an unforgettable learning experience in one of the world&apos;s most biodiverse regions.
+      <section className="py-20 hero-canopy text-white relative overflow-hidden">
+        <div className="absolute inset-0 leaf-texture opacity-50"></div>
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Explore Wild India?</h2>
+          <p className="text-xl mb-8 text-green-50/90">
+            Join a small group or ask for a private guided programme in one of the world&apos;s most biodiverse regions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/trips"
-              className="bg-[#c084fc] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#a855f7] transition-colors"
-            >
+            <Link href="/trips" className="bg-[#ea580c] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#c2410c] transition-colors shadow-lg">
               Browse All Trips
             </Link>
-            <Link
-              href="/contact"
-              className="bg-white text-[#6b21a8] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Get in Touch
+            <Link href="/contact" className="bg-white/10 backdrop-blur border border-white/40 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-colors">
+              Ask About Dates
             </Link>
           </div>
         </div>
       </section>
     </div>
+  );
+}
+
+/* --- Inline icon helpers --- */
+function Check() {
+  return (
+    <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+    </svg>
+  );
+}
+function Clock() {
+  return (
+    <svg className="w-4 h-4 text-[#15803d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  );
+}
+function Signal() {
+  return (
+    <svg className="w-4 h-4 text-[#15803d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+    </svg>
+  );
+}
+function Calendar() {
+  return (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+    </svg>
+  );
+}
+function ServiceIcon({ name }: { name: string }) {
+  const paths: Record<string, string> = {
+    guide: 'M12 21a9 9 0 100-18 9 9 0 000 18zm0 0l3-9-9 3 6 6z',
+    camera: 'M3 8a2 2 0 012-2h2l1.5-2h7L17 6h2a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm9 8a4 4 0 100-8 4 4 0 000 8z',
+    moon: 'M21 12.8A8.5 8.5 0 1111.2 3a6.5 6.5 0 009.8 9.8z',
+    map: 'M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3zm0 0V3m6 18V6',
+    family: 'M16 11a4 4 0 10-8 0v1H6a3 3 0 00-3 3v3h18v-3a3 3 0 00-3-3h-2v-1z',
+    leaf: 'M20 4C11 4 5 9 5 17c0 1.5.5 2.8 1.4 3.8C8 12 13 8 20 4z',
+    groups: 'M8 11a4 4 0 118 0v1h1.5a3.5 3.5 0 013.5 3.5V19H3v-3.5A3.5 3.5 0 016.5 12H8v-1z',
+    school: 'M12 3l9 5-9 5-9-5 9-5zm-5 8v4c0 2 2.5 4 5 4s5-2 5-4v-4',
+  };
+
+  return (
+    <div className="w-12 h-12 bg-green-50 border border-green-100 rounded-lg flex items-center justify-center mb-4 text-[#15803d]">
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={paths[name]} />
+      </svg>
+    </div>
+  );
+}
+function Icon({ name }: { name: string }) {
+  const paths: Record<string, string> = {
+    book: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
+    globe: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+    check: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
+    heart: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',
+  };
+  return (
+    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={paths[name]} />
+    </svg>
   );
 }

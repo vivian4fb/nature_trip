@@ -2,12 +2,18 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --forest-green: #6b21a8;
-  --fern-green: #9333ea;
-  --earth-brown: #a855f7;
-  --sunrise-orange: #c084fc;
-  --bird-red: #d946ef;
+  --foreground: #1a1a1a;
+
+  /* Wildora nature travel palette */
+  --forest-green: #14432a;   /* deep forest - headings, dark sections */
+  --fern-green: #15803d;     /* fern - icons, secondary accents */
+  --moss-green: #3f6212;     /* moss */
+  --earth-brown: #7c4a1e;    /* warm earth brown */
+  --sunrise-orange: #ea580c; /* Malabar Trogon accent - primary CTA */
+  --sunrise-orange-dark: #c2410c;
+  --bird-red: #dc2626;       /* trogon red - alerts, endemic tags */
+  --sand: #faf7f0;           /* warm off-white section background */
+  --canopy-gradient: linear-gradient(135deg, #14432a 0%, #1b5e3f 55%, #15803d 100%);
 }
 
 @theme inline {
@@ -15,27 +21,160 @@
   --color-foreground: var(--foreground);
   --color-forest: var(--forest-green);
   --color-fern: var(--fern-green);
+  --color-moss: var(--moss-green);
   --color-earth: var(--earth-brown);
   --color-accent-orange: var(--sunrise-orange);
   --color-accent-red: var(--bird-red);
+  --color-sand: var(--sand);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, Arial, Helvetica, sans-serif;
 }
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Leafy layered hero background */
+.hero-canopy {
+  background:
+    linear-gradient(90deg, rgba(10, 34, 22, 0.92) 0%, rgba(20, 67, 42, 0.78) 44%, rgba(20, 67, 42, 0.24) 100%),
+    url("/india-wildlife-hero.png") center / cover no-repeat,
+    var(--canopy-gradient);
+}
+
+.home-hero-canopy {
+  background:
+    linear-gradient(90deg, rgba(8, 24, 16, 0.9) 0%, rgba(15, 46, 30, 0.72) 46%, rgba(15, 46, 30, 0.22) 100%),
+    url("/forest.png") center / cover no-repeat,
+    var(--canopy-gradient);
+}
+
+/* Subtle botanical texture overlay */
+.leaf-texture {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 5C20 20 20 40 30 55C40 40 40 20 30 5Z' fill='none' stroke='%23ffffff' stroke-opacity='0.05' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+/* Card hover lift */
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(20, 67, 42, 0.35);
+}
+
+/* Fade-up on load */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+
+.wildora-brand {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 680px);
+  transform: translateY(0);
+  animation: wildoraFloat 5.5s ease-in-out infinite;
+}
+
+.wildora-brand__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.35rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  padding: 1rem 1.15rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06));
+  box-shadow: 0 24px 55px rgba(2, 18, 10, 0.32);
+  backdrop-filter: blur(16px);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wildora-brand__content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.34) 42%, transparent 68%);
+  transform: translateX(-115%);
+  transition: transform 0.75s ease;
+}
+
+.wildora-brand__glow {
+  position: absolute;
+  inset: 0.4rem;
+  z-index: 0;
+  border-radius: 0.75rem;
+  background: linear-gradient(90deg, rgba(234, 88, 12, 0.26), rgba(21, 128, 61, 0.18));
+  filter: blur(18px);
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.wildora-brand__kicker {
+  color: #ffffff;
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: 0;
+  text-shadow: 0 4px 26px rgba(0, 0, 0, 0.36);
+}
+
+.wildora-brand__tagline {
+  color: rgba(255, 247, 237, 0.96);
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.wildora-brand:hover .wildora-brand__content {
+  transform: translateY(-6px) scale(1.012);
+  border-color: rgba(255, 255, 255, 0.56);
+  box-shadow: 0 32px 70px rgba(2, 18, 10, 0.42);
+}
+
+.wildora-brand:hover .wildora-brand__content::before {
+  transform: translateX(115%);
+}
+
+.wildora-brand:hover .wildora-brand__glow {
+  transform: scale(1.04);
+  opacity: 1;
+}
+
+@keyframes wildoraFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wildora-brand {
+    animation: none;
+  }
+
+  .wildora-brand__content,
+  .wildora-brand__content::before,
+  .wildora-brand__glow {
+    transition: none;
+  }
+}
+
+/* Marquee for trust logos */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 28s linear infinite;
 }

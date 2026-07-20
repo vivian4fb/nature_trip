@@ -11,39 +11,42 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold" style={{ color: 'var(--forest-green)' }}>
-              Western Ghats Nature Tours
+            <Link href="/" className="text-xl font-bold tracking-tight" style={{ color: 'var(--forest-green)' }}>
+              Wildora Expeditions
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-[#6b21a8] transition-colors">
+            <Link href="/" className="text-gray-700 hover:text-[#14432a] transition-colors">
               Home
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-[#6b21a8] transition-colors">
-              About Western Ghats
+            <Link href="/about" className="text-gray-700 hover:text-[#14432a] transition-colors">
+              About Wild India
             </Link>
-            <Link href="/trips" className="text-gray-700 hover:text-[#6b21a8] transition-colors">
+            <Link href="/trips" className="text-gray-700 hover:text-[#14432a] transition-colors">
               Trips
             </Link>
-            <Link href="/experts" className="text-gray-700 hover:text-[#6b21a8] transition-colors">
+            <Link href="/when-to-visit" className="text-gray-700 hover:text-[#14432a] transition-colors">
+              When to Visit
+            </Link>
+            <Link href="/experts" className="text-gray-700 hover:text-[#14432a] transition-colors">
               Our Experts
             </Link>
-            <Link href="/species" className="text-gray-700 hover:text-[#6b21a8] transition-colors">
+            <Link href="/species" className="text-gray-700 hover:text-[#14432a] transition-colors">
               Species
             </Link>
-            <Link href="/schools" className="text-gray-700 hover:text-[#6b21a8] transition-colors">
-              For Schools
+            <Link href="/schools" className="text-gray-700 hover:text-[#14432a] transition-colors">
+              Custom Groups
             </Link>
-            <Link href="/practical" className="text-gray-700 hover:text-[#6b21a8] transition-colors">
+            <Link href="/practical" className="text-gray-700 hover:text-[#14432a] transition-colors">
               Practical Info
             </Link>
             <Link
               href="/contact"
-              className="bg-[#c084fc] text-white px-4 py-2 rounded-md hover:bg-[#a855f7] transition-colors"
+              className="bg-[#ea580c] text-white px-4 py-2 rounded-md hover:bg-[#c2410c] transition-colors"
             >
-              Contact Us
+              Plan a Tour
             </Link>
           </div>
 
@@ -51,7 +54,7 @@ export default function Navigation() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-[#6b21a8] focus:outline-none"
+              className="text-gray-700 hover:text-[#14432a] focus:outline-none"
               aria-label="Toggle menu"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -74,10 +77,13 @@ export default function Navigation() {
               Home
             </Link>
             <Link href="/about" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">
-              About Western Ghats
+              About Wild India
             </Link>
             <Link href="/trips" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">
               Trips
+            </Link>
+            <Link href="/when-to-visit" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">
+              When to Visit
             </Link>
             <Link href="/experts" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">
               Our Experts
@@ -86,13 +92,13 @@ export default function Navigation() {
               Species
             </Link>
             <Link href="/schools" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">
-              For Schools
+              Custom Groups
             </Link>
             <Link href="/practical" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">
               Practical Info
             </Link>
-            <Link href="/contact" className="block px-3 py-2 bg-[#c084fc] text-white rounded-md hover:bg-[#a855f7]">
-              Contact Us
+            <Link href="/contact" className="block px-3 py-2 bg-[#ea580c] text-white rounded-md hover:bg-[#c2410c]">
+              Plan a Tour
             </Link>
           </div>
         </div>

@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import type { Metadata } from 'next';
 import { faqs } from '@/lib/data';
 
 export default function PracticalPage() {
@@ -10,11 +9,11 @@ export default function PracticalPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-r from-[#6b21a8] to-[#9333ea] text-white py-20">
+      <section className="bg-gradient-to-r from-[#14432a] to-[#15803d] text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">Practical Info & FAQ</h1>
           <p className="text-xl text-gray-100">
-            Everything you need to know to prepare for your trip
+            Seasons, fitness, packing, comfort, safety, and custom tour details
           </p>
         </div>
       </section>
@@ -22,36 +21,36 @@ export default function PracticalPage() {
       {/* Best Seasons */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#6b21a8]">Best Seasons to Visit</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#14432a]">Best Seasons to Visit</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2 text-[#9333ea]">Monsoon (Jun-Sep)</h3>
+              <h3 className="text-xl font-semibold mb-2 text-[#15803d]">Monsoon (Jun-Sep)</h3>
               <p className="text-sm text-gray-700 mb-3">
-                Heavy rainfall, lush forests. Best for amphibians and experiencing the forest at its most alive. Be prepared for leeches and wet conditions.
+                Heavy rainfall in many regions, lush forests, and dramatic landscapes. Best for rainforest frogs, reptiles, waterfalls, and green habitats. Be prepared for leeches and wet conditions on relevant routes.
               </p>
               <div className="text-xs text-gray-600">
-                <strong>Best for:</strong> Herping, monsoon ecology
+                <strong>Best for:</strong> Rainforests, herping, waterfalls
               </div>
             </div>
-            <div className="bg-gray-50 rounded-lg p-6 border-2 border-[#c084fc]">
-              <div className="bg-[#c084fc] text-white text-xs px-2 py-1 rounded inline-block mb-2">
+            <div className="bg-gray-50 rounded-lg p-6 border-2 border-[#ea580c]">
+              <div className="bg-[#ea580c] text-white text-xs px-2 py-1 rounded inline-block mb-2">
                 MOST POPULAR
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-[#9333ea]">Post-Monsoon (Oct-Jan)</h3>
+              <h3 className="text-xl font-semibold mb-2 text-[#15803d]">Cool Season (Oct-Mar)</h3>
               <p className="text-sm text-gray-700 mb-3">
-                Pleasant weather, green forests, peak bird activity. Ideal conditions for most wildlife observation and photography.
+                Pleasant weather in many regions, strong birding, wetlands, deserts, family travel, and comfortable safari conditions.
               </p>
               <div className="text-xs text-gray-600">
-                <strong>Best for:</strong> Birding, general naturalist trips
+                <strong>Best for:</strong> Birding, wetlands, safaris, family trips
               </div>
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2 text-[#9333ea]">Dry Season (Feb-May)</h3>
+              <h3 className="text-xl font-semibold mb-2 text-[#15803d]">Dry Safari Season (Mar-Jun)</h3>
               <p className="text-sm text-gray-700 mb-3">
-                Drier conditions, wildlife concentrated near water. Higher elevations remain comfortable. Good visibility for mammals.
+                Drier conditions can concentrate wildlife near water in many forest reserves. Higher elevations remain cooler. Good visibility for mammals and many safari routes.
               </p>
               <div className="text-xs text-gray-600">
-                <strong>Best for:</strong> Mammals, photography
+                <strong>Best for:</strong> Big cats, mammals, photography
               </div>
             </div>
           </div>
@@ -61,24 +60,24 @@ export default function PracticalPage() {
       {/* Difficulty Levels */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#6b21a8]">Understanding Difficulty Levels</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#14432a]">Understanding Difficulty Levels</h2>
           <div className="space-y-4">
             <div className="bg-white rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-2 text-green-700">Easy</h3>
               <p className="text-gray-700">
-                Gentle walks on established trails, typically 2-4 km per day. Minimal elevation gain. Suitable for all fitness levels including families with children.
+                Mostly vehicle-based safaris, lodge walks, easy wetland visits, or gentle trails. Suitable for most fitness levels including families with children.
               </p>
             </div>
             <div className="bg-white rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-2 text-yellow-700">Moderate</h3>
               <p className="text-gray-700">
-                Walks of 4-8 km per day on forest trails with some elevation changes. May involve uneven terrain. Requires basic fitness and ability to walk for several hours.
+                Walks of 4-8 km per day, uneven trails, warmer safari days, rainforest conditions, or some elevation changes. Requires basic fitness and comfort outdoors.
               </p>
             </div>
             <div className="bg-white rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-2 text-red-700">Challenging</h3>
               <p className="text-gray-700">
-                Longer distances (8-12 km) with significant elevation gain. Steep trails, potentially slippery conditions. Requires good physical fitness and stamina.
+                Longer walks, high altitude, cold desert, steep trails, remote habitat, or extended field hours. Requires good physical fitness and stamina.
               </p>
             </div>
           </div>
@@ -88,33 +87,33 @@ export default function PracticalPage() {
       {/* What to Pack */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#6b21a8]">What to Pack</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#14432a]">What to Pack</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-[#9333ea]">Essential Gear</h3>
+              <h3 className="text-xl font-semibold mb-4 text-[#15803d]">Essential Gear</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>✓ Sturdy walking shoes or boots</li>
-                <li>✓ Rain jacket (waterproof, not just water-resistant)</li>
-                <li>✓ Long pants and full-sleeve shirts</li>
-                <li>✓ Warm layer for evenings/high altitudes</li>
-                <li>✓ Hat and sunscreen</li>
-                <li>✓ Insect repellent</li>
-                <li>✓ Reusable water bottle</li>
-                <li>✓ Headlamp with extra batteries</li>
-                <li>✓ Personal medications</li>
+                <li>- Sturdy walking shoes or boots</li>
+                <li>- Rain jacket (waterproof, not just water-resistant)</li>
+                <li>- Long pants and full-sleeve shirts</li>
+                <li>- Warm layer for evenings/high altitudes</li>
+                <li>- Hat and sunscreen</li>
+                <li>- Insect repellent</li>
+                <li>- Reusable water bottle</li>
+                <li>- Headlamp with extra batteries</li>
+                <li>- Personal medications</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-[#9333ea]">Recommended Items</h3>
+              <h3 className="text-xl font-semibold mb-4 text-[#15803d]">Recommended Items</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>✓ Binoculars (8x or 10x magnification)</li>
-                <li>✓ Camera with telephoto lens</li>
-                <li>✓ Field notebook and pen</li>
-                <li>✓ Field guides (we provide, but personal copies useful)</li>
-                <li>✓ Dry bags for electronics</li>
-                <li>✓ Small backpack for day trips</li>
-                <li>✓ Power bank for charging devices</li>
-                <li>✓ Plastic bags for wet clothes</li>
+                <li>- Binoculars (8x or 10x magnification)</li>
+                <li>- Camera with telephoto lens or macro option</li>
+                <li>- Field notebook and pen</li>
+                <li>- Field guides (we provide shared references, but personal copies are useful)</li>
+                <li>- Dry bags for electronics</li>
+                <li>- Small backpack for day trips</li>
+                <li>- Power bank for charging devices</li>
+                <li>- Plastic bags for wet clothes</li>
               </ul>
             </div>
           </div>
@@ -124,7 +123,7 @@ export default function PracticalPage() {
       {/* FAQ */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-center text-[#6b21a8]">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center text-[#14432a]">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -132,9 +131,9 @@ export default function PracticalPage() {
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                 >
-                  <span className="font-semibold text-[#6b21a8]">{faq.question}</span>
+                  <span className="font-semibold text-[#14432a]">{faq.question}</span>
                   <svg
-                    className={`w-5 h-5 text-[#9333ea] transition-transform ${
+                    className={`w-5 h-5 text-[#15803d] transition-transform ${
                       openIndex === index ? 'transform rotate-180' : ''
                     }`}
                     fill="none"
@@ -158,13 +157,13 @@ export default function PracticalPage() {
       {/* Accommodation */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-6 text-[#6b21a8]">Accommodation & Food</h2>
+          <h2 className="text-3xl font-bold mb-6 text-[#14432a]">Accommodation & Food</h2>
           <div className="space-y-4 text-gray-700">
             <p>
-              <strong>Accommodation:</strong> We use comfortable eco-lodges and guesthouses with clean rooms, attached bathrooms (hot water available), and basic amenities. Accommodation emphasizes low environmental impact and community benefit. Rooms are typically twin-sharing; single occupancy may be available for a supplement.
+              <strong>Accommodation:</strong> We use comfortable wildlife lodges, eco-lodges, guesthouses, camps, and nature-friendly stays with clean rooms and practical amenities. Rooms are typically twin-sharing; single occupancy may be available for a supplement.
             </p>
             <p>
-              <strong>Meals:</strong> All meals are included and feature fresh, locally sourced vegetarian food. Meals are served family-style and provide an opportunity to discuss the day&apos;s observations. We can accommodate most dietary restrictions with advance notice (vegan, gluten-free, allergies).
+              <strong>Meals:</strong> All meals are included and feature fresh, locally sourced vegetarian-friendly food. Meals are served in a relaxed style, with time to talk through the day&apos;s sightings and route. We can accommodate most dietary restrictions with advance notice (vegan, gluten-free, allergies).
             </p>
             <p>
               <strong>Water:</strong> Boiled/filtered drinking water is provided. We encourage using your own reusable bottle to minimize plastic waste.
@@ -174,15 +173,15 @@ export default function PracticalPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#6b21a8] text-white">
+      <section className="py-16 bg-[#14432a] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Still Have Questions?</h2>
           <p className="text-lg mb-8 text-gray-200">
-            We&apos;re here to help you prepare for your Western Ghats adventure
+            We&apos;re here to help you prepare for your India wildlife adventure
           </p>
           <a
             href="/contact"
-            className="inline-block bg-[#c084fc] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#a855f7] transition-colors"
+            className="inline-block bg-[#ea580c] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#c2410c] transition-colors"
           >
             Contact Us
           </a>

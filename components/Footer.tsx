@@ -2,14 +2,15 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#6b21a8] text-white mt-20">
+    <footer className="bg-[#14432a] text-white mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Western Ghats Nature Tours</h3>
+            <h3 className="text-lg font-semibold mb-1">Wildora Expeditions</h3>
+            <p className="text-[#ea580c] text-sm font-medium mb-4">Discover Nature. Experience the wild.</p>
             <p className="text-gray-300 text-sm">
-              Educational nature trips in the Western Ghats led by PhD experts. Specializing in endemic species and conservation.
+              Leisure-first guided wildlife holidays across India, covering forests, deserts, wetlands, mountains, rainforests, coasts, and custom group routes.
             </p>
           </div>
 
@@ -19,7 +20,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About Western Ghats
+                  About Wild India
                 </Link>
               </li>
               <li>
@@ -46,7 +47,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/schools" className="text-gray-300 hover:text-white transition-colors">
-                  For Schools & Universities
+                  Custom Groups
                 </Link>
               </li>
               <li>
@@ -66,12 +67,12 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Get in Touch</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li>Email: info@wghatstours.com</li>
+              <li>Email: info@wildoraexpeditions.com</li>
               <li>Phone: +91 98765 43210</li>
               <li>WhatsApp: +91 98765 43210</li>
               <li className="pt-2">
-                <Link href="/contact" className="text-[#c084fc] hover:text-[#a855f7] font-medium">
-                  Send us a message →
+                <Link href="/contact" className="text-[#ea580c] hover:text-[#c2410c] font-medium">
+                  Send us a message -&gt;
                 </Link>
               </li>
             </ul>
@@ -79,9 +80,9 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-300">
-          <p>&copy; {new Date().getFullYear()} Western Ghats Nature Tours. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Wildora Expeditions. All rights reserved.</p>
           <p className="mt-2">
-            Committed to ethical wildlife tourism and conservation education.
+            Committed to ethical wildlife tourism, local expertise, and low-impact travel.
           </p>
         </div>
       </div>

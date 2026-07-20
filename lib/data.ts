@@ -1,4 +1,4 @@
-// Data for Western Ghats Nature Tours
+// Data for Wildora Expeditions
 
 export interface Trip {
   id: string;
@@ -10,12 +10,34 @@ export interface Trip {
   season: string;
   groupSize: string;
   price: string;
+  priceUSD?: string;
+  nextDeparture?: string;
+  spotsLeft?: number;
+  targetSpecies?: string;
+  region?: string;
   highlights: string[];
   itinerary: { day: number; title: string; description: string }[];
   included: string[];
   toBring: string[];
   learningOutcomes: string[];
   suitableFor: string[];
+}
+
+export interface Service {
+  id: string;
+  title: string;
+  tagline: string;
+  description: string;
+  forWho: string;
+  icon: 'guide' | 'camera' | 'moon' | 'map' | 'family' | 'leaf' | 'groups' | 'school';
+}
+
+export interface Review {
+  name: string;
+  country: string;
+  rating: number;
+  text: string;
+  trip: string;
 }
 
 export interface Expert {
@@ -42,302 +64,349 @@ export interface Species {
 
 export const trips: Trip[] = [
   {
-    id: 'shola-endemic-expedition',
-    title: 'Shola Forest Endemic Expedition',
-    description: 'Explore the unique shola-grassland mosaic ecosystem and discover species found nowhere else on Earth.',
+    id: 'central-india-big-cats',
+    title: 'Central India Big Cats & Forest Safari',
+    description: 'A wildlife holiday through tiger country, dry forests, river edges, meadows, and bird-rich buffer zones.',
     duration: '7 days / 6 nights',
-    difficulty: 'Moderate',
-    focus: ['Birds', 'Flora', 'General Ecology'],
-    season: 'October to March',
-    groupSize: 'Max 10 participants',
-    price: '₹45,000 per person',
+    difficulty: 'Easy',
+    focus: ['Tigers', 'Leopards', 'Forest birds'],
+    season: 'October to June',
+    groupSize: 'Max 10 guests',
+    price: 'Rs 58,000 per person',
+    priceUSD: 'approx. US$695 / GBP 550',
+    nextDeparture: '15 November 2026',
+    spotsLeft: 4,
+    targetSpecies: 'Tigers, leopards, wild dogs, owls, raptors',
+    region: 'Central India forests',
     highlights: [
-      'Explore pristine shola forests and grasslands',
-      'Spot endemic birds including Nilgiri Flycatcher and White-bellied Shortwing',
-      'Learn about montane ecosystem dynamics',
-      'Night walks for amphibians and nocturnal mammals',
-      'Botanical walks focusing on endemic flora'
+      'Jeep safaris in prime tiger and leopard habitat',
+      'Birding and nature walks in lodge grounds and buffer forests',
+      'Evening sessions for owls, nightjars, civets, and forest sounds',
+      'Comfortable lodges, local food, and relaxed downtime between drives',
+      'Ethical viewing with guides who understand animal behaviour and park rules'
     ],
     itinerary: [
       {
         day: 1,
-        title: 'Arrival and Orientation',
-        description: 'Arrive in the Western Ghats, settle into accommodation, and attend evening orientation session on shola ecosystems and trip safety.'
+        title: 'Arrival in Tiger Country',
+        description: 'Arrive, settle into your lodge, meet your naturalist, and take a short birding walk near the property.'
       },
       {
         day: 2,
-        title: 'Shola Forest Introduction',
-        description: 'Morning bird walk in shola patches. Afternoon session on forest ecology and endemic species. Evening discussion on conservation challenges.'
+        title: 'First Safari Drives',
+        description: 'Morning and afternoon jeep safaris focused on tracks, calls, habitat signs, and patient big-cat viewing.'
       },
       {
         day: 3,
-        title: 'Grassland Exploration',
-        description: 'Full day exploring the grassland-forest interface. Focus on habitat specialization and species adaptations.'
+        title: 'Birds, Meadows, and Waterholes',
+        description: 'Explore different safari zones with time for raptors, woodland birds, deer, wild boar, and possible predator movement near water.'
       },
       {
         day: 4,
-        title: 'Endemic Birds Focus',
-        description: 'Dedicated birding day targeting Western Ghats endemics. Learn bird identification techniques and behavior observation.'
+        title: 'Slow Wildlife Day',
+        description: 'A lighter day with optional village, river, or lodge-ground birding between safari sessions.'
       },
       {
         day: 5,
-        title: 'Flora and Invertebrates',
-        description: 'Botanical walk with focus on endemic trees and shrubs. Afternoon session on butterflies and other invertebrates.'
+        title: 'Leopards and Forest Edges',
+        description: 'Search rocky edges, dry forest, and grassland mosaics for leopards, sloth bears, owls, and smaller mammals.'
       },
       {
         day: 6,
-        title: 'Night Ecology',
-        description: 'Day for rest or optional activities. Evening amphibian survey and night walk for nocturnal wildlife.'
+        title: 'Final Full Safari Day',
+        description: 'Use the final full day to revisit the most productive habitats and refine the group checklist.'
       },
       {
         day: 7,
-        title: 'Synthesis and Departure',
-        description: 'Morning wrap-up session synthesizing learning. Departure after lunch.'
+        title: 'Breakfast Review and Departure',
+        description: 'Review sightings, photographs, and route notes before departure after breakfast.'
       }
     ],
     included: [
-      'Accommodation in eco-lodges',
-      'All meals (vegetarian)',
-      'Expert guide throughout',
-      'Field equipment (binoculars, field guides)',
-      'Transportation during trip',
-      'Entry permits'
+      'Wildlife lodge accommodation',
+      'All meals, with vegetarian-friendly options',
+      'Expert naturalist guide throughout',
+      'Safari vehicle coordination where included in the plan',
+      'Transportation during the trip',
+      'Park entry and permit guidance'
     ],
     toBring: [
-      'Comfortable walking shoes',
-      'Rain jacket and warm layers',
-      'Personal water bottle',
-      'Sunscreen and hat',
+      'Neutral-coloured comfortable clothing',
+      'Light jacket for early morning drives',
+      'Hat, sunglasses, and sunscreen',
       'Personal medications',
-      'Notebook and pen',
-      'Camera (optional)'
+      'Binoculars if you have them',
+      'Camera or phone for photography'
     ],
     learningOutcomes: [
-      'Understand shola-grassland ecosystem dynamics',
-      'Identify key endemic bird species',
-      'Recognize major plant families of the Western Ghats',
-      'Appreciate conservation challenges and solutions',
-      'Develop field observation skills'
+      'Enjoy ethical big-cat viewing across varied forest habitats',
+      'Understand animal tracks, alarm calls, and safari fieldcraft',
+      'Leave with a personal wildlife checklist and route notes',
+      'Balance safari intensity with rest, food, and comfortable travel',
+      'See India beyond a single habitat or species'
     ],
     suitableFor: [
-      'Nature enthusiasts',
-      'Birders',
-      'College students',
-      'Teachers',
-      'Families with teenagers'
+      'International visitors',
+      'Families',
+      'First-time safari guests',
+      'Photographers',
+      'Wildlife enthusiasts'
     ]
   },
   {
-    id: 'herp-diversity-course',
-    title: 'Herpetological Diversity Course',
-    description: 'An intensive field course focused on the incredible diversity of reptiles and amphibians in the Western Ghats.',
+    id: 'monsoon-rainforest-nights',
+    title: 'Monsoon Rainforest Nights & Endemics',
+    description: 'A guided rainforest experience for frogs, reptiles, endemic birds, butterflies, waterfalls, spice country, and forest nights.',
     duration: '5 days / 4 nights',
     difficulty: 'Moderate',
-    focus: ['Reptiles', 'Amphibians'],
+    focus: ['Frogs', 'Reptiles', 'Rainforest birds'],
     season: 'June to September (monsoon)',
-    groupSize: 'Max 12 participants',
-    price: '₹38,000 per person',
+    groupSize: 'Max 12 guests',
+    price: 'Rs 38,000 per person',
+    priceUSD: 'approx. US$460 / GBP 365',
+    nextDeparture: '22 August 2026',
+    spotsLeft: 6,
+    targetSpecies: 'Frogs, geckos, pit vipers, hornbills, forest butterflies',
+    region: 'Indian rainforests',
     highlights: [
-      'Survey frogs during peak breeding season',
-      'Learn safe snake observation techniques',
-      'Understand amphibian conservation',
-      'Night surveys in streams and forests',
-      'Hands-on species identification training'
+      'Guided night walks for frogs, geckos, snakes, owls, moths, and rainforest soundscapes',
+      'Stream and forest-edge visits during peak amphibian activity',
+      'Waterfall, viewpoint, spice, and plantation stops between wildlife sessions',
+      'Safe snake observation from respectful distances',
+      'Monsoon photography support for low light, rain, and macro subjects'
     ],
     itinerary: [
       {
         day: 1,
-        title: 'Introduction to Western Ghats Herpetofauna',
-        description: 'Arrival, orientation, and evening presentation on reptile and amphibian diversity.'
+        title: 'Arrival and Rainforest Welcome',
+        description: 'Arrive, settle in, meet your guide, and take a short evening walk if weather allows.'
       },
       {
         day: 2,
-        title: 'Amphibian Survey Techniques',
-        description: 'Morning lecture on frog families. Evening stream survey for breeding amphibians.'
+        title: 'Rainforest Streams After Dark',
+        description: 'A slower morning, forest-edge exploration after lunch, and a guided night walk along frog-rich stream habitat.'
       },
       {
         day: 3,
-        title: 'Forest Reptiles',
-        description: 'Day survey for lizards and snakes. Learn about arboreal and terrestrial species. Night survey.'
+        title: 'Reptiles, Waterfalls, and Viewpoints',
+        description: 'Daytime search for lizards and forest birds, followed by a waterfall or viewpoint visit and another optional night session.'
       },
       {
         day: 4,
-        title: 'Endemic Species Focus',
-        description: 'Target endemic and threatened species. Discuss conservation status and threats.'
+        title: 'Endemic Wildlife Focus',
+        description: 'Target locally special frogs, birds, butterflies, and reptiles, with a relaxed evening checklist session.'
       },
       {
         day: 5,
-        title: 'Wrap-up and Departure',
-        description: 'Morning review session. Species checklist compilation. Departure after lunch.'
+        title: 'Breakfast Review and Departure',
+        description: 'Review sightings and photo highlights over breakfast before departure after lunch.'
       }
     ],
     included: [
       'Accommodation',
       'All meals',
-      'Expert herpetologist guide',
-      'Field equipment',
-      'Transportation',
-      'Permits'
+      'Expert naturalist guide',
+      'Shared torches and field references',
+      'Transportation during the trip',
+      'Permits and local coordination'
     ],
     toBring: [
       'Sturdy waterproof boots',
-      'Rain gear',
+      'Reliable rain gear',
       'Headlamp',
-      'Long pants and full sleeves',
+      'Long pants and full-sleeve shirts',
       'Insect repellent',
-      'Field notebook'
+      'Dry bag for electronics'
     ],
     learningOutcomes: [
-      'Identify major amphibian and reptile families',
-      'Understand breeding ecology',
-      'Learn safe wildlife observation',
-      'Recognize conservation threats',
-      'Develop survey skills'
+      'Experience tropical rainforest at its most alive',
+      'Observe frogs, reptiles, birds, and insects safely with a specialist guide',
+      'Build a personal list of monsoon species and photo subjects',
+      'Understand the rainforest by walking it, listening to it, and watching it after dark',
+      'Balance adventurous night walks with enough rest between sessions'
     ],
     suitableFor: [
-      'Herpetology students',
       'Wildlife enthusiasts',
-      'Researchers',
-      'Advanced naturalists'
+      'Adventure travellers',
+      'Photographers',
+      'Advanced naturalists',
+      'Small private groups'
     ]
   },
   {
-    id: 'butterfly-biodiversity-workshop',
-    title: 'Butterfly Biodiversity Workshop',
-    description: 'Discover the stunning butterfly diversity of the Western Ghats through field observation and photography.',
-    duration: '4 days / 3 nights',
-    difficulty: 'Easy',
-    focus: ['Butterflies', 'Flora'],
-    season: 'October to February',
-    groupSize: 'Max 10 participants',
-    price: '₹28,000 per person',
+    id: 'himalaya-birds-mountain-wildlife',
+    title: 'Himalaya Birds & Mountain Wildlife',
+    description: 'A scenic Himalayan nature break combining pheasants, high-altitude birds, forest mammals, village landscapes, and mountain views.',
+    duration: '6 days / 5 nights',
+    difficulty: 'Moderate',
+    focus: ['Himalayan birds', 'Mountain mammals', 'Forest walks'],
+    season: 'March to May and October to November',
+    groupSize: 'Max 10 guests',
+    price: 'Rs 52,000 per person',
+    priceUSD: 'approx. US$625 / GBP 495',
+    nextDeparture: '18 April 2027',
+    spotsLeft: 8,
+    targetSpecies: 'Pheasants, laughingthrushes, woodpeckers, deer, martens',
+    region: 'Indian Himalaya',
     highlights: [
-      'Learn butterfly identification',
-      'Photograph endemic species',
-      'Understand plant-butterfly relationships',
-      'Visit diverse habitats',
-      'Create personal field checklist'
+      'Dawn birding for Himalayan specialities in oak, pine, and rhododendron forests',
+      'Scenic village trails, viewpoints, and mountain photography stops',
+      'Flexible walking pace with warm meals and rest breaks built in',
+      'Search for mammals, raptors, woodpeckers, and mixed feeding flocks',
+      'Custom extensions possible for snow leopard country, red panda habitat, or higher passes'
     ],
     itinerary: [
       {
         day: 1,
-        title: 'Butterfly Basics',
-        description: 'Arrival and introduction to butterfly diversity and identification.'
+        title: 'Arrival in the Foothills',
+        description: 'Arrive, settle in, and enjoy a short acclimatisation walk for common mountain birds.'
       },
       {
         day: 2,
-        title: 'Forest Butterflies',
-        description: 'Morning survey in evergreen forest. Afternoon session on photography techniques.'
+        title: 'Oak Forest Birding',
+        description: 'Early walk through oak and mixed forest, with time for woodpeckers, laughingthrushes, flycatchers, and raptors.'
       },
       {
         day: 3,
-        title: 'Grassland and Edge Species',
-        description: 'Explore open habitats. Learn about host plants and butterfly life cycles.'
+        title: 'Ridge Trails and Viewpoints',
+        description: 'Follow a scenic ridge route with stops for birds, landscapes, tea, and local village life.'
       },
       {
         day: 4,
-        title: 'Review and Departure',
-        description: 'Morning wrap-up. Species list review. Departure after lunch.'
+        title: 'Pheasant and Mammal Search',
+        description: 'Target shy forest birds and mammals during the most active hours, with a slower afternoon for rest or photography.'
+      },
+      {
+        day: 5,
+        title: 'High Forest Day',
+        description: 'Visit a higher forest belt if conditions allow, focusing on mixed flocks, raptors, and mountain plant life.'
+      },
+      {
+        day: 6,
+        title: 'Final Walk and Departure',
+        description: 'Short morning walk, checklist review, and departure after breakfast.'
       }
     ],
     included: [
-      'Accommodation',
+      'Mountain lodge or guesthouse accommodation',
       'Meals',
-      'Expert lepidopterist',
+      'Expert bird and wildlife guide',
       'Field guides',
-      'Transportation',
-      'Permits'
+      'Transportation during the trip',
+      'Local access coordination'
     ],
     toBring: [
-      'Light hiking shoes',
+      'Comfortable walking shoes',
+      'Warm layers',
       'Hat and sunscreen',
-      'Camera with macro capability',
       'Binoculars',
-      'Notebook',
+      'Camera or phone',
       'Water bottle'
     ],
     learningOutcomes: [
-      'Identify common butterfly families',
-      'Understand butterfly ecology',
-      'Learn photography basics',
-      'Recognize endemic species',
-      'Appreciate biodiversity patterns'
+      'Enjoy Himalayan birds and mammals at a comfortable travel pace',
+      'Recognize key mountain habitats and seasonal wildlife patterns',
+      'Improve birding and wildlife observation in forested terrain',
+      'Experience local culture and scenery alongside wildlife',
+      'Take home a personal checklist and practical viewing tips'
     ],
     suitableFor: [
-      'Beginners welcome',
-      'Photographers',
-      'Families',
+      'Birders',
       'Nature lovers',
-      'Students'
+      'Couples and friends',
+      'Photographers',
+      'Slow travellers'
     ]
   }
 ];
 
 export const experts: Expert[] = [
   {
-    id: 'dr-anand-kumar',
-    name: 'Dr. Anand Kumar',
-    qualifications: 'PhD in Tropical Forest Ecology',
-    specialization: 'Forest Ecology and Conservation',
-    experience: '25+ years in Western Ghats research and education',
-    bio: 'Dr. Kumar has dedicated over two decades to studying and teaching about Western Ghats ecosystems. His research focuses on the ecological relationships within shola forests and the impacts of climate change on montane ecosystems. He has guided hundreds of students and researchers through the forests he calls home.'
+    id: 'dr-a-relton',
+    name: 'Dr. A. Relton',
+    qualifications: 'Associate Professor & Head, Department of Social Work, Bishop Heber College',
+    specialization: 'Birds and reptiles; field ornithology',
+    experience: 'Lead author, "Birds of Bishop Heber College"',
+    bio: 'A naturalist known for his long-standing passion for birds and reptiles, Dr. Relton has led wildlife observation, bird documentation, and nature education work for many years. On tour, he makes serious field knowledge feel warm, practical, and accessible.'
   },
   {
-    id: 'priya-nair',
-    name: 'Priya Nair',
-    qualifications: 'PhD in Herpetology',
-    specialization: 'Reptiles and Amphibians',
-    experience: '15 years studying Western Ghats herpetofauna',
-    bio: 'Priya\'s passion for reptiles and amphibians has led to the documentation of several new species in the Western Ghats. She combines rigorous scientific methodology with enthusiastic teaching, making even the most secretive creatures accessible to learners. Her work on frog conservation has informed policy at state and national levels.'
+    id: 'a-daisy-caroline-mary',
+    name: 'A. Daisy Caroline Mary',
+    qualifications: 'Lecturer, Department of Environmental Sciences; Programme Officer, Heber Au Sable Institute of Environmental Studies',
+    specialization: 'Butterflies, field ecology and environmental education',
+    experience: 'Author, "Butterflies of Bishop Heber College"',
+    bio: 'Daisy has spent years in the field with birds and butterflies, and has written accessible natural history material for beginners and students. Her tours are patient and observant, with clear explanations for guests who want depth without a formal classroom feel.'
   },
   {
-    id: 'ravi-shankar',
-    name: 'Ravi Shankar',
-    qualifications: 'MSc in Ornithology',
-    specialization: 'Bird Ecology and Behavior',
-    experience: '20 years of birding and bird research',
-    bio: 'Ravi has been birding in the Western Ghats since childhood. His encyclopedic knowledge of bird calls and behaviors makes him an exceptional guide for birders of all levels. He has contributed to numerous bird atlases and conservation assessments, and his patient teaching style has inspired many new birders.'
-  },
-  {
-    id: 'dr-meera-patel',
-    name: 'Dr. Meera Patel',
-    qualifications: 'PhD in Botany',
-    specialization: 'Endemic Flora and Plant Ecology',
-    experience: '18 years studying Western Ghats plant diversity',
-    bio: 'Dr. Patel\'s research on endemic plants has contributed to our understanding of speciation and adaptation in tropical mountains. She brings plants to life through stories of their evolution, ecology, and cultural significance. Her field courses are known for combining rigorous botany with accessible teaching.'
+    id: 'r-carlton',
+    name: 'R. Carlton',
+    qualifications: 'B.Sc. Zoology; President, Nature Club, Bishop Heber College',
+    specialization: 'Wildlife photography and field surveys',
+    experience: 'Co-author of campus bird and butterfly guides',
+    bio: "A zoology graduate and nature-club leader, Carlton brings energy and a photographer's eye to the field. He has helped coordinate bird surveys, wildlife censuses, and eco-camps, and supports guests who want better field photos and careful observation."
   }
 ];
 
 export const species: Species[] = [
   {
-    id: 'nilgiri-flycatcher',
-    commonName: 'Nilgiri Flycatcher',
-    scientificName: 'Eumyias albicaudatus',
-    category: 'Birds',
-    endemic: true,
-    threatened: false,
-    habitat: 'Shola forests above 1200m',
-    fieldNote: 'Often seen sallying for insects from exposed perches in the canopy.'
+    id: 'bengal-tiger',
+    commonName: 'Bengal Tiger',
+    scientificName: 'Panthera tigris tigris',
+    category: 'Mammals',
+    endemic: false,
+    threatened: true,
+    habitat: 'Forests, grasslands, mangroves, and riverine habitats',
+    fieldNote: 'Best observed through patient safari drives, track reading, and listening for alarm calls.'
   },
   {
-    id: 'malabar-trogon',
-    commonName: 'Malabar Trogon',
-    scientificName: 'Harpactes fasciatus',
-    category: 'Birds',
-    endemic: true,
-    threatened: false,
-    habitat: 'Evergreen and semi-evergreen forests',
-    fieldNote: 'Look for this stunning bird perched motionless in the mid-canopy.'
-  },
-  {
-    id: 'nilgiri-marten',
-    commonName: 'Nilgiri Marten',
-    scientificName: 'Martes gwatkinsii',
+    id: 'asiatic-lion',
+    commonName: 'Asiatic Lion',
+    scientificName: 'Panthera leo persica',
     category: 'Mammals',
     endemic: true,
     threatened: true,
-    habitat: 'Shola forests and adjacent areas',
-    fieldNote: 'This elusive carnivore is most active in early morning hours.'
+    habitat: 'Dry deciduous forest and scrubland',
+    fieldNote: 'A rare Indian big cat best seen with regulated local guiding in its native landscape.'
+  },
+  {
+    id: 'snow-leopard',
+    commonName: 'Snow Leopard',
+    scientificName: 'Panthera uncia',
+    category: 'Mammals',
+    endemic: false,
+    threatened: true,
+    habitat: 'High Himalayan cold desert and rocky slopes',
+    fieldNote: 'Winter tracking requires patience, optics, local spotters, and a tolerance for cold conditions.'
+  },
+  {
+    id: 'great-hornbill',
+    commonName: 'Great Hornbill',
+    scientificName: 'Buceros bicornis',
+    category: 'Birds',
+    endemic: false,
+    threatened: true,
+    habitat: 'Mature evergreen and moist forests',
+    fieldNote: 'Listen for heavy wingbeats and watch fruiting trees in the early morning.'
+  },
+  {
+    id: 'himalayan-monal',
+    commonName: 'Himalayan Monal',
+    scientificName: 'Lophophorus impejanus',
+    category: 'Birds',
+    endemic: false,
+    threatened: false,
+    habitat: 'Himalayan forests and alpine edges',
+    fieldNote: 'Dawn and quiet ridge walks give the best chance of seeing this iridescent pheasant.'
+  },
+  {
+    id: 'king-cobra',
+    commonName: 'King Cobra',
+    scientificName: 'Ophiophagus hannah',
+    category: 'Reptiles',
+    endemic: false,
+    threatened: true,
+    habitat: 'Rainforests, plantations, and forest edges',
+    fieldNote: 'Observed only from a safe distance with expert local guidance and no disturbance.'
   },
   {
     id: 'malabar-gliding-frog',
@@ -350,26 +419,6 @@ export const species: Species[] = [
     fieldNote: 'Watch for foam nests on leaves overhanging streams during monsoon.'
   },
   {
-    id: 'hump-nosed-pit-viper',
-    commonName: 'Hump-nosed Pit Viper',
-    scientificName: 'Hypnale hypnale',
-    category: 'Reptiles',
-    endemic: true,
-    threatened: false,
-    habitat: 'Forest floor and plantation edges',
-    fieldNote: 'A small, well-camouflaged viper. Observe from a safe distance.'
-  },
-  {
-    id: 'travancore-tortoise',
-    commonName: 'Travancore Tortoise',
-    scientificName: 'Indotestudo travancorica',
-    category: 'Reptiles',
-    endemic: true,
-    threatened: true,
-    habitat: 'Evergreen forests with bamboo',
-    fieldNote: 'This threatened species requires intact forest habitat.'
-  },
-  {
     id: 'southern-birdwing',
     commonName: 'Southern Birdwing',
     scientificName: 'Troides minos',
@@ -377,79 +426,200 @@ export const species: Species[] = [
     endemic: true,
     threatened: false,
     habitat: 'Forest edges and clearings',
-    fieldNote: 'India\'s largest butterfly, often seen flying high along forest edges.'
+    fieldNote: "India's largest butterfly, often seen flying high along forest edges."
   },
   {
-    id: 'malabar-tree-nymph',
-    commonName: 'Malabar Tree Nymph',
-    scientificName: 'Idea malabarica',
-    category: 'Butterflies',
-    endemic: true,
-    threatened: false,
-    habitat: 'Dense evergreen forests',
-    fieldNote: 'This large, graceful butterfly floats slowly through the understory.'
+    id: 'red-panda',
+    commonName: 'Red Panda',
+    scientificName: 'Ailurus fulgens',
+    category: 'Mammals',
+    endemic: false,
+    threatened: true,
+    habitat: 'Eastern Himalayan temperate forest and bamboo understory',
+    fieldNote: 'Requires quiet walking, local trackers, and careful timing in high-elevation forest.'
   },
   {
-    id: 'nilgiri-rhododendron',
-    commonName: 'Nilgiri Rhododendron',
-    scientificName: 'Rhododendron arboreum nilagiricum',
+    id: 'rhododendron',
+    commonName: 'Rhododendron',
+    scientificName: 'Rhododendron spp.',
     category: 'Flora',
-    endemic: true,
+    endemic: false,
     threatened: false,
-    habitat: 'Shola forest margins',
-    fieldNote: 'Spectacular red blooms in February-March attract sunbirds and other pollinators.'
-  },
-  {
-    id: 'strobilanthes',
-    commonName: 'Kurinji (Neelakurinji)',
-    scientificName: 'Strobilanthes kunthiana',
-    category: 'Flora',
-    endemic: true,
-    threatened: false,
-    habitat: 'Montane grasslands',
-    fieldNote: 'Famous for mass flowering once every 12 years, carpeting hillsides in blue.'
+    habitat: 'Himalayan and highland forests',
+    fieldNote: 'Spectacular blooms in spring attract birds, insects, and photographers.'
   }
 ];
 
 export const faqs = [
   {
-    question: 'What is the best time to visit the Western Ghats?',
-    answer: 'The best time depends on your interests. October to March offers pleasant weather and excellent birding. June to September (monsoon) is ideal for amphibian surveys, though travel can be challenging. We tailor our trips to seasonal highlights.'
+    question: 'Do you cover wildlife regions across India?',
+    answer: 'Yes. Wildora Expeditions can plan guided wildlife experiences across India, including central Indian tiger reserves, Himalayan forests, deserts, wetlands, mangroves, rainforests, grasslands, and coastal habitats.'
+  },
+  {
+    question: 'What is the best time to visit India for wildlife?',
+    answer: 'The best time depends on the region and target species. October to March is comfortable for many birding, wetland, desert, and family trips. March to June is strong for many tiger safaris. June to September is ideal for monsoon rainforest life, frogs, reptiles, waterfalls, and lush landscapes.'
+  },
+  {
+    question: 'Do I need previous wildlife knowledge?',
+    answer: 'No. Most tours are beginner-friendly. Our guides help you see, identify, and enjoy wildlife at your level. Experienced naturalists can still request target species, specialist routes, and deeper interpretation.'
+  },
+  {
+    question: 'How academic are the tours?',
+    answer: 'The tours are experience-led, not lecture-led. Guides explain what you are seeing in the field, but the emphasis is on wildlife watching, photography, local landscapes, food, rest, and comfortable travel.'
   },
   {
     question: 'What level of fitness is required?',
-    answer: 'Most of our trips involve moderate walking on forest trails. Difficulty levels are clearly marked for each trip. We maintain a comfortable pace with frequent stops for observation and learning. If you have specific concerns, please contact us to discuss options.'
+    answer: 'It depends on the region. Many safari and wetland trips are easy. Rainforest, desert, and Himalayan routes may involve more walking or weather exposure. We mark difficulty clearly and can tailor the pace.'
   },
   {
-    question: 'Are the trips safe? What about snakes?',
-    answer: 'Safety is our top priority. Our guides are trained in wilderness first aid and wildlife safety. While the Western Ghats is home to venomous snakes, incidents are extremely rare when proper precautions are followed. We teach safe observation techniques and maintain appropriate distances from all wildlife.'
+    question: 'Can you provide guided day tours?',
+    answer: 'Yes. Where local logistics allow, we offer half-day and full-day guiding for birds, butterflies, safaris, forest trails, wetlands, night walks, and target species.'
+  },
+  {
+    question: 'Can you customize a programme for our group?',
+    answer: 'Yes. We design custom programmes for families, private groups, international visitors, photographers, companies, schools, universities, and special-interest clubs. Share your dates, region, group size, comfort level, and target interests.'
+  },
+  {
+    question: 'Do you cater to international visitors?',
+    answer: 'Yes. Many guests travel from the UK, Europe, North America, Australia, and elsewhere. We can help plan around major gateways such as Delhi, Mumbai, Bengaluru, Kochi, Chennai, Kolkata, Jaipur, Guwahati, and Nagpur, depending on the route.'
+  },
+  {
+    question: 'Are the trips safe? What about snakes and large mammals?',
+    answer: 'Safety is central to every route. Our guides explain safe wildlife observation, maintain distance from animals, follow park rules, and avoid risky handling or disturbance. Wildlife encounters are planned with local expertise and appropriate caution.'
   },
   {
     question: 'What accommodation can I expect?',
-    answer: 'We use comfortable eco-lodges and guesthouses with clean rooms and basic amenities. Accommodation emphasizes low environmental impact and support for local communities. All locations are chosen for their proximity to quality field sites.'
+    answer: 'We use comfortable wildlife lodges, eco-lodges, guesthouses, camps, and nature-friendly stays with clean rooms and practical amenities. Locations are chosen for comfort, field access, and support for local communities.'
   },
   {
     question: 'Are meals provided? Can you accommodate dietary restrictions?',
-    answer: 'All meals are included and feature fresh, locally sourced vegetarian food. We can accommodate most dietary restrictions with advance notice. Please inform us of any allergies or special requirements when booking.'
-  },
-  {
-    question: 'Do I need previous knowledge or experience?',
-    answer: 'No previous experience is required for most trips. Our educational approach is designed for all levels, from complete beginners to experienced naturalists. We tailor explanations to the group\'s knowledge level.'
-  },
-  {
-    question: 'What is your group size?',
-    answer: 'We keep groups small (typically 8-12 participants) to minimize environmental impact and maximize learning opportunities. Small groups allow for personal attention and better wildlife observation.'
+    answer: 'All multi-day trips include meals, usually fresh and locally sourced with vegetarian-friendly options. We can accommodate most dietary restrictions with advance notice.'
   },
   {
     question: 'How do I book a trip?',
-    answer: 'Use our contact form or email us directly with your preferred dates and trip. We\'ll respond within 24 hours with availability and booking instructions. A deposit is required to confirm your spot.'
-  },
-  {
-    question: 'What is your cancellation policy?',
-    answer: 'Cancellations more than 30 days before departure receive a full refund minus processing fees. Cancellations 15-30 days before departure receive 50% refund. Within 15 days, no refund is available. We recommend travel insurance.'
-  },
-  {
-    question: 'Can you customize trips for university groups?',
-    answer: 'Absolutely. We regularly work with universities to create custom field courses aligned with specific learning objectives. Contact us to discuss your requirements, timeline, and student group size.'
+    answer: 'Use the contact form, email, or WhatsApp with your preferred dates, group size, target region, interests, and comfort level. We will respond with availability, a suggested route, and booking instructions.'
   }
+];
+
+export const services: Service[] = [
+  {
+    id: 'guided-day-tours',
+    title: 'Guided Day Tours',
+    tagline: 'Birding, safaris, trails, and wetlands',
+    description: 'Half-day and full-day guiding for guests already in a region, with routes matched to the season, local wildlife, and your pace.',
+    forWho: 'Travellers, resort guests, families',
+    icon: 'guide'
+  },
+  {
+    id: 'private-custom',
+    title: 'Private & Tailor-Made Tours',
+    tagline: 'Your dates, your region, your comfort level',
+    description: 'A bespoke India itinerary built around your interests, fitness, wish-list species, preferred accommodation, and available travel window.',
+    forWho: 'Couples, friends, solo travellers',
+    icon: 'map'
+  },
+  {
+    id: 'target-species',
+    title: 'Target Species Routes',
+    tagline: 'Wildlife with a clear purpose',
+    description: 'Plan routes for tigers, leopards, elephants, hornbills, pheasants, red pandas, snow leopards, frogs, butterflies, and other India wildlife highlights.',
+    forWho: 'Birders, naturalists, photographers',
+    icon: 'leaf'
+  },
+  {
+    id: 'photography',
+    title: 'Wildlife Photography Walks',
+    tagline: 'Big cats, birds, macro, and fieldcraft',
+    description: 'Patient field support for ethical photography of mammals, birds, frogs, butterflies, forest details, landscapes, and safari subjects.',
+    forWho: 'Photographers of all levels',
+    icon: 'camera'
+  },
+  {
+    id: 'night-safari',
+    title: 'Night Walks & Spotlighting',
+    tagline: 'The wild after dark',
+    description: 'Guided night sessions for frogs, geckos, owls, moths, civets, insects, and forest soundscapes, run only where conditions and rules allow.',
+    forWho: 'Add-on for suitable routes',
+    icon: 'moon'
+  },
+  {
+    id: 'culture-landscape',
+    title: 'Culture & Landscape Trails',
+    tagline: 'People, places, and wild country',
+    description: 'Add villages, tea, coffee, spice, desert, river, craft, coastal, or mountain experiences between wildlife sessions.',
+    forWho: 'Families and slow travellers',
+    icon: 'family'
+  },
+  {
+    id: 'custom-groups',
+    title: 'Custom Group Programmes',
+    tagline: 'Made for your group',
+    description: 'Flexible programmes for private groups, clubs, companies, families, schools, universities, and international travel groups.',
+    forWho: 'Groups of 6 or more',
+    icon: 'groups'
+  },
+  {
+    id: 'school-camps',
+    title: 'School & University Options',
+    tagline: 'Academic when you need it',
+    description: 'Field courses, student camps, and curriculum-linked modules remain available on request, but they are built as custom programmes.',
+    forWho: 'Schools and universities',
+    icon: 'school'
+  }
+];
+
+export const reviews: Review[] = [
+  {
+    name: 'Michael & Anne Petersen',
+    country: 'Denmark',
+    rating: 5,
+    text: 'We wanted more than one park and Wildora built a route that made sense: forests, birds, big mammals, and enough rest between drives.',
+    trip: 'Central India Big Cats & Forest Safari'
+  },
+  {
+    name: 'Laura Bianchi',
+    country: 'Italy',
+    rating: 5,
+    text: 'The monsoon rainforest nights were unforgettable. Safe, expertly led, and the photography guidance was worth the trip on its own.',
+    trip: 'Monsoon Rainforest Nights & Endemics'
+  },
+  {
+    name: 'James Carter',
+    country: 'United States',
+    rating: 5,
+    text: 'Seamless from the first email. Clear routing, airport pickup, a realistic species list, and guides who knew exactly where to slow down.',
+    trip: 'Custom India Wildlife Tour'
+  },
+  {
+    name: 'Priya Sharma',
+    country: 'India',
+    rating: 5,
+    text: 'Our family wanted nature without a classroom feel. The team balanced birds, mammals, local food, and downtime beautifully.',
+    trip: 'Private Family Tour'
+  },
+  {
+    name: 'Rajesh Menon',
+    country: 'India',
+    rating: 5,
+    text: 'The small group size made all the difference. We could ask questions, take our time observing, and still feel like we were on holiday.',
+    trip: 'Himalaya Birds & Mountain Wildlife'
+  },
+  {
+    name: 'Dr. Sarah Williams',
+    country: 'United Kingdom',
+    rating: 5,
+    text: 'A rich India wildlife experience without heavy lectures. The guide brought habitats, behaviour, and conservation stories alive in the field.',
+    trip: 'Custom Naturalist Tour'
+  }
+];
+
+export const trustSignals = [
+  'Guided tours across India',
+  'Forests, deserts, wetlands, mountains, coasts',
+  'Target species by region and season',
+  'Small groups, max 10-12',
+  'International visitor planning',
+  'Leisure-first nature holidays',
+  'Custom programmes on request',
+  'Ethical, low-impact fieldcraft'
 ];

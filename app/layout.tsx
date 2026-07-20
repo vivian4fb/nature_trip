@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FloatingCTA from "@/components/FloatingCTA";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,9 +16,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Western Ghats Nature Tours | Educational Wildlife Trips",
-  description: "Educational nature trips in the Western Ghats led by PhD experts. Explore endemic species, birding, herpetology, and tropical forest ecology in South India's UNESCO biodiversity hotspot.",
-  keywords: ["western ghats", "nature tour", "educational tour", "birding trip", "wildlife tour", "endemic species", "south india", "field course"],
+  title: "Wildora Expeditions | Expert-Led India Wildlife Trips",
+  description: "Small-group guided wildlife holidays across India for public travellers, families, photographers, birders and international guests. Tiger safaris, Himalayan birding, wetlands, deserts, rainforests, monsoon frogs, butterflies, night walks and custom group programmes.",
+  keywords: [
+    "india wildlife tours", "india tiger safari", "india birding tour",
+    "india herping tour", "monsoon herping india", "india butterfly tour",
+    "guided nature tour india", "india private wildlife tour", "india endemic species tour",
+    "himalaya birding", "central india safari", "india family wildlife holiday"
+  ],
+  openGraph: {
+    title: "Wildora Expeditions | Expert-Led India Wildlife Trips",
+    description: "Leisure-first guided safaris, birding, herping, butterfly, rainforest, desert, wetland and mountain trips across India.",
+    type: "website",
+    locale: "en_GB",
+  },
 };
 
 export default function RootLayout({
@@ -32,6 +44,7 @@ export default function RootLayout({
       >
         <Navigation />
         {children}
+        <FloatingCTA />
         <Footer />
       </body>
     </html>
