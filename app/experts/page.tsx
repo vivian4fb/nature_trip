@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { experts } from '@/lib/data';
+import { img } from '@/lib/photos';
 
 export const metadata: Metadata = {
   title: 'Our Experts | Wildora Expeditions',
@@ -41,7 +42,17 @@ export default function ExpertsPage() {
                 } gap-8 bg-white rounded-lg shadow-md overflow-hidden p-8`}
               >
                 <div className="md:w-1/3">
-                  <div className="w-48 h-48 bg-gradient-to-br from-[#15803d] to-[#14432a] rounded-full mx-auto"></div>
+                  {expert.imageUrl ? (
+                    <img
+                      src={img(expert.imageUrl)}
+                      alt={expert.name}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-48 h-48 rounded-full mx-auto object-cover shadow-md"
+                    />
+                  ) : (
+                    <div className="w-48 h-48 bg-gradient-to-br from-[#15803d] to-[#14432a] rounded-full mx-auto"></div>
+                  )}
                 </div>
                 <div className="md:w-2/3">
                   <h3 className="text-3xl font-bold mb-2 text-[#14432a]">{expert.name}</h3>

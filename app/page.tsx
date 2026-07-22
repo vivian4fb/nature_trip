@@ -385,10 +385,20 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {experts.map((expert) => (
               <div key={expert.id} className="bg-white rounded-2xl shadow-md p-6 text-center card-lift border border-gray-100">
-                <div className="w-24 h-24 bg-gradient-to-br from-[#1b5e3f] to-[#14432a] rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
-                  {expert.name.split(' ').filter((w) => w.length > 1)[0]?.[0]}
-                  {expert.name.split(' ').filter((w) => w.length > 1)[1]?.[0]}
-                </div>
+                {expert.imageUrl ? (
+                  <img
+                    src={img(expert.imageUrl)}
+                    alt={expert.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover shadow"
+                  />
+                ) : (
+                  <div className="w-24 h-24 bg-gradient-to-br from-[#1b5e3f] to-[#14432a] rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                    {expert.name.split(' ').filter((w) => w.length > 1)[0]?.[0]}
+                    {expert.name.split(' ').filter((w) => w.length > 1)[1]?.[0]}
+                  </div>
+                )}
                 <h3 className="text-xl font-semibold mb-1 text-[#14432a]">{expert.name}</h3>
                 <p className="text-sm text-gray-600 mb-2">{expert.qualifications}</p>
                 <p className="text-sm text-[#15803d] font-medium mb-2">{expert.specialization}</p>

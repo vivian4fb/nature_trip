@@ -435,6 +435,7 @@ export const experts: Expert[] = [
     id: 'a-daisy-caroline-mary',
     name: 'Dr. A. Daisy Caroline Mary',
     qualifications: 'Former Assistant Professor of Environmental Sciences, Bishop Heber College (Autonomous), Tiruchirappalli',
+    imageUrl: '/photos/experts/daisy.webp',
     specialization: 'Environmental science, biodiversity conservation, and sustainability education',
     experience: 'Decades of university teaching, research supervision, and community environmental outreach',
     bio: 'An accomplished environmental scientist, educator, and researcher, Dr. Daisy has dedicated her career to inspiring students and communities to understand and protect the natural world. Her expertise spans environmental management, biodiversity conservation, ecosystem restoration, climate change, and sustainable development. She regularly leads environmental workshops, nature camps, and field-based learning programmes for schools, colleges, NGOs, and organizations, with a focus on connecting participants directly with nature. Her guiding conviction: "Protecting nature begins with understanding it, and education is the first step towards lasting conservation."'
