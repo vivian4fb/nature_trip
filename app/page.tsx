@@ -203,7 +203,7 @@ export default function Home() {
             <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Upcoming departures</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#14432a]">Featured Trips</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {trips.map((trip) => (
               <div key={trip.id} className="bg-white rounded-2xl shadow-md overflow-hidden card-lift flex flex-col">
                 <div className="relative h-48 bg-gradient-to-br from-[#1b5e3f] to-[#14432a] leaf-texture">
@@ -382,7 +382,7 @@ export default function Home() {
             <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">The people who guide you</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#14432a]">Meet Our Experts</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {experts.map((expert) => (
               <div key={expert.id} className="bg-white rounded-2xl shadow-md p-6 text-center card-lift border border-gray-100">
                 <div className="w-24 h-24 bg-gradient-to-br from-[#1b5e3f] to-[#14432a] rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">

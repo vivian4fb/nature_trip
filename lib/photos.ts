@@ -118,4 +118,5 @@ export const tripPhotoSlugs: Record<string, string> = {
   'central-india-big-cats': 'tigress-with-cubs',
   'monsoon-rainforest-nights': 'green-frog',
   'himalaya-birds-mountain-wildlife': 'himalayan-whistling-thrush',
+  'western-ghats-endemics': 'lion-tailed-macaque',
 };

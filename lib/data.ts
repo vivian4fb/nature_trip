@@ -317,6 +317,108 @@ export const trips: Trip[] = [
       'Photographers',
       'Slow travellers'
     ]
+  },
+  {
+    id: 'western-ghats-endemics',
+    title: 'Western Ghats Endemics Expedition',
+    description: 'A 10-day journey through the UNESCO-listed Western Ghats — rainforest bird sanctuaries, shola grasslands, and tiger country — focused on species found nowhere else on Earth.',
+    duration: '10 days / 9 nights',
+    difficulty: 'Moderate',
+    focus: ['Endemic birds', 'Endemic mammals', 'Shola & rainforest habitats'],
+    season: 'October to March (post-monsoon)',
+    groupSize: 'Max 10 guests',
+    price: 'Price on request',
+    targetSpecies: 'Lion-tailed Macaque, Nilgiri Tahr, Malabar Grey Hornbill, Sri Lanka Frogmouth',
+    region: 'Western Ghats (Kerala, Tamil Nadu & Karnataka)',
+    highlights: [
+      'Explore a UNESCO World Heritage Site and one of the world\'s eight hottest biodiversity hotspots, home to over 7,400 species',
+      'Search for 20+ endemic bird possibilities including Malabar Grey Hornbill, Sri Lanka Frogmouth, Nilgiri Laughingthrush, and sholakilis',
+      'Track endemic mammals: Lion-tailed Macaque, Nilgiri Tahr, Nilgiri Langur, and Malabar Giant Squirrel',
+      'Walk shola-grassland mosaics, montane forests, and lowland rainforest across Kerala, Tamil Nadu, and Karnataka',
+      'Finish in Bandipur Tiger Reserve with a chance of Bengal Tiger, Asian Elephant, Leopard, and Dhole'
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Arrival at Thattekad Bird Sanctuary (Kerala)',
+        description: 'Visit the Salim Ali Bird Interpretation Centre, Thattekad Bird Sanctuary, and the Periyar River. Targets: Malabar Grey Hornbill, Sri Lanka Frogmouth, Malabar Trogon, White-bellied Treepie, and Rufous Babbler. Night at Thattekad.'
+      },
+      {
+        day: 2,
+        title: 'Thattekad Bird Sanctuary',
+        description: 'A full day focused on the endemic birds of the Western Ghats in one of South India\'s richest lowland forests. Night at Thattekad.'
+      },
+      {
+        day: 3,
+        title: 'Pampadum Shola National Park',
+        description: 'Explore Pampadum Shola National Park and the Vattavada region for Nilgiri Pipit, Nilgiri Wood Pigeon, endemic orchids, rhododendrons — and, if fortunate, the elusive Nilgiri Marten. Night at Munnar.'
+      },
+      {
+        day: 4,
+        title: 'Eravikulam National Park',
+        description: 'Visit Rajamalai and the interpretation centre in the heartland of the Nilgiri Tahr. Also watch for Nilgiri Pipit, Black-and-orange Flycatcher, and Nilgiri Flycatcher. Night at Munnar.'
+      },
+      {
+        day: 5,
+        title: 'Chinnar Wildlife Sanctuary',
+        description: 'Cross into the rain-shadow forests of Chinnar for Grizzled Giant Squirrel, Indian Star Tortoise, Mugger Crocodile, and Indian Giant Flying Squirrel. Night at Chinnar.'
+      },
+      {
+        day: 6,
+        title: 'Anamalai Tiger Reserve (Top Slip – Valparai)',
+        description: 'Travel through Top Slip, the Parambikulam border, and on to Valparai. Targets: Lion-tailed Macaque, Nilgiri Langur, Malabar Giant Squirrel, and Great Hornbill. Night at Valparai.'
+      },
+      {
+        day: 7,
+        title: 'Valparai Rainforests',
+        description: 'Explore Nallamudi, Sholayar, and the tea-estate edges where rainforest fragments hold Lion-tailed Macaque and Nilgiri Langur, alongside Asian Elephant and Gaur. Night at Valparai.'
+      },
+      {
+        day: 8,
+        title: 'Nilgiri Biosphere Reserve (Ooty)',
+        description: 'Visit the Government Botanical Garden, Doddabetta, and Wenlock Downs for Nilgiri Laughingthrush, Nilgiri Flycatcher, and classic shola vegetation. Night at Ooty.'
+      },
+      {
+        day: 9,
+        title: 'Mukurthi National Park',
+        description: 'Walk the high shola-grassland country of Mukurthi, Avalanche, and Emerald for Nilgiri Tahr, Black-and-orange Flycatcher, and a rare chance of Nilgiri Marten. Night at Ooty.'
+      },
+      {
+        day: 10,
+        title: 'Bandipur Tiger Reserve (Karnataka) & Departure',
+        description: 'A finale in Bandipur National Park with its interpretation centre. Chances of Bengal Tiger, Asian Elephant, Leopard, Dhole, Gaur, Sambar Deer, and Crested Hawk-Eagle before departure.'
+      }
+    ],
+    included: [
+      'Accommodation throughout (lodges and guesthouses)',
+      'Meals',
+      'Expert naturalist guide',
+      'Park entry fees and access coordination',
+      'Transportation during the trip',
+      'Field guides and checklists'
+    ],
+    toBring: [
+      'Comfortable walking shoes',
+      'Warm layers for high-altitude mornings',
+      'Rain protection',
+      'Binoculars',
+      'Camera or phone',
+      'Water bottle'
+    ],
+    learningOutcomes: [
+      'Understand why the Western Ghats hold such extraordinary endemism',
+      'Identify key endemic birds, mammals, and plants in the field',
+      'Recognize shola-grassland, montane, and lowland rainforest habitats',
+      'Learn how the Southwest Monsoon shapes these ecosystems',
+      'Take home a personal species checklist from a world biodiversity hotspot'
+    ],
+    suitableFor: [
+      'Birders',
+      'Mammal watchers',
+      'Photographers',
+      'Nature lovers',
+      'Endemic species enthusiasts'
+    ]
   }
 ];
 
@@ -324,26 +426,34 @@ export const experts: Expert[] = [
   {
     id: 'dr-a-relton',
     name: 'Dr. A. Relton',
-    qualifications: 'Associate Professor & Head, Department of Social Work, Bishop Heber College',
-    specialization: 'Birds and reptiles; field ornithology',
-    experience: 'Lead author, "Birds of Bishop Heber College"',
-    bio: 'A naturalist known for his long-standing passion for birds and reptiles, Dr. Relton has led wildlife observation, bird documentation, and nature education work for many years. On tour, he makes serious field knowledge feel warm, practical, and accessible.'
+    qualifications: 'Former Vice-Principal & Controller of Examinations, Bishop Heber College (Autonomous), Tiruchirappalli',
+    specialization: 'Birds, butterflies, wetland ecology and wildlife interpretation',
+    experience: '30+ years in biodiversity research and nature education; author of "Birds of Bishop Heber College" and "Butterflies of Bishop Heber College"',
+    bio: 'A wildlife naturalist, educator, and conservationist with over three decades in the field, Dr. Relton has spent years documenting the flora and fauna of the Western and Eastern Ghats, Ramsar wetlands, and protected areas across India. His research focuses on butterfly diversity and conservation in the Eastern Ghats, and his expertise spans birds, butterflies, amphibians, reptiles, mammals, and tropical ecosystems. Through Nature Expeditions he leads eco-tours, birdwatching expeditions, butterfly walks, biodiversity camps, and photography tours that pair scientific interpretation with engaging storytelling. He believes meaningful conservation begins with meaningful experiences in nature.'
   },
   {
     id: 'a-daisy-caroline-mary',
-    name: 'A. Daisy Caroline Mary',
-    qualifications: 'Lecturer, Department of Environmental Sciences; Programme Officer, Heber Au Sable Institute of Environmental Studies',
-    specialization: 'Butterflies, field ecology and environmental education',
-    experience: 'Author, "Butterflies of Bishop Heber College"',
-    bio: 'Daisy has spent years in the field with birds and butterflies, and has written accessible natural history material for beginners and students. Her tours are patient and observant, with clear explanations for guests who want depth without a formal classroom feel.'
+    name: 'Dr. A. Daisy Caroline Mary',
+    qualifications: 'Former Associate Professor of Environmental Sciences, Bishop Heber College (Autonomous), Tiruchirappalli',
+    specialization: 'Environmental science, biodiversity conservation, and sustainability education',
+    experience: 'Decades of university teaching, research supervision, and community environmental outreach',
+    bio: 'An accomplished environmental scientist, educator, and researcher, Dr. Daisy has dedicated her career to inspiring students and communities to understand and protect the natural world. Her expertise spans environmental management, biodiversity conservation, ecosystem restoration, climate change, and sustainable development. She regularly leads environmental workshops, nature camps, and field-based learning programmes for schools, colleges, NGOs, and organizations, with a focus on connecting participants directly with nature. Her guiding conviction: "Protecting nature begins with understanding it, and education is the first step towards lasting conservation."'
   },
   {
     id: 'r-carlton',
-    name: 'R. Carlton',
-    qualifications: 'B.Sc. Zoology; President, Nature Club, Bishop Heber College',
-    specialization: 'Wildlife photography and field surveys',
-    experience: 'Co-author of campus bird and butterfly guides',
-    bio: "A zoology graduate and nature-club leader, Carlton brings energy and a photographer's eye to the field. He has helped coordinate bird surveys, wildlife censuses, and eco-camps, and supports guests who want better field photos and careful observation."
+    name: 'Dr. Carlton Relton',
+    qualifications: 'Assistant Professor of Environmental Sciences, Bishop Heber College; Ph.D. in Environmental Sciences',
+    specialization: 'Butterflies, birds, and tropical ecosystems of the Western and Eastern Ghats',
+    experience: '10+ years in biodiversity research; advanced training in Ecology of Indian Tropics and Ornithology at the Au Sable Institute, USA',
+    bio: 'An environmental scientist, wildlife naturalist, and conservation communicator, Carlton connects people with nature through immersive learning experiences. His research centres on butterflies, birds, and the protected landscapes of the Western and Eastern Ghats, combining science with citizen science and environmental awareness. An avid wildlife photographer, he has explored many of India\'s biodiversity hotspots and authored and co-authored books on biodiversity. He leads curated birdwatching tours, butterfly walks, photography tours, and rainforest explorations designed to go beyond sightseeing — helping guests understand ecosystems and become ambassadors for conservation.'
+  },
+  {
+    id: 'dr-griffith-michael',
+    name: 'Dr. Griffith Michael',
+    qualifications: 'Ph.D. in Zoology; postgraduate qualifications in Wildlife Biology and Zoology',
+    specialization: 'Mammal ecology and conservation, with a focus on the lesser-known mammals of South India',
+    experience: 'Striped Hyena research in Sanjay Dubri Tiger Reserve; bird, butterfly, mammal, and tiger monitoring at Karaivetti, Point Calimere, and Anamalai Tiger Reserve',
+    bio: 'A wildlife biologist and zoologist, Dr. Griffith\'s doctoral research explored the diversity and ecology of the lesser-known small mammals of Tiruchirappalli. He has taken part in biodiversity surveys across India\'s protected areas and trained in Ecology of the Indian Tropics at the Au Sable Institute, Michigan, USA. He leads birdwatching programmes, mammal tracking sessions, and wildlife interpretation walks that combine scientific accuracy with hands-on field craft. His belief: every species, large or small, common or elusive, plays a vital role in healthy ecosystems — and conservation begins with curiosity.'
   }
 ];
 
