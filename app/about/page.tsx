@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { findPhoto, img } from '@/lib/photos';
 
 export const metadata: Metadata = {
   title: 'About Wild India | Wildora Expeditions',
@@ -38,34 +39,50 @@ export default function AboutPage() {
             {[
               {
                 title: 'Central Indian Forests',
-                body: 'Tiger, leopard, wild dog, sloth bear, gaur, deer, owls, raptors, and dry forest birding across classic safari landscapes.'
+                body: 'Tiger, leopard, wild dog, sloth bear, gaur, deer, owls, raptors, and dry forest birding across classic safari landscapes.',
+                photo: 'dry-deciduous-forest'
               },
               {
                 title: 'Himalaya & Foothills',
-                body: 'Pheasants, raptors, red panda routes, mountain mammals, rhododendron forests, alpine views, and high-altitude extensions.'
+                body: 'Pheasants, raptors, red panda routes, mountain mammals, rhododendron forests, alpine views, and high-altitude extensions.',
+                photo: 'nilgiri-rhododendron'
               },
               {
                 title: 'Deserts & Grasslands',
-                body: 'Desert fox, blackbuck, wolves, bustards, cranes, raptors, open-country birding, salt flats, and winter light.'
+                body: 'Desert fox, blackbuck, wolves, bustards, cranes, raptors, open-country birding, salt flats, and winter light.',
+                photo: 'blackbuck'
               },
               {
                 title: 'Wetlands, Rivers & Mangroves',
-                body: 'Migratory birds, storks, cranes, otters, river dolphins, crocodiles, mangrove wildlife, and boat-based nature experiences.'
+                body: 'Migratory birds, storks, cranes, otters, river dolphins, crocodiles, mangrove wildlife, and boat-based nature experiences.',
+                photo: 'mangrove-creek'
               },
               {
                 title: 'Rainforests & Monsoon Habitats',
-                body: 'Frogs, reptiles, hornbills, butterflies, orchids, night walks, waterfalls, and rich forest soundscapes during the rains.'
+                body: 'Frogs, reptiles, hornbills, butterflies, orchids, night walks, waterfalls, and rich forest soundscapes during the rains.',
+                photo: 'evergreen-forest'
               },
               {
                 title: 'Coasts & Islands',
-                body: 'Marine-influenced habitats, coastal birds, mangroves, island forests, beaches, and relaxed nature-focused extensions.'
+                body: 'Marine-influenced habitats, coastal birds, mangroves, island forests, beaches, and relaxed nature-focused extensions.',
+                photo: 'palmyra-palms'
               }
-            ].map((region) => (
-              <div key={region.title} className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3 text-[#15803d]">{region.title}</h3>
-                <p className="text-gray-700">{region.body}</p>
-              </div>
-            ))}
+            ].map((region) => {
+              const p = findPhoto(region.photo);
+              return (
+                <div key={region.title} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100">
+                  {p && (
+                    <div className="h-44 overflow-hidden">
+                      <img src={img(p.src)} alt={`${region.title} — ${p.name}`} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                    </div>
+                  )}
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-3 text-[#15803d]">{region.title}</h3>
+                    <p className="text-gray-700">{region.body}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

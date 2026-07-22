@@ -41,6 +41,9 @@ yarn-error.log*
 cloudflared-tunnel.*.log
 *.txt
 
+# original photo archive (web-optimized copies live in public/photos)
+/Website Photos/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

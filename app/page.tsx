@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { trips, experts, services, reviews, trustSignals } from '@/lib/data';
+import { photos, photoCategories, img, tripPhotoSlugs, findPhoto } from '@/lib/photos';
 
 function Stars({ n }: { n: number }) {
   return (
@@ -105,6 +106,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Field photo film-strip: every photo in our archive, shot on our own trips */}
+      <section className="py-14 bg-[#0a2216]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
+          <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Shot in the field by our guides</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white">What You&apos;ll See With Us</h2>
+          <p className="text-green-50/70 mt-3 max-w-2xl mx-auto text-sm">
+            Every photograph below was taken on our own expeditions — tigers, owls, bee-eaters, moths, frogs, orchids and the forests they live in.
+          </p>
+        </div>
+        <div className="space-y-3">
+          {[photos.filter((_, i) => i % 2 === 0), photos.filter((_, i) => i % 2 === 1)].map((row, r) => (
+            <div key={r} className="photo-marquee">
+              <div className={`photo-marquee-track${r === 1 ? ' photo-marquee-track--reverse' : ''}`}>
+                {[...row, ...row].map((p, i) => (
+                  <div key={`${p.slug}-${i}`} className="photo-tile h-32 md:h-40 flex-shrink-0" style={{ aspectRatio: `${p.w} / ${p.h}` }}>
+                    <img src={img(p.thumb)} alt={p.name} loading="lazy" decoding="async" />
+                    <span className="photo-tile__caption">{p.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Why We're Different */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -133,6 +159,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Field gallery bento */}
+      <section className="py-20 bg-[#faf7f0]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">From our field archives</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#14432a]">Moments Worth Travelling For</h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[9rem] md:auto-rows-[11rem]">
+            {[
+              { slug: 'tigress-with-cubs', span: 'col-span-2 row-span-2' },
+              { slug: 'indian-paradise-flycatcher', span: 'row-span-2' },
+              { slug: 'lion-tailed-macaque', span: '' },
+              { slug: 'atlas-moth', span: '' },
+              { slug: 'asiatic-lion', span: 'col-span-2' },
+              { slug: 'indian-chameleon', span: 'row-span-2' },
+              { slug: 'indian-roller', span: '' },
+              { slug: 'grassland-shola-mosaic', span: 'col-span-2' },
+              { slug: 'southern-birdwing', span: '' },
+            ].map(({ slug, span }) => {
+              const p = findPhoto(slug);
+              if (!p) return null;
+              return (
+                <Link key={slug} href={`/species#cat-${p.category}`} className={`photo-tile photo-tile--captioned block ${span}`}>
+                  <img src={img(p.src)} alt={`${p.name} — ${p.categoryLabel}`} loading="lazy" decoding="async" />
+                  <span className="photo-tile__caption">{p.name} · {p.categoryLabel}</span>
+                </Link>
+              );
+            })}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/species" className="inline-block text-[#14432a] font-semibold hover:text-[#15803d] transition-colors">
+              Browse the Full Species Gallery -&gt;
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Trips */}
       <section className="py-20 bg-[#faf7f0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -144,6 +207,10 @@ export default function Home() {
             {trips.map((trip) => (
               <div key={trip.id} className="bg-white rounded-2xl shadow-md overflow-hidden card-lift flex flex-col">
                 <div className="relative h-48 bg-gradient-to-br from-[#1b5e3f] to-[#14432a] leaf-texture">
+                  {(() => {
+                    const p = findPhoto(tripPhotoSlugs[trip.id]);
+                    return p ? <img src={img(p.src)} alt={p.name} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" /> : null;
+                  })()}
                   {typeof trip.spotsLeft === 'number' && trip.spotsLeft <= 6 && (
                     <span className="absolute top-3 left-3 bg-[#dc2626] text-white text-xs font-semibold px-3 py-1 rounded-full">
                       Only {trip.spotsLeft} spots left
@@ -187,6 +254,41 @@ export default function Home() {
             <Link href="/trips" className="inline-block text-[#14432a] font-semibold hover:text-[#15803d] transition-colors">
               View All Trips &amp; Custom Options -&gt;
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Explore by category */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Explore by group</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#14432a]">Wildlife We Track, Watch &amp; Photograph</h2>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              ['birds', 'white-throated-kingfisher'],
+              ['mammals', 'indian-leopard'],
+              ['butterflies', 'common-map'],
+              ['moths', 'indian-moon-moth'],
+              ['reptiles', 'indian-star-tortoise'],
+              ['amphibians', 'painted-frog'],
+              ['invertebrates', 'giant-wood-spider'],
+              ['plants-habitats', 'montane-shola-forest'],
+            ].map(([catId, slug]) => {
+              const cat = photoCategories.find((c) => c.id === catId);
+              const p = findPhoto(slug);
+              if (!cat || !p) return null;
+              return (
+                <Link key={catId} href={`/species#cat-${catId}`} className="photo-tile block h-44 md:h-52 card-lift">
+                  <img src={img(p.src)} alt={`${cat.label} — ${p.name}`} loading="lazy" decoding="async" />
+                  <span className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-[#06180f]/90 to-transparent text-white">
+                    <span className="block font-bold">{cat.label}</span>
+                    <span className="block text-xs text-green-50/80">{cat.count} field photo{cat.count > 1 ? 's' : ''}</span>
+                  </span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { trips } from '@/lib/data';
+import { findPhoto, img, tripPhotoSlugs } from '@/lib/photos';
 
 export const metadata: Metadata = {
   title: 'Guided Trips & Itineraries | Wildora Expeditions',
@@ -26,7 +27,12 @@ export default function TripsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {trips.map((trip) => (
               <div key={trip.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="h-56 bg-gradient-to-br from-[#15803d] to-[#14432a]"></div>
+                <div className="relative h-56 bg-gradient-to-br from-[#15803d] to-[#14432a]">
+                  {(() => {
+                    const p = findPhoto(tripPhotoSlugs[trip.id]);
+                    return p ? <img src={img(p.src)} alt={p.name} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" /> : null;
+                  })()}
+                </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-semibold mb-3 text-[#14432a]">{trip.title}</h3>
                   <p className="text-gray-600 mb-4">{trip.description}</p>

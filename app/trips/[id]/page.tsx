@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { trips } from '@/lib/data';
+import { findPhoto, img, tripPhotoSlugs } from '@/lib/photos';
 
 export async function generateStaticParams() {
   return trips.map((trip) => ({
@@ -35,7 +36,16 @@ export default async function TripDetailPage({ params }: { params: Promise<{ id:
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative h-[400px] flex items-center justify-center bg-gradient-to-r from-[#14432a] to-[#15803d] text-white">
+      <section className="relative h-[400px] flex items-center justify-center bg-gradient-to-r from-[#14432a] to-[#15803d] text-white overflow-hidden">
+        {(() => {
+          const p = findPhoto(tripPhotoSlugs[trip.id]);
+          return p ? (
+            <>
+              <img src={img(p.src)} alt={p.name} decoding="async" className="absolute inset-0 w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#06180f]/85 via-[#0a2216]/50 to-[#0a2216]/30"></div>
+            </>
+          ) : null;
+        })()}
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-4">{trip.title}</h1>
           <p className="text-xl text-gray-100">{trip.description}</p>
