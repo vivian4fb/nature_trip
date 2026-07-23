@@ -428,6 +428,7 @@ export const experts: Expert[] = [
     name: 'Dr. A. Relton',
     qualifications: 'Former Vice-Principal & Controller of Examinations, Bishop Heber College (Autonomous), Tiruchirappalli',
     specialization: 'Birds, butterflies, wetland ecology and wildlife interpretation',
+    imageUrl: '/photos/experts/relton.webp',
     experience: '30+ years in biodiversity research and nature education; author of "Birds of Bishop Heber College" and "Butterflies of Bishop Heber College"',
     bio: 'A wildlife naturalist, educator, and conservationist with over three decades in the field, Dr. Relton has spent years documenting the flora and fauna of the Western and Eastern Ghats, Ramsar wetlands, and protected areas across India. His research focuses on butterfly diversity and conservation in the Eastern Ghats, and his expertise spans birds, butterflies, amphibians, reptiles, mammals, and tropical ecosystems. Through Nature Expeditions he leads eco-tours, birdwatching expeditions, butterfly walks, biodiversity camps, and photography tours that pair scientific interpretation with engaging storytelling. He believes meaningful conservation begins with meaningful experiences in nature.'
   },
@@ -445,6 +446,7 @@ export const experts: Expert[] = [
     name: 'Dr. Carlton Relton',
     qualifications: 'Assistant Professor of Environmental Sciences, Bishop Heber College; Ph.D. in Environmental Sciences',
     specialization: 'Butterflies, birds, and tropical ecosystems of the Western and Eastern Ghats',
+    imageUrl: '/photos/experts/carlton.webp',
     experience: '10+ years in biodiversity research; advanced training in Ecology of Indian Tropics and Ornithology at the Au Sable Institute, USA',
     bio: 'An environmental scientist, wildlife naturalist, and conservation communicator, Carlton connects people with nature through immersive learning experiences. His research centres on butterflies, birds, and the protected landscapes of the Western and Eastern Ghats, combining science with citizen science and environmental awareness. An avid wildlife photographer, he has explored many of India\'s biodiversity hotspots and authored and co-authored books on biodiversity. He leads curated birdwatching tours, butterfly walks, photography tours, and rainforest explorations designed to go beyond sightseeing — helping guests understand ecosystems and become ambassadors for conservation.'
   },
@@ -453,6 +455,7 @@ export const experts: Expert[] = [
     name: 'Dr. Griffith Michael',
     qualifications: 'Ph.D. in Zoology; postgraduate qualifications in Wildlife Biology and Zoology',
     specialization: 'Mammal ecology and conservation, with a focus on the lesser-known mammals of South India',
+    imageUrl: '/photos/experts/griffith.webp',
     experience: 'Striped Hyena research in Sanjay Dubri Tiger Reserve; bird, butterfly, mammal, and tiger monitoring at Karaivetti, Point Calimere, and Anamalai Tiger Reserve',
     bio: 'A wildlife biologist and zoologist, Dr. Griffith\'s doctoral research explored the diversity and ecology of the lesser-known small mammals of Tiruchirappalli. He has taken part in biodiversity surveys across India\'s protected areas and trained in Ecology of the Indian Tropics at the Au Sable Institute, Michigan, USA. He leads birdwatching programmes, mammal tracking sessions, and wildlife interpretation walks that combine scientific accuracy with hands-on field craft. His belief: every species, large or small, common or elusive, plays a vital role in healthy ecosystems — and conservation begins with curiosity.'
   }
