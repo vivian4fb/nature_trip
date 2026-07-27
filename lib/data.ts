@@ -483,16 +483,6 @@ export const species: Species[] = [
     fieldNote: 'A rare Indian big cat best seen with regulated local guiding in its native landscape.'
   },
   {
-    id: 'snow-leopard',
-    commonName: 'Snow Leopard',
-    scientificName: 'Panthera uncia',
-    category: 'Mammals',
-    endemic: false,
-    threatened: true,
-    habitat: 'High Himalayan cold desert and rocky slopes',
-    fieldNote: 'Winter tracking requires patience, optics, local spotters, and a tolerance for cold conditions.'
-  },
-  {
     id: 'great-hornbill',
     commonName: 'Great Hornbill',
     scientificName: 'Buceros bicornis',
@@ -503,36 +493,6 @@ export const species: Species[] = [
     fieldNote: 'Listen for heavy wingbeats and watch fruiting trees in the early morning.'
   },
   {
-    id: 'himalayan-monal',
-    commonName: 'Himalayan Monal',
-    scientificName: 'Lophophorus impejanus',
-    category: 'Birds',
-    endemic: false,
-    threatened: false,
-    habitat: 'Himalayan forests and alpine edges',
-    fieldNote: 'Dawn and quiet ridge walks give the best chance of seeing this iridescent pheasant.'
-  },
-  {
-    id: 'king-cobra',
-    commonName: 'King Cobra',
-    scientificName: 'Ophiophagus hannah',
-    category: 'Reptiles',
-    endemic: false,
-    threatened: true,
-    habitat: 'Rainforests, plantations, and forest edges',
-    fieldNote: 'Observed only from a safe distance with expert local guidance and no disturbance.'
-  },
-  {
-    id: 'malabar-gliding-frog',
-    commonName: 'Malabar Gliding Frog',
-    scientificName: 'Rhacophorus malabaricus',
-    category: 'Amphibians',
-    endemic: true,
-    threatened: false,
-    habitat: 'Forest streams and adjacent vegetation',
-    fieldNote: 'Watch for foam nests on leaves overhanging streams during monsoon.'
-  },
-  {
     id: 'southern-birdwing',
     commonName: 'Southern Birdwing',
     scientificName: 'Troides minos',
@@ -541,16 +501,6 @@ export const species: Species[] = [
     threatened: false,
     habitat: 'Forest edges and clearings',
     fieldNote: "India's largest butterfly, often seen flying high along forest edges."
-  },
-  {
-    id: 'red-panda',
-    commonName: 'Red Panda',
-    scientificName: 'Ailurus fulgens',
-    category: 'Mammals',
-    endemic: false,
-    threatened: true,
-    habitat: 'Eastern Himalayan temperate forest and bamboo understory',
-    fieldNote: 'Requires quiet walking, local trackers, and careful timing in high-elevation forest.'
   },
   {
     id: 'rhododendron',

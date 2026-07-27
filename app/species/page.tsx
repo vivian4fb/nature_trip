@@ -65,8 +65,8 @@ export default function SpeciesPage() {
         </div>
       </section>
 
-      {/* Species Grid */}
-      <section className="py-12">
+      {/* Species Grid — some tabs are covered by the field gallery alone, so skip it when empty. */}
+      <section className={filteredSpecies.length === 0 ? 'hidden' : 'py-12'}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredSpecies.map((sp) => (
