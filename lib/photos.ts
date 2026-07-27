@@ -94,12 +94,75 @@ export const photos: Photo[] = [
   { category: 'invertebrates', categoryLabel: 'Invertebrates', slug: 'indian-red-scorpion', name: "Indian Red Scorpion", src: '/photos/invertebrates/indian-red-scorpion.webp', thumb: '/photos/invertebrates/thumb/indian-red-scorpion.webp', w: 1600, h: 1200 },
   { category: 'invertebrates', categoryLabel: 'Invertebrates', slug: 'shore-crab', name: "Shore Crab", src: '/photos/invertebrates/shore-crab.webp', thumb: '/photos/invertebrates/thumb/shore-crab.webp', w: 1600, h: 1071 },
   { category: 'invertebrates', categoryLabel: 'Invertebrates', slug: 'sea-star', name: "Sea Star", src: '/photos/invertebrates/sea-star.webp', thumb: '/photos/invertebrates/thumb/sea-star.webp', w: 1600, h: 1200 },
+  { category: 'amphibians', categoryLabel: 'Amphibians', slug: 'bronze-frog', name: "Bronze Frog", src: '/photos/amphibians/bronze-frog.webp', thumb: '/photos/amphibians/thumb/bronze-frog.webp', w: 1600, h: 1067 },
+  { category: 'amphibians', categoryLabel: 'Amphibians', slug: 'golden-backed-frog', name: "Golden-backed Frog", src: '/photos/amphibians/golden-backed-frog.webp', thumb: '/photos/amphibians/thumb/golden-backed-frog.webp', w: 1600, h: 1067 },
+  { category: 'birds', categoryLabel: 'Birds', slug: 'asian-openbill-stork', name: "Asian Openbill Stork", src: '/photos/birds/asian-openbill-stork.webp', thumb: '/photos/birds/thumb/asian-openbill-stork.webp', w: 1067, h: 1600 },
+  { category: 'birds', categoryLabel: 'Birds', slug: 'broad-tailed-grassbird', name: "Broad-tailed Grassbird", src: '/photos/birds/broad-tailed-grassbird.webp', thumb: '/photos/birds/thumb/broad-tailed-grassbird.webp', w: 1600, h: 1067 },
+  { category: 'birds', categoryLabel: 'Birds', slug: 'flame-throated-bulbul', name: "Flame-throated Bulbul", src: '/photos/birds/flame-throated-bulbul.webp', thumb: '/photos/birds/thumb/flame-throated-bulbul.webp', w: 1600, h: 1067 },
+  { category: 'birds', categoryLabel: 'Birds', slug: 'great-cormorant', name: "Great Cormorant", src: '/photos/birds/great-cormorant.webp', thumb: '/photos/birds/thumb/great-cormorant.webp', w: 1600, h: 1067 },
+  { category: 'birds', categoryLabel: 'Birds', slug: 'great-indian-hornbill', name: "Great Indian Hornbill", src: '/photos/birds/great-indian-hornbill.webp', thumb: '/photos/birds/thumb/great-indian-hornbill.webp', w: 1600, h: 1067 },
+  { category: 'birds', categoryLabel: 'Birds', slug: 'malabar-grey-hornbill', name: "Malabar Grey Hornbill", src: '/photos/birds/malabar-grey-hornbill.webp', thumb: '/photos/birds/thumb/malabar-grey-hornbill.webp', w: 1067, h: 1600 },
+  { category: 'birds', categoryLabel: 'Birds', slug: 'malabar-parakeet', name: "Malabar Parakeet", src: '/photos/birds/malabar-parakeet.webp', thumb: '/photos/birds/thumb/malabar-parakeet.webp', w: 1600, h: 1067 },
+  { category: 'birds', categoryLabel: 'Birds', slug: 'malabar-trogon', name: "Malabar Trogon (Male)", src: '/photos/birds/malabar-trogon.webp', thumb: '/photos/birds/thumb/malabar-trogon.webp', w: 1600, h: 1067 },
+  { category: 'birds', categoryLabel: 'Birds', slug: 'malabar-whistling-thrush', name: "Malabar Whistling Thrush", src: '/photos/birds/malabar-whistling-thrush.webp', thumb: '/photos/birds/thumb/malabar-whistling-thrush.webp', w: 1600, h: 1067 },
+  { category: 'birds', categoryLabel: 'Birds', slug: 'nilgiri-flycatcher', name: "Nilgiri Flycatcher (Male)", src: '/photos/birds/nilgiri-flycatcher.webp', thumb: '/photos/birds/thumb/nilgiri-flycatcher.webp', w: 1600, h: 1067 },
+  { category: 'birds', categoryLabel: 'Birds', slug: 'nilgiri-pipit', name: "Nilgiri Pipit", src: '/photos/birds/nilgiri-pipit.webp', thumb: '/photos/birds/thumb/nilgiri-pipit.webp', w: 1600, h: 1067 },
+  { category: 'birds', categoryLabel: 'Birds', slug: 'nilgiri-wood-pigeon', name: "Nilgiri Wood Pigeon", src: '/photos/birds/nilgiri-wood-pigeon.webp', thumb: '/photos/birds/thumb/nilgiri-wood-pigeon.webp', w: 1600, h: 1067 },
+  { category: 'birds', categoryLabel: 'Birds', slug: 'white-bellied-treepie', name: "White-bellied Treepie", src: '/photos/birds/white-bellied-treepie.webp', thumb: '/photos/birds/thumb/white-bellied-treepie.webp', w: 1067, h: 1600 },
+  { category: 'birds', categoryLabel: 'Birds', slug: 'white-bellied-woodpecker', name: "White-bellied Woodpecker", src: '/photos/birds/white-bellied-woodpecker.webp', thumb: '/photos/birds/thumb/white-bellied-woodpecker.webp', w: 1600, h: 1067 },
+  { category: 'birds', categoryLabel: 'Birds', slug: 'white-cheeked-barbet', name: "White-cheeked Barbet", src: '/photos/birds/white-cheeked-barbet.webp', thumb: '/photos/birds/thumb/white-cheeked-barbet.webp', w: 1600, h: 1067 },
+  { category: 'birds', categoryLabel: 'Birds', slug: 'yellow-throated-bulbul', name: "Yellow-throated Bulbul", src: '/photos/birds/yellow-throated-bulbul.webp', thumb: '/photos/birds/thumb/yellow-throated-bulbul.webp', w: 1600, h: 1067 },
+  { category: 'mammals', categoryLabel: 'Mammals', slug: 'asian-elephant-herd', name: "Asian Elephant Herd", src: '/photos/mammals/asian-elephant-herd.webp', thumb: '/photos/mammals/thumb/asian-elephant-herd.webp', w: 1600, h: 1067 },
+  { category: 'mammals', categoryLabel: 'Mammals', slug: 'indian-wild-dog', name: "Indian Wild Dog (Dhole)", src: '/photos/mammals/indian-wild-dog.webp', thumb: '/photos/mammals/thumb/indian-wild-dog.webp', w: 1600, h: 1067 },
+  { category: 'mammals', categoryLabel: 'Mammals', slug: 'jungle-cat', name: "Jungle Cat", src: '/photos/mammals/jungle-cat.webp', thumb: '/photos/mammals/thumb/jungle-cat.webp', w: 1600, h: 1067 },
+  { category: 'mammals', categoryLabel: 'Mammals', slug: 'nilgiri-tahr-female', name: "Nilgiri Tahr (Female)", src: '/photos/mammals/nilgiri-tahr-female.webp', thumb: '/photos/mammals/thumb/nilgiri-tahr-female.webp', w: 1600, h: 1067 },
+  { category: 'mammals', categoryLabel: 'Mammals', slug: 'nilgiri-tahr-male', name: "Nilgiri Tahr (Male)", src: '/photos/mammals/nilgiri-tahr-male.webp', thumb: '/photos/mammals/thumb/nilgiri-tahr-male.webp', w: 1600, h: 1067 },
+  { category: 'mammals', categoryLabel: 'Mammals', slug: 'rhesus-macaque', name: "Rhesus Macaque", src: '/photos/mammals/rhesus-macaque.webp', thumb: '/photos/mammals/thumb/rhesus-macaque.webp', w: 1067, h: 1600 },
+  { category: 'mammals', categoryLabel: 'Mammals', slug: 'ruddy-mongoose', name: "Ruddy Mongoose", src: '/photos/mammals/ruddy-mongoose.webp', thumb: '/photos/mammals/thumb/ruddy-mongoose.webp', w: 1600, h: 1067 },
+  { category: 'reptiles', categoryLabel: 'Reptiles', slug: 'anaimalai-spiny-lizard', name: "Anaimalai Spiny Lizard", src: '/photos/reptiles/anaimalai-spiny-lizard.webp', thumb: '/photos/reptiles/thumb/anaimalai-spiny-lizard.webp', w: 1600, h: 1067 },
+  { category: 'reptiles', categoryLabel: 'Reptiles', slug: 'forest-calotes', name: "Forest Calotes", src: '/photos/reptiles/forest-calotes.webp', thumb: '/photos/reptiles/thumb/forest-calotes.webp', w: 1600, h: 1067 },
+  { category: 'reptiles', categoryLabel: 'Reptiles', slug: 'green-calotes', name: "Green Calotes", src: '/photos/reptiles/green-calotes.webp', thumb: '/photos/reptiles/thumb/green-calotes.webp', w: 1600, h: 1067 },
+  { category: 'reptiles', categoryLabel: 'Reptiles', slug: 'hump-nosed-pit-viper', name: "Hump-nosed Pit Viper", src: '/photos/reptiles/hump-nosed-pit-viper.webp', thumb: '/photos/reptiles/thumb/hump-nosed-pit-viper.webp', w: 1600, h: 1067 },
+  { category: 'reptiles', categoryLabel: 'Reptiles', slug: 'large-scaled-green-lizard', name: "Large-scaled Green Lizard", src: '/photos/reptiles/large-scaled-green-lizard.webp', thumb: '/photos/reptiles/thumb/large-scaled-green-lizard.webp', w: 1600, h: 1067 },
+  { category: 'reptiles', categoryLabel: 'Reptiles', slug: 'large-scaled-pit-viper', name: "Large-scaled Pit Viper", src: '/photos/reptiles/large-scaled-pit-viper.webp', thumb: '/photos/reptiles/thumb/large-scaled-pit-viper.webp', w: 1600, h: 1067 },
+  { category: 'reptiles', categoryLabel: 'Reptiles', slug: 'malabar-pit-viper', name: "Malabar Pit Viper", src: '/photos/reptiles/malabar-pit-viper.webp', thumb: '/photos/reptiles/thumb/malabar-pit-viper.webp', w: 1600, h: 1067 },
+  { category: 'reptiles', categoryLabel: 'Reptiles', slug: 'saw-scaled-viper', name: "Saw-scaled Viper", src: '/photos/reptiles/saw-scaled-viper.webp', thumb: '/photos/reptiles/thumb/saw-scaled-viper.webp', w: 1600, h: 1067 },
 ];
 
 
 export const photoCategories = Array.from(
   new Map(photos.map((p) => [p.category, p.categoryLabel])).entries()
 ).map(([id, label]) => ({ id, label, count: photos.filter((p) => p.category === id).length }));
+
+/* Species-page tabs. Every photo category maps to exactly one tab so no photo is orphaned. */
+export const speciesTabs = ['All', 'Birds', 'Mammals', 'Reptiles', 'Amphibians', 'Butterflies & Moths', 'Invertebrates', 'Flora'] as const;
+
+const photoCategoryToTab: Record<string, string> = {
+  birds: 'Birds',
+  mammals: 'Mammals',
+  reptiles: 'Reptiles',
+  amphibians: 'Amphibians',
+  butterflies: 'Butterflies & Moths',
+  moths: 'Butterflies & Moths',
+  invertebrates: 'Invertebrates',
+  'plants-habitats': 'Flora',
+};
+
+export function tabForPhotoCategory(categoryId: string): string | undefined {
+  return photoCategoryToTab[categoryId];
+}
+
+export function photosForTab(tab: string): Photo[] {
+  if (tab === 'All') return photos;
+  return photos.filter((p) => photoCategoryToTab[p.category] === tab);
+}
+
+/* data.ts species categories are singular labels; map them onto the same tabs. */
+export function speciesMatchesTab(speciesCategory: string, tab: string): boolean {
+  if (tab === 'All') return true;
+  if (tab === 'Butterflies & Moths') return speciesCategory === 'Butterflies' || speciesCategory === 'Moths';
+  return speciesCategory === tab;
+}
 
 export function byCategory(category: string): Photo[] {
   return photos.filter((p) => p.category === category);
@@ -116,7 +179,7 @@ export const img = (path: string) => `${BASE_PATH}${path}`;
 /* Representative photo for each trip card / trip page hero. */
 export const tripPhotoSlugs: Record<string, string> = {
   'central-india-big-cats': 'tigress-with-cubs',
-  'monsoon-rainforest-nights': 'green-frog',
+  'monsoon-rainforest-nights': 'golden-backed-frog',
   'himalaya-birds-mountain-wildlife': 'himalayan-whistling-thrush',
   'western-ghats-endemics': 'lion-tailed-macaque',
 };

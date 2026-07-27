@@ -1,26 +1,36 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { species } from '@/lib/data';
-import { photos, photoCategories, findPhoto, img } from '@/lib/photos';
-
-const categories = ['All', 'Birds', 'Mammals', 'Reptiles', 'Amphibians', 'Butterflies', 'Flora'];
+import { speciesTabs, photosForTab, speciesMatchesTab, tabForPhotoCategory, findPhoto, img } from '@/lib/photos';
 
 /* species-card id -> field photo slug, where our archive has a matching shot */
 const speciesPhotoSlugs: Record<string, string> = {
   'bengal-tiger': 'bengal-tiger',
   'asiatic-lion': 'asiatic-lion',
+  'great-hornbill': 'great-indian-hornbill',
   'southern-birdwing': 'southern-birdwing',
   'rhododendron': 'nilgiri-rhododendron',
 };
 
 export default function SpeciesPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  const filteredSpecies = selectedCategory === 'All'
-    ? species
-    : species.filter(s => s.category === selectedCategory);
+  /* Home page deep-links in as /species#cat-birds — open that tab. */
+  useEffect(() => {
+    const applyHash = () => {
+      const match = /^#cat-(.+)$/.exec(window.location.hash);
+      const tab = match ? tabForPhotoCategory(match[1]) : undefined;
+      if (tab) setSelectedCategory(tab);
+    };
+    applyHash();
+    window.addEventListener('hashchange', applyHash);
+    return () => window.removeEventListener('hashchange', applyHash);
+  }, []);
+
+  const filteredSpecies = species.filter((s) => speciesMatchesTab(s.category, selectedCategory));
+  const galleryPhotos = photosForTab(selectedCategory);
 
   return (
     <div className="min-h-screen">
@@ -38,7 +48,7 @@ export default function SpeciesPage() {
       <section className="py-8 bg-gray-50 sticky top-16 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
+            {speciesTabs.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
@@ -61,12 +71,15 @@ export default function SpeciesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredSpecies.map((sp) => (
               <div key={sp.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="relative h-48 bg-gradient-to-br from-[#15803d] to-[#14432a]">
-                  {(() => {
-                    const p = findPhoto(speciesPhotoSlugs[sp.id]);
-                    return p ? <img src={img(p.src)} alt={sp.commonName} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" /> : null;
-                  })()}
-                </div>
+                {(() => {
+                  const p = findPhoto(speciesPhotoSlugs[sp.id]);
+                  if (!p) return null;
+                  return (
+                    <div className="relative h-48 bg-gradient-to-br from-[#15803d] to-[#14432a]">
+                      <img src={img(p.src)} alt={sp.commonName} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
+                    </div>
+                  );
+                })()}
                 <div className="p-6">
                   <div className="flex flex-wrap gap-2 mb-3">
                     <span className="bg-[#15803d] text-white text-xs px-2 py-1 rounded">
@@ -105,25 +118,18 @@ export default function SpeciesPage() {
             <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Photographed on our expeditions</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Field Photo Gallery</h2>
             <p className="text-green-50/70 mt-3 max-w-2xl mx-auto text-sm">
-              {photos.length} photographs from our archive, all taken in the field by our guides and guests.
+              {galleryPhotos.length} photograph{galleryPhotos.length === 1 ? '' : 's'}
+              {selectedCategory === 'All' ? '' : ` in ${selectedCategory}`}, all taken in the field by our guides and guests.
             </p>
           </div>
-          {photoCategories.map((cat) => (
-            <div key={cat.id} id={`cat-${cat.id}`} className="mb-12 scroll-mt-40">
-              <h3 className="text-xl font-bold text-white mb-4 flex items-baseline gap-3">
-                {cat.label}
-                <span className="text-sm font-medium text-green-50/60">{cat.count} photo{cat.count > 1 ? 's' : ''}</span>
-              </h3>
-              <div className="columns-2 md:columns-3 lg:columns-4 gap-3 [&>*]:mb-3">
-                {photos.filter((p) => p.category === cat.id).map((p) => (
-                  <div key={p.slug} className="photo-tile photo-tile--captioned break-inside-avoid">
-                    <img src={img(p.src)} alt={`${p.name} — ${cat.label}`} loading="lazy" decoding="async" style={{ aspectRatio: `${p.w} / ${p.h}` }} />
-                    <span className="photo-tile__caption">{p.name}</span>
-                  </div>
-                ))}
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-3 [&>*]:mb-3">
+            {galleryPhotos.map((p) => (
+              <div key={p.slug} className="photo-tile photo-tile--captioned break-inside-avoid">
+                <img src={img(p.src)} alt={`${p.name} — ${p.categoryLabel}`} loading="lazy" decoding="async" style={{ aspectRatio: `${p.w} / ${p.h}` }} />
+                <span className="photo-tile__caption">{p.name}</span>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
