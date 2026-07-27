@@ -41,7 +41,7 @@ export default async function TripDetailPage({ params }: { params: Promise<{ id:
           const p = findPhoto(tripPhotoSlugs[trip.id]);
           return p ? (
             <>
-              <img src={img(p.src)} alt={p.name} decoding="async" className="absolute inset-0 w-full h-full object-cover" />
+              <img src={img(p.wide ?? p.src)} alt={p.name} decoding="async" className={`absolute inset-0 w-full h-full object-cover ${p.wide ? 'object-top' : ''}`} />
               <div className="absolute inset-0 bg-gradient-to-t from-[#06180f]/85 via-[#0a2216]/50 to-[#0a2216]/30"></div>
             </>
           ) : null;

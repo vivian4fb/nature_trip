@@ -30,7 +30,9 @@ export default function TripsPage() {
                 <div className="relative h-56 bg-gradient-to-br from-[#15803d] to-[#14432a]">
                   {(() => {
                     const p = findPhoto(tripPhotoSlugs[trip.id]);
-                    return p ? <img src={img(p.src)} alt={p.name} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" /> : null;
+                    if (!p) return null;
+                    /* Re-cropped photos are framed head-first, so anchor to the top rather than the centre. */
+                    return <img src={img(p.wide ?? p.src)} alt={p.name} loading="lazy" decoding="async" className={`absolute inset-0 w-full h-full object-cover ${p.wide ? 'object-top' : ''}`} />;
                   })()}
                 </div>
                 <div className="p-6">

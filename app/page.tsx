@@ -209,7 +209,9 @@ export default function Home() {
                 <div className="relative h-48 bg-gradient-to-br from-[#1b5e3f] to-[#14432a] leaf-texture">
                   {(() => {
                     const p = findPhoto(tripPhotoSlugs[trip.id]);
-                    return p ? <img src={img(p.src)} alt={p.name} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" /> : null;
+                    if (!p) return null;
+                    /* Re-cropped photos are framed head-first, so anchor to the top rather than the centre. */
+                    return <img src={img(p.wide ?? p.src)} alt={p.name} loading="lazy" decoding="async" className={`absolute inset-0 w-full h-full object-cover ${p.wide ? 'object-top' : ''}`} />;
                   })()}
                   {typeof trip.spotsLeft === 'number' && trip.spotsLeft <= 6 && (
                     <span className="absolute top-3 left-3 bg-[#dc2626] text-white text-xs font-semibold px-3 py-1 rounded-full">

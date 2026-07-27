@@ -7,6 +7,9 @@ export interface Photo {
   thumb: string;
   w: number;
   h: number;
+  /* Landscape re-crop for the wide trip card/hero frames, where a portrait
+     original would otherwise be cropped down to the subject's body. */
+  wide?: string;
 }
 
 export const photos: Photo[] = [
@@ -57,7 +60,7 @@ export const photos: Photo[] = [
   { category: 'mammals', categoryLabel: 'Mammals', slug: 'indian-gaur', name: "Indian Gaur", src: '/photos/mammals/indian-gaur.webp', thumb: '/photos/mammals/thumb/indian-gaur.webp', w: 1600, h: 1200 },
   { category: 'mammals', categoryLabel: 'Mammals', slug: 'indian-giant-squirrel', name: "Indian Giant Squirrel", src: '/photos/mammals/indian-giant-squirrel.webp', thumb: '/photos/mammals/thumb/indian-giant-squirrel.webp', w: 1600, h: 1067 },
   { category: 'mammals', categoryLabel: 'Mammals', slug: 'indian-leopard', name: "Indian Leopard", src: '/photos/mammals/indian-leopard.webp', thumb: '/photos/mammals/thumb/indian-leopard.webp', w: 1600, h: 1200 },
-  { category: 'mammals', categoryLabel: 'Mammals', slug: 'lion-tailed-macaque', name: "Lion-tailed Macaque", src: '/photos/mammals/lion-tailed-macaque.webp', thumb: '/photos/mammals/thumb/lion-tailed-macaque.webp', w: 1067, h: 1600 },
+  { category: 'mammals', categoryLabel: 'Mammals', slug: 'lion-tailed-macaque', name: "Lion-tailed Macaque", src: '/photos/mammals/lion-tailed-macaque.webp', thumb: '/photos/mammals/thumb/lion-tailed-macaque.webp', w: 1067, h: 1600, wide: '/photos/mammals/lion-tailed-macaque-wide.webp' },
   { category: 'mammals', categoryLabel: 'Mammals', slug: 'asiatic-lion', name: "Asiatic Lion", src: '/photos/mammals/asiatic-lion.webp', thumb: '/photos/mammals/thumb/asiatic-lion.webp', w: 1600, h: 1067 },
   { category: 'mammals', categoryLabel: 'Mammals', slug: 'one-horned-rhinoceros', name: "One-horned Rhinoceros", src: '/photos/mammals/one-horned-rhinoceros.webp', thumb: '/photos/mammals/thumb/one-horned-rhinoceros.webp', w: 1600, h: 1200 },
   { category: 'mammals', categoryLabel: 'Mammals', slug: 'slender-loris', name: "Slender Loris", src: '/photos/mammals/slender-loris.webp', thumb: '/photos/mammals/thumb/slender-loris.webp', w: 1600, h: 1025 },
