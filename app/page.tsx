@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { trips, experts, services, reviews, trustSignals } from '@/lib/data';
 import { photos, photoCategories, img, tripPhotoSlugs, findPhoto } from '@/lib/photos';
+import HomeHero from '@/components/HomeHero';
 
 function Stars({ n }: { n: number }) {
   return (
@@ -17,83 +18,8 @@ function Stars({ n }: { n: number }) {
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-[640px] flex items-center home-hero-canopy text-white overflow-hidden">
-        <div className="absolute inset-0 leaf-texture opacity-60"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7 fade-up">
-            <div
-              className="wildora-brand mb-8 max-w-2xl"
-              aria-label="Wildora Expeditions - Discover Nature Experience the wild"
-            >
-              <div className="wildora-brand__glow"></div>
-              <div className="wildora-brand__content">
-                <span className="wildora-brand__kicker">Wildora Expeditions</span>
-                <span className="wildora-brand__tagline">Discover Nature. Experience the wild.</span>
-              </div>
-            </div>
-            <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 rounded-full px-4 py-1.5 text-sm font-medium mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#ea580c]"></span>
-              India-wide wildlife expeditions
-            </span>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Experience India&apos;s Wild Places with Expert Naturalists
-            </h1>
-            <p className="text-lg md:text-2xl mb-8 text-green-50/90 max-w-2xl">
-              Leisure-first guided wildlife holidays for travellers, families, photographers, and nature lovers. Explore tiger forests, Himalayan birding routes, wetlands, deserts, rainforests, coasts, butterflies, night walks, and custom India wildlife circuits.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/trips"
-                className="bg-[#ea580c] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#c2410c] transition-colors shadow-lg text-center"
-              >
-                Browse Guided Trips
-              </Link>
-              <Link
-                href="#checklist"
-                className="bg-white/10 backdrop-blur border border-white/40 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-colors text-center"
-              >
-                Get the Wildlife Checklist
-              </Link>
-            </div>
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-green-50/80">
-              <span className="flex items-center gap-2"><Check /> Guided by local field experience</span>
-              <span className="flex items-center gap-2"><Check /> Ethical, low-impact travel</span>
-              <span className="flex items-center gap-2"><Check /> Custom groups on request</span>
-            </div>
-          </div>
-
-          {/* Quick facts card */}
-          <div className="lg:col-span-5 fade-up">
-            <div className="bg-white/95 text-gray-800 rounded-2xl shadow-2xl p-6 md:p-8">
-              <div className="flex items-center gap-1 mb-1">
-                <Stars n={5} />
-                <span className="ml-2 text-sm font-semibold text-gray-700">5.0 - loved by guests worldwide</span>
-              </div>
-              <p className="text-sm text-gray-600 mb-6">Guests from the UK, Europe, USA, Australia &amp; India</p>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  ['25+', 'Years in the field'],
-                  ['500+', 'Species recorded'],
-                  ['10-12', 'Max group size'],
-                  ['1', 'Custom route for your group'],
-                ].map(([n, l]) => (
-                  <div key={l} className="rounded-xl bg-[#faf7f0] p-4">
-                    <div className="text-2xl font-bold text-[#14432a]">{n}</div>
-                    <div className="text-xs text-gray-600">{l}</div>
-                  </div>
-                ))}
-              </div>
-              <Link
-                href="/contact"
-                className="mt-6 block text-center bg-[#14432a] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#1b5e3f] transition-colors"
-              >
-                Plan My Tour
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section: full-bleed wildlife photo loop */}
+      <HomeHero />
 
       {/* Trust marquee */}
       <section className="bg-[#14432a] text-green-50/90 py-4 overflow-hidden">
