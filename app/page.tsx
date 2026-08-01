@@ -275,7 +275,7 @@ export default function Home() {
             <Link href="/contact" className="block text-center bg-[#b5651d] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8f4e14] transition-colors mb-3">
               Request a Custom Quote
             </Link>
-            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="block text-center border border-[#33361f] text-[#33361f] px-6 py-3 rounded-lg font-semibold hover:bg-[#33361f] hover:text-white transition-colors">
+            <a href="https://wa.me/919443161606" target="_blank" rel="noopener noreferrer" className="block text-center border border-[#33361f] text-[#33361f] px-6 py-3 rounded-lg font-semibold hover:bg-[#33361f] hover:text-white transition-colors">
               Chat on WhatsApp
             </a>
           </div>

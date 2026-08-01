@@ -6,7 +6,7 @@ export default function FloatingCTA() {
   return (
     <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
       <a
-        href="https://wa.me/919876543210?text=Hi!%20I'd%20like%20to%20know%20more%20about%20your%20India%20wildlife%20expeditions."
+        href="https://wa.me/919443161606?text=Hi!%20I'd%20like%20to%20know%20more%20about%20your%20India%20wildlife%20expeditions."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"

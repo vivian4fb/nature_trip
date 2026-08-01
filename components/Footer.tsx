@@ -69,7 +69,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-300">
               <li>Email: info@wildoraexpeditions.com</li>
               <li>Phone: +91 98765 43210</li>
-              <li>WhatsApp: +91 98765 43210</li>
+              <li>WhatsApp: +91 94431 61606</li>
               <li className="pt-2">
                 <Link href="/contact" className="text-[#b5651d] hover:text-[#8f4e14] font-medium">
                   Send us a message -&gt;
