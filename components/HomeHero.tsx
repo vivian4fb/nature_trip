@@ -12,7 +12,7 @@ const SLIDE_SLUGS = [
   'malabar-trogon',
   'indian-leopard',
   'lion-tailed-macaque',
-  'great-indian-bustard',
+  'blackbuck',
   'nilgiri-tahr-male',
 ];
 
