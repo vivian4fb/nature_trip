@@ -426,7 +426,7 @@ export const experts: Expert[] = [
   {
     id: 'dr-a-relton',
     name: 'Dr. A. Relton',
-    qualifications: 'Former Vice-Principal & Controller of Examinations, Bishop Heber College (Autonomous), Tiruchirappalli',
+    qualifications: 'Honorary Wildlife Warden, Nature Club Advisor, Course Director of Ecology of Indian Tropics',
     specialization: 'Birds, butterflies, wetland ecology and wildlife interpretation',
     imageUrl: '/photos/experts/relton.webp',
     experience: '30+ years in biodiversity research and nature education; author of "Birds of Bishop Heber College" and "Butterflies of Bishop Heber College"',
