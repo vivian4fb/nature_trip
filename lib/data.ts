@@ -10,7 +10,6 @@ export interface Trip {
   season: string;
   groupSize: string;
   price: string;
-  priceUSD?: string;
   nextDeparture?: string;
   spotsLeft?: number;
   targetSpecies?: string;
@@ -72,8 +71,7 @@ export const trips: Trip[] = [
     focus: ['Tigers', 'Leopards', 'Forest birds'],
     season: 'October to June',
     groupSize: 'Max 10 guests',
-    price: 'Rs 58,000 per person',
-    priceUSD: 'approx. US$695 / GBP 550',
+    price: 'Price on request',
     nextDeparture: '15 November 2026',
     spotsLeft: 4,
     targetSpecies: 'Tigers, leopards, wild dogs, owls, raptors',
@@ -162,8 +160,7 @@ export const trips: Trip[] = [
     focus: ['Frogs', 'Reptiles', 'Rainforest birds'],
     season: 'June to September (monsoon)',
     groupSize: 'Max 12 guests',
-    price: 'Rs 38,000 per person',
-    priceUSD: 'approx. US$460 / GBP 365',
+    price: 'Price on request',
     nextDeparture: '22 August 2026',
     spotsLeft: 6,
     targetSpecies: 'Frogs, geckos, pit vipers, hornbills, forest butterflies',
@@ -242,8 +239,7 @@ export const trips: Trip[] = [
     focus: ['Himalayan birds', 'Mountain mammals', 'Forest walks'],
     season: 'March to May and October to November',
     groupSize: 'Max 10 guests',
-    price: 'Rs 52,000 per person',
-    priceUSD: 'approx. US$625 / GBP 495',
+    price: 'Price on request',
     nextDeparture: '18 April 2027',
     spotsLeft: 8,
     targetSpecies: 'Pheasants, laughingthrushes, woodpeckers, deer, martens',

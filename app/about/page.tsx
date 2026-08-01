@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
-      <section className="bg-gradient-to-r from-[#14432a] to-[#15803d] text-white py-20">
+      <section className="bg-gradient-to-r from-[#33361f] to-[#5b6b3a] text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">About Wild India</h1>
           <p className="text-xl text-gray-100">
@@ -20,7 +20,7 @@ export default function AboutPage() {
 
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-6 text-[#14432a]">A Continent-Scale Wildlife Destination</h2>
+          <h2 className="text-3xl font-bold mb-6 text-[#33361f]">A Continent-Scale Wildlife Destination</h2>
           <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
             <p>
               India is one of the world&apos;s richest wildlife destinations because its habitats change dramatically across short distances. A single country can offer tiger safaris, Himalayan birding, desert foxes, river dolphins, mangrove cats, rainforest frogs, elephants, hornbills, butterflies, and winter wetlands.
@@ -34,7 +34,7 @@ export default function AboutPage() {
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center text-[#14432a]">India Wildlife Regions We Cover</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-[#33361f]">India Wildlife Regions We Cover</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
@@ -77,7 +77,7 @@ export default function AboutPage() {
                     </div>
                   )}
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 text-[#15803d]">{region.title}</h3>
+                    <h3 className="text-xl font-semibold mb-3 text-[#5b6b3a]">{region.title}</h3>
                     <p className="text-gray-700">{region.body}</p>
                   </div>
                 </div>
@@ -89,26 +89,26 @@ export default function AboutPage() {
 
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-6 text-[#14432a]">Endemics, Icons, and Hidden Wildlife</h2>
-          <div className="bg-white rounded-lg p-6 border-l-4 border-[#ea580c] shadow-sm">
+          <h2 className="text-3xl font-bold mb-6 text-[#33361f]">Endemics, Icons, and Hidden Wildlife</h2>
+          <div className="bg-white rounded-lg p-6 border-l-4 border-[#b5651d] shadow-sm">
             <p className="text-gray-700 mb-6">
               India is famous for tigers, elephants, rhinos, lions, leopards, and peacocks, but its quieter wildlife is just as rewarding: frogs, reptiles, butterflies, hornbills, pheasants, endemic birds, orchids, insects, and nocturnal mammals. Our routes can focus on the headline species or the small, local specialities most visitors miss.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#ea580c]">100+</div>
+                <div className="text-3xl font-bold text-[#b5651d]">100+</div>
                 <div className="text-sm text-gray-600">National parks</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#ea580c]">1300+</div>
+                <div className="text-3xl font-bold text-[#b5651d]">1300+</div>
                 <div className="text-sm text-gray-600">Bird species</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#ea580c]">500+</div>
+                <div className="text-3xl font-bold text-[#b5651d]">500+</div>
                 <div className="text-sm text-gray-600">Mammal species</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#ea580c]">Many</div>
+                <div className="text-3xl font-bold text-[#b5651d]">Many</div>
                 <div className="text-sm text-gray-600">Endemic species</div>
               </div>
             </div>
@@ -118,7 +118,7 @@ export default function AboutPage() {
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center text-[#14432a]">Trip Styles Across India</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-[#33361f]">Trip Styles Across India</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               ['Big Cat Safaris', 'Tiger, leopard, lion, snow leopard, and clouded habitat routes where suitable.'],
@@ -129,7 +129,7 @@ export default function AboutPage() {
               ['Custom India Circuits', 'Multi-region itineraries combining wildlife, culture, comfort, and seasonal highlights.']
             ].map(([title, body]) => (
               <div key={title} className="bg-white rounded-lg p-6 shadow-md">
-                <h3 className="text-xl font-semibold mb-3 text-[#15803d]">{title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-[#5b6b3a]">{title}</h3>
                 <p className="text-gray-700 text-sm">{body}</p>
               </div>
             ))}
@@ -139,22 +139,22 @@ export default function AboutPage() {
 
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center text-[#14432a]">Seasons Across India</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-[#33361f]">Seasons Across India</h2>
           <div className="space-y-6">
-            <div className="border-l-4 border-[#15803d] pl-6">
-              <h3 className="text-xl font-semibold mb-2 text-[#14432a]">Winter & Early Spring (October - March)</h3>
+            <div className="border-l-4 border-[#5b6b3a] pl-6">
+              <h3 className="text-xl font-semibold mb-2 text-[#33361f]">Winter & Early Spring (October - March)</h3>
               <p className="text-gray-700">
                 Comfortable weather for birding, wetlands, family holidays, desert landscapes, forest walks, and many safari routes.
               </p>
             </div>
-            <div className="border-l-4 border-[#ea580c] pl-6">
-              <h3 className="text-xl font-semibold mb-2 text-[#14432a]">Dry Heat & Big Cat Season (March - June)</h3>
+            <div className="border-l-4 border-[#b5651d] pl-6">
+              <h3 className="text-xl font-semibold mb-2 text-[#33361f]">Dry Heat & Big Cat Season (March - June)</h3>
               <p className="text-gray-700">
                 Hotter conditions often concentrate wildlife around water, making this a strong period for many tiger and dry forest safaris.
               </p>
             </div>
-            <div className="border-l-4 border-[#15803d] pl-6">
-              <h3 className="text-xl font-semibold mb-2 text-[#14432a]">Monsoon (June - September)</h3>
+            <div className="border-l-4 border-[#5b6b3a] pl-6">
+              <h3 className="text-xl font-semibold mb-2 text-[#33361f]">Monsoon (June - September)</h3>
               <p className="text-gray-700">
                 Rain closes or changes access in some parks, but opens extraordinary rainforest, frog, reptile, waterfall, and green landscape experiences.
               </p>
@@ -163,7 +163,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#14432a] text-white">
+      <section className="py-16 bg-[#33361f] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-6 text-center">Ethical Wildlife Travel</h2>
           <div className="prose prose-lg max-w-none text-gray-200">

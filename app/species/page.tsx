@@ -35,7 +35,7 @@ export default function SpeciesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-r from-[#14432a] to-[#15803d] text-white py-20">
+      <section className="bg-gradient-to-r from-[#33361f] to-[#5b6b3a] text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">Species We Focus On</h1>
           <p className="text-xl text-gray-100">
@@ -54,7 +54,7 @@ export default function SpeciesPage() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-2 rounded-full font-semibold transition-colors ${
                   selectedCategory === category
-                    ? 'bg-[#ea580c] text-white'
+                    ? 'bg-[#b5651d] text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-100'
                 }`}
               >
@@ -75,18 +75,18 @@ export default function SpeciesPage() {
                   const p = findPhoto(speciesPhotoSlugs[sp.id]);
                   if (!p) return null;
                   return (
-                    <div className="relative h-48 bg-gradient-to-br from-[#15803d] to-[#14432a]">
+                    <div className="relative h-48 bg-gradient-to-br from-[#5b6b3a] to-[#33361f]">
                       <img src={img(p.src)} alt={sp.commonName} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
                     </div>
                   );
                 })()}
                 <div className="p-6">
                   <div className="flex flex-wrap gap-2 mb-3">
-                    <span className="bg-[#15803d] text-white text-xs px-2 py-1 rounded">
+                    <span className="bg-[#5b6b3a] text-white text-xs px-2 py-1 rounded">
                       {sp.category}
                     </span>
                     {sp.endemic && (
-                      <span className="bg-[#ea580c] text-white text-xs px-2 py-1 rounded">
+                      <span className="bg-[#b5651d] text-white text-xs px-2 py-1 rounded">
                         Endemic
                       </span>
                     )}
@@ -96,7 +96,7 @@ export default function SpeciesPage() {
                       </span>
                     )}
                   </div>
-                  <h3 className="text-xl font-semibold mb-1 text-[#14432a]">{sp.commonName}</h3>
+                  <h3 className="text-xl font-semibold mb-1 text-[#33361f]">{sp.commonName}</h3>
                   <p className="text-sm text-gray-600 italic mb-3">{sp.scientificName}</p>
                   <div className="text-sm text-gray-700 mb-2">
                     <span className="font-semibold">Habitat:</span> {sp.habitat}
@@ -112,10 +112,10 @@ export default function SpeciesPage() {
       </section>
 
       {/* Field photo gallery */}
-      <section className="py-16 bg-[#0a2216]">
+      <section className="py-16 bg-[#262714]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Photographed on our expeditions</p>
+            <p className="text-[#b5651d] font-semibold uppercase tracking-wide text-sm mb-2">Photographed on our expeditions</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Field Photo Gallery</h2>
             <p className="text-green-50/70 mt-3 max-w-2xl mx-auto text-sm">
               {galleryPhotos.length} photograph{galleryPhotos.length === 1 ? '' : 's'}
@@ -136,7 +136,7 @@ export default function SpeciesPage() {
       {/* About Endemic Species */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-6 text-center text-[#14432a]">
+          <h2 className="text-3xl font-bold mb-6 text-center text-[#33361f]">
             Why Local Specialities Matter
           </h2>
           <p className="text-gray-700 mb-4">
@@ -154,7 +154,7 @@ export default function SpeciesPage() {
       {/* Ethical Observation */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-6 text-center text-[#14432a]">
+          <h2 className="text-3xl font-bold mb-6 text-center text-[#33361f]">
             Ethical Wildlife Observation
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -183,7 +183,7 @@ export default function SpeciesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#14432a] text-white">
+      <section className="py-16 bg-[#33361f] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">See These Species in the Wild</h2>
           <p className="text-lg mb-8 text-gray-200">
@@ -191,7 +191,7 @@ export default function SpeciesPage() {
           </p>
           <Link
             href="/trips"
-            className="inline-block bg-[#ea580c] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#c2410c] transition-colors"
+            className="inline-block bg-[#b5651d] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#8f4e14] transition-colors"
           >
             Browse Our Trips
           </Link>

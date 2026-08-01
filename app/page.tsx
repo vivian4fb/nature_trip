@@ -5,7 +5,7 @@ import HomeHero from '@/components/HomeHero';
 
 function Stars({ n }: { n: number }) {
   return (
-    <div className="flex gap-0.5 text-[#ea580c]" aria-label={`${n} out of 5 stars`}>
+    <div className="flex gap-0.5 text-[#b5651d]" aria-label={`${n} out of 5 stars`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <svg key={i} className="w-4 h-4" viewBox="0 0 20 20" fill={i < n ? 'currentColor' : 'none'} stroke="currentColor">
           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.955a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.447a1 1 0 00-.364 1.118l1.287 3.955c.3.921-.755 1.688-1.54 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.784.57-1.838-.197-1.539-1.118l1.287-3.955a1 1 0 00-.364-1.118L2.075 9.372c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.274-3.945z" />
@@ -22,20 +22,20 @@ export default function Home() {
       <HomeHero />
 
       {/* Trust marquee */}
-      <section className="bg-[#14432a] text-green-50/90 py-4 overflow-hidden">
+      <section className="bg-[#33361f] text-green-50/90 py-4 overflow-hidden">
         <div className="flex w-max marquee-track">
           {[...trustSignals, ...trustSignals].map((s, i) => (
             <span key={i} className="flex items-center gap-3 px-8 text-sm font-medium whitespace-nowrap">
-              <span className="text-[#ea580c]">*</span> {s}
+              <span className="text-[#b5651d]">*</span> {s}
             </span>
           ))}
         </div>
       </section>
 
       {/* Field photo film-strip: every photo in our archive, shot on our own trips */}
-      <section className="py-14 bg-[#0a2216]">
+      <section className="py-14 bg-[#262714]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
-          <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Shot in the field by our guides</p>
+          <p className="text-[#b5651d] font-semibold uppercase tracking-wide text-sm mb-2">Shot in the field by our guides</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white">What You&apos;ll See With Us</h2>
           <p className="text-green-50/70 mt-3 max-w-2xl mx-auto text-sm">
             Every photograph below was taken on our own expeditions — tigers, owls, bee-eaters, moths, frogs, orchids and the forests they live in.
@@ -61,8 +61,8 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Why travel with us</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#14432a]">
+            <p className="text-[#b5651d] font-semibold uppercase tracking-wide text-sm mb-2">Why travel with us</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#33361f]">
               Guided, Enjoyable, and Deeply Local
             </h2>
           </div>
@@ -74,10 +74,10 @@ export default function Home() {
               { t: 'Custom Groups', d: 'Private tours and group programmes can be built around your dates and interests.', icon: 'heart' },
             ].map((c) => (
               <div key={c.t} className="text-center card-lift bg-white rounded-2xl border border-gray-100 p-6">
-                <div className="w-16 h-16 bg-[#15803d] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-[#5b6b3a] rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Icon name={c.icon} />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-[#14432a]">{c.t}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-[#33361f]">{c.t}</h3>
                 <p className="text-gray-600">{c.d}</p>
               </div>
             ))}
@@ -86,11 +86,11 @@ export default function Home() {
       </section>
 
       {/* Field gallery bento */}
-      <section className="py-20 bg-[#faf7f0]">
+      <section className="py-20 bg-[#f3eedf]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">From our field archives</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#14432a]">Moments Worth Travelling For</h2>
+            <p className="text-[#b5651d] font-semibold uppercase tracking-wide text-sm mb-2">From our field archives</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#33361f]">Moments Worth Travelling For</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[9rem] md:auto-rows-[11rem]">
             {[
@@ -115,7 +115,7 @@ export default function Home() {
             })}
           </div>
           <div className="text-center mt-10">
-            <Link href="/species" className="inline-block text-[#14432a] font-semibold hover:text-[#15803d] transition-colors">
+            <Link href="/species" className="inline-block text-[#33361f] font-semibold hover:text-[#5b6b3a] transition-colors">
               Browse the Full Species Gallery -&gt;
             </Link>
           </div>
@@ -123,16 +123,16 @@ export default function Home() {
       </section>
 
       {/* Featured Trips */}
-      <section className="py-20 bg-[#faf7f0]">
+      <section className="py-20 bg-[#f3eedf]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Upcoming departures</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#14432a]">Featured Trips</h2>
+            <p className="text-[#b5651d] font-semibold uppercase tracking-wide text-sm mb-2">Upcoming departures</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#33361f]">Featured Trips</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {trips.map((trip) => (
               <div key={trip.id} className="bg-white rounded-2xl shadow-md overflow-hidden card-lift flex flex-col">
-                <div className="relative h-48 bg-gradient-to-br from-[#1b5e3f] to-[#14432a] leaf-texture">
+                <div className="relative h-48 bg-gradient-to-br from-[#4a5230] to-[#33361f] leaf-texture">
                   {(() => {
                     const p = findPhoto(tripPhotoSlugs[trip.id]);
                     if (!p) return null;
@@ -140,7 +140,7 @@ export default function Home() {
                     return <img src={img(p.wide ?? p.src)} alt={p.name} loading="lazy" decoding="async" className={`absolute inset-0 w-full h-full object-cover ${p.wide ? 'object-top' : ''}`} />;
                   })()}
                   {typeof trip.spotsLeft === 'number' && trip.spotsLeft <= 6 && (
-                    <span className="absolute top-3 left-3 bg-[#dc2626] text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    <span className="absolute top-3 left-3 bg-[#9a3324] text-white text-xs font-semibold px-3 py-1 rounded-full">
                       Only {trip.spotsLeft} spots left
                     </span>
                   )}
@@ -151,26 +151,25 @@ export default function Home() {
                   )}
                 </div>
                 <div className="p-6 flex flex-col flex-1">
-                  <h3 className="text-xl font-semibold mb-2 text-[#14432a]">{trip.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-[#33361f]">{trip.title}</h3>
                   <p className="text-gray-600 mb-4 text-sm">{trip.description}</p>
                   <div className="space-y-1.5 text-sm text-gray-700 mb-4">
                     <div className="flex items-center gap-2"><Clock /> {trip.duration}</div>
                     <div className="flex items-center gap-2"><Signal /> {trip.difficulty} - {trip.targetSpecies}</div>
                     {trip.nextDeparture && (
-                      <div className="flex items-center gap-2 text-[#ea580c] font-medium"><Calendar /> Next departure: {trip.nextDeparture}</div>
+                      <div className="flex items-center gap-2 text-[#b5651d] font-medium"><Calendar /> Next departure: {trip.nextDeparture}</div>
                     )}
                   </div>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {trip.focus.map((f, idx) => (
-                      <span key={idx} className="bg-green-50 text-[#14432a] border border-green-100 text-xs px-2 py-1 rounded">{f}</span>
+                      <span key={idx} className="bg-[#f3eedf] text-[#33361f] border border-[#ded3b0] text-xs px-2 py-1 rounded">{f}</span>
                     ))}
                   </div>
                   <div className="mt-auto">
                     <div className="mb-3">
-                      <span className="text-2xl font-bold text-[#14432a]">{trip.price}</span>
-                      {trip.priceUSD && <span className="block text-xs text-gray-500">{trip.priceUSD}</span>}
+                      <span className="text-2xl font-bold text-[#33361f]">{trip.price}</span>
                     </div>
-                    <Link href={`/trips/${trip.id}`} className="block text-center bg-[#ea580c] text-white px-4 py-3 rounded-lg hover:bg-[#c2410c] transition-colors font-semibold">
+                    <Link href={`/trips/${trip.id}`} className="block text-center bg-[#b5651d] text-white px-4 py-3 rounded-lg hover:bg-[#8f4e14] transition-colors font-semibold">
                       View Itinerary
                     </Link>
                   </div>
@@ -179,7 +178,7 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link href="/trips" className="inline-block text-[#14432a] font-semibold hover:text-[#15803d] transition-colors">
+            <Link href="/trips" className="inline-block text-[#33361f] font-semibold hover:text-[#5b6b3a] transition-colors">
               View All Trips &amp; Custom Options -&gt;
             </Link>
           </div>
@@ -190,8 +189,8 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Explore by group</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#14432a]">Wildlife We Track, Watch &amp; Photograph</h2>
+            <p className="text-[#b5651d] font-semibold uppercase tracking-wide text-sm mb-2">Explore by group</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#33361f]">Wildlife We Track, Watch &amp; Photograph</h2>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
@@ -210,7 +209,7 @@ export default function Home() {
               return (
                 <Link key={catId} href={`/species#cat-${catId}`} className="photo-tile block h-44 md:h-52 card-lift">
                   <img src={img(p.src)} alt={`${cat.label} — ${p.name}`} loading="lazy" decoding="async" />
-                  <span className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-[#06180f]/90 to-transparent text-white">
+                  <span className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-[#1c1d10]/90 to-transparent text-white">
                     <span className="block font-bold">{cat.label}</span>
                     <span className="block text-xs text-green-50/80">{cat.count} field photo{cat.count > 1 ? 's' : ''}</span>
                   </span>
@@ -225,23 +224,23 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Guided services</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#14432a] mb-3">Experiences &amp; Services We Offer</h2>
+            <p className="text-[#b5651d] font-semibold uppercase tracking-wide text-sm mb-2">Guided services</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#33361f] mb-3">Experiences &amp; Services We Offer</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">Book a fixed departure, add a guided day tour, or ask us to build a private programme around your target species, group size, and comfort level.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((s) => (
               <div key={s.id} className="bg-white rounded-2xl border border-gray-100 p-6 card-lift">
                 <ServiceIcon name={s.icon} />
-                <h3 className="font-semibold text-[#14432a] mb-1">{s.title}</h3>
-                <p className="text-xs text-[#ea580c] font-medium mb-2">{s.tagline}</p>
+                <h3 className="font-semibold text-[#33361f] mb-1">{s.title}</h3>
+                <p className="text-xs text-[#b5651d] font-medium mb-2">{s.tagline}</p>
                 <p className="text-sm text-gray-600 mb-3">{s.description}</p>
                 <p className="text-xs text-gray-500"><span className="font-semibold">Best for:</span> {s.forWho}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link href="/contact" className="inline-block bg-[#14432a] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1b5e3f] transition-colors">
+            <Link href="/contact" className="inline-block bg-[#33361f] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#4a5230] transition-colors">
               Design My Guided Experience
             </Link>
           </div>
@@ -249,11 +248,11 @@ export default function Home() {
       </section>
 
       {/* International visitors band */}
-      <section className="py-16 bg-[#14432a] text-white relative overflow-hidden">
+      <section className="py-16 bg-[#33361f] text-white relative overflow-hidden">
         <div className="absolute inset-0 leaf-texture opacity-40"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Travelling from abroad?</p>
+            <p className="text-[#b5651d] font-semibold uppercase tracking-wide text-sm mb-2">Travelling from abroad?</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Made simple for international visitors</h2>
             <p className="text-green-50/90 mb-6">
               Many guests fly in from the UK, Europe, North America and Australia. We handle route planning across India so you can focus on wildlife, scenery, and downtime.
@@ -266,17 +265,17 @@ export default function Home() {
                 'Secure deposits, clear cancellation terms and insurance guidance',
                 'Comfortable eco-lodges, vegetarian-friendly food, all transport arranged',
               ].map((t) => (
-                <li key={t} className="flex items-start gap-3"><span className="text-[#ea580c] mt-1"><Check /></span>{t}</li>
+                <li key={t} className="flex items-start gap-3"><span className="text-[#b5651d] mt-1"><Check /></span>{t}</li>
               ))}
             </ul>
           </div>
           <div className="bg-white/95 text-gray-800 rounded-2xl p-8 shadow-2xl">
-            <h3 className="text-xl font-bold text-[#14432a] mb-2">Plan your visit</h3>
+            <h3 className="text-xl font-bold text-[#33361f] mb-2">Plan your visit</h3>
             <p className="text-sm text-gray-600 mb-5">Tell us your dates, group size, comfort level, and target species. We&apos;ll reply within 24 hours with a tailored plan and quote in your currency.</p>
-            <Link href="/contact" className="block text-center bg-[#ea580c] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#c2410c] transition-colors mb-3">
+            <Link href="/contact" className="block text-center bg-[#b5651d] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8f4e14] transition-colors mb-3">
               Request a Custom Quote
             </Link>
-            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="block text-center border border-[#14432a] text-[#14432a] px-6 py-3 rounded-lg font-semibold hover:bg-[#14432a] hover:text-white transition-colors">
+            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="block text-center border border-[#33361f] text-[#33361f] px-6 py-3 rounded-lg font-semibold hover:bg-[#33361f] hover:text-white transition-colors">
               Chat on WhatsApp
             </a>
           </div>
@@ -284,18 +283,18 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-[#faf7f0]">
+      <section className="py-20 bg-[#f3eedf]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Reviews</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#14432a]">What Our Guests Say</h2>
+            <p className="text-[#b5651d] font-semibold uppercase tracking-wide text-sm mb-2">Reviews</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#33361f]">What Our Guests Say</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {reviews.map((r) => (
               <div key={r.name} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                 <Stars n={r.rating} />
                 <p className="text-gray-700 italic my-4 text-sm leading-relaxed">&ldquo;{r.text}&rdquo;</p>
-                <p className="text-sm font-semibold text-[#14432a]">{r.name}</p>
+                <p className="text-sm font-semibold text-[#33361f]">{r.name}</p>
                 <p className="text-xs text-gray-500">{r.country} - {r.trip}</p>
               </div>
             ))}
@@ -307,8 +306,8 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">The people who guide you</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#14432a]">Meet Our Experts</h2>
+            <p className="text-[#b5651d] font-semibold uppercase tracking-wide text-sm mb-2">The people who guide you</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#33361f]">Meet Our Experts</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {experts.map((expert) => (
@@ -322,20 +321,20 @@ export default function Home() {
                     className="w-24 h-24 rounded-full mx-auto mb-4 object-cover shadow"
                   />
                 ) : (
-                  <div className="w-24 h-24 bg-gradient-to-br from-[#1b5e3f] to-[#14432a] rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                  <div className="w-24 h-24 bg-gradient-to-br from-[#4a5230] to-[#33361f] rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
                     {expert.name.split(' ').filter((w) => w.length > 1)[0]?.[0]}
                     {expert.name.split(' ').filter((w) => w.length > 1)[1]?.[0]}
                   </div>
                 )}
-                <h3 className="text-xl font-semibold mb-1 text-[#14432a]">{expert.name}</h3>
+                <h3 className="text-xl font-semibold mb-1 text-[#33361f]">{expert.name}</h3>
                 <p className="text-sm text-gray-600 mb-2">{expert.qualifications}</p>
-                <p className="text-sm text-[#15803d] font-medium mb-2">{expert.specialization}</p>
+                <p className="text-sm text-[#5b6b3a] font-medium mb-2">{expert.specialization}</p>
                 <p className="text-xs text-gray-500">{expert.experience}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link href="/experts" className="inline-block text-[#14432a] font-semibold hover:text-[#15803d] transition-colors">
+            <Link href="/experts" className="inline-block text-[#33361f] font-semibold hover:text-[#5b6b3a] transition-colors">
               Learn More About Our Team -&gt;
             </Link>
           </div>
@@ -343,12 +342,12 @@ export default function Home() {
       </section>
 
       {/* Lead magnet / checklist */}
-      <section id="checklist" className="py-20 bg-[#faf7f0]">
+      <section id="checklist" className="py-20 bg-[#f3eedf]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-gray-100 grid md:grid-cols-5 gap-8 items-center">
             <div className="md:col-span-3">
-              <p className="text-[#ea580c] font-semibold uppercase tracking-wide text-sm mb-2">Free download</p>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#14432a] mb-3">The India Wildlife Trip-Planning Checklist</h2>
+              <p className="text-[#b5651d] font-semibold uppercase tracking-wide text-sm mb-2">Free download</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#33361f] mb-3">The India Wildlife Trip-Planning Checklist</h2>
               <p className="text-gray-600 mb-4">Get our expert-curated checklist for India wildlife routes, target species, seasons, and region choices. A practical trip-planning companion.</p>
               <ul className="text-sm text-gray-600 space-y-1 mb-2">
                 <li className="flex items-center gap-2"><Check /> Safaris, birding, wetlands, mountains and rainforests</li>
@@ -357,9 +356,9 @@ export default function Home() {
               </ul>
             </div>
             <form className="md:col-span-2 space-y-3">
-              <input type="text" placeholder="Your name" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15803d] focus:border-transparent" />
-              <input type="email" placeholder="Email address" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15803d] focus:border-transparent" />
-              <button type="submit" className="w-full bg-[#ea580c] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#c2410c] transition-colors">
+              <input type="text" placeholder="Your name" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#5b6b3a] focus:border-transparent" />
+              <input type="email" placeholder="Email address" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#5b6b3a] focus:border-transparent" />
+              <button type="submit" className="w-full bg-[#b5651d] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8f4e14] transition-colors">
                 Send Me the Checklist
               </button>
               <p className="text-xs text-gray-400 text-center">No spam. Unsubscribe anytime.</p>
@@ -377,7 +376,7 @@ export default function Home() {
             Join a small group or ask for a private guided programme in one of the world&apos;s most biodiverse regions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/trips" className="bg-[#ea580c] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#c2410c] transition-colors shadow-lg">
+            <Link href="/trips" className="bg-[#b5651d] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#8f4e14] transition-colors shadow-lg">
               Browse All Trips
             </Link>
             <Link href="/contact" className="bg-white/10 backdrop-blur border border-white/40 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-colors">
@@ -400,14 +399,14 @@ function Check() {
 }
 function Clock() {
   return (
-    <svg className="w-4 h-4 text-[#15803d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className="w-4 h-4 text-[#5b6b3a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
     </svg>
   );
 }
 function Signal() {
   return (
-    <svg className="w-4 h-4 text-[#15803d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className="w-4 h-4 text-[#5b6b3a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
     </svg>
   );
@@ -432,7 +431,7 @@ function ServiceIcon({ name }: { name: string }) {
   };
 
   return (
-    <div className="w-12 h-12 bg-green-50 border border-green-100 rounded-lg flex items-center justify-center mb-4 text-[#15803d]">
+    <div className="w-12 h-12 bg-[#f3eedf] border border-[#ded3b0] rounded-lg flex items-center justify-center mb-4 text-[#5b6b3a]">
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={paths[name]} />
       </svg>

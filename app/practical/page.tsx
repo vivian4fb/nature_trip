@@ -9,7 +9,7 @@ export default function PracticalPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-r from-[#14432a] to-[#15803d] text-white py-20">
+      <section className="bg-gradient-to-r from-[#33361f] to-[#5b6b3a] text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">Practical Info & FAQ</h1>
           <p className="text-xl text-gray-100">
@@ -21,10 +21,10 @@ export default function PracticalPage() {
       {/* Best Seasons */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#14432a]">Best Seasons to Visit</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#33361f]">Best Seasons to Visit</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2 text-[#15803d]">Monsoon (Jun-Sep)</h3>
+              <h3 className="text-xl font-semibold mb-2 text-[#5b6b3a]">Monsoon (Jun-Sep)</h3>
               <p className="text-sm text-gray-700 mb-3">
                 Heavy rainfall in many regions, lush forests, and dramatic landscapes. Best for rainforest frogs, reptiles, waterfalls, and green habitats. Be prepared for leeches and wet conditions on relevant routes.
               </p>
@@ -32,11 +32,11 @@ export default function PracticalPage() {
                 <strong>Best for:</strong> Rainforests, herping, waterfalls
               </div>
             </div>
-            <div className="bg-gray-50 rounded-lg p-6 border-2 border-[#ea580c]">
-              <div className="bg-[#ea580c] text-white text-xs px-2 py-1 rounded inline-block mb-2">
+            <div className="bg-gray-50 rounded-lg p-6 border-2 border-[#b5651d]">
+              <div className="bg-[#b5651d] text-white text-xs px-2 py-1 rounded inline-block mb-2">
                 MOST POPULAR
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-[#15803d]">Cool Season (Oct-Mar)</h3>
+              <h3 className="text-xl font-semibold mb-2 text-[#5b6b3a]">Cool Season (Oct-Mar)</h3>
               <p className="text-sm text-gray-700 mb-3">
                 Pleasant weather in many regions, strong birding, wetlands, deserts, family travel, and comfortable safari conditions.
               </p>
@@ -45,7 +45,7 @@ export default function PracticalPage() {
               </div>
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2 text-[#15803d]">Dry Safari Season (Mar-Jun)</h3>
+              <h3 className="text-xl font-semibold mb-2 text-[#5b6b3a]">Dry Safari Season (Mar-Jun)</h3>
               <p className="text-sm text-gray-700 mb-3">
                 Drier conditions can concentrate wildlife near water in many forest reserves. Higher elevations remain cooler. Good visibility for mammals and many safari routes.
               </p>
@@ -60,7 +60,7 @@ export default function PracticalPage() {
       {/* Difficulty Levels */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#14432a]">Understanding Difficulty Levels</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#33361f]">Understanding Difficulty Levels</h2>
           <div className="space-y-4">
             <div className="bg-white rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-2 text-green-700">Easy</h3>
@@ -87,10 +87,10 @@ export default function PracticalPage() {
       {/* What to Pack */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#14432a]">What to Pack</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#33361f]">What to Pack</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-[#15803d]">Essential Gear</h3>
+              <h3 className="text-xl font-semibold mb-4 text-[#5b6b3a]">Essential Gear</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>- Sturdy walking shoes or boots</li>
                 <li>- Rain jacket (waterproof, not just water-resistant)</li>
@@ -104,7 +104,7 @@ export default function PracticalPage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-[#15803d]">Recommended Items</h3>
+              <h3 className="text-xl font-semibold mb-4 text-[#5b6b3a]">Recommended Items</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>- Binoculars (8x or 10x magnification)</li>
                 <li>- Camera with telephoto lens or macro option</li>
@@ -123,7 +123,7 @@ export default function PracticalPage() {
       {/* FAQ */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-center text-[#14432a]">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center text-[#33361f]">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -131,9 +131,9 @@ export default function PracticalPage() {
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                 >
-                  <span className="font-semibold text-[#14432a]">{faq.question}</span>
+                  <span className="font-semibold text-[#33361f]">{faq.question}</span>
                   <svg
-                    className={`w-5 h-5 text-[#15803d] transition-transform ${
+                    className={`w-5 h-5 text-[#5b6b3a] transition-transform ${
                       openIndex === index ? 'transform rotate-180' : ''
                     }`}
                     fill="none"
@@ -157,7 +157,7 @@ export default function PracticalPage() {
       {/* Accommodation */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-6 text-[#14432a]">Accommodation & Food</h2>
+          <h2 className="text-3xl font-bold mb-6 text-[#33361f]">Accommodation & Food</h2>
           <div className="space-y-4 text-gray-700">
             <p>
               <strong>Accommodation:</strong> We use comfortable wildlife lodges, eco-lodges, guesthouses, camps, and nature-friendly stays with clean rooms and practical amenities. Rooms are typically twin-sharing; single occupancy may be available for a supplement.
@@ -173,7 +173,7 @@ export default function PracticalPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#14432a] text-white">
+      <section className="py-16 bg-[#33361f] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Still Have Questions?</h2>
           <p className="text-lg mb-8 text-gray-200">
@@ -181,7 +181,7 @@ export default function PracticalPage() {
           </p>
           <a
             href="/contact"
-            className="inline-block bg-[#ea580c] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#c2410c] transition-colors"
+            className="inline-block bg-[#b5651d] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#8f4e14] transition-colors"
           >
             Contact Us
           </a>

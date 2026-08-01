@@ -36,13 +36,13 @@ export default async function TripDetailPage({ params }: { params: Promise<{ id:
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative h-[400px] flex items-center justify-center bg-gradient-to-r from-[#14432a] to-[#15803d] text-white overflow-hidden">
+      <section className="relative h-[400px] flex items-center justify-center bg-gradient-to-r from-[#33361f] to-[#5b6b3a] text-white overflow-hidden">
         {(() => {
           const p = findPhoto(tripPhotoSlugs[trip.id]);
           return p ? (
             <>
               <img src={img(p.wide ?? p.src)} alt={p.name} decoding="async" className={`absolute inset-0 w-full h-full object-cover ${p.wide ? 'object-top' : ''}`} />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#06180f]/85 via-[#0a2216]/50 to-[#0a2216]/30"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1c1d10]/85 via-[#262714]/50 to-[#262714]/30"></div>
             </>
           ) : null;
         })()}
@@ -56,7 +56,7 @@ export default async function TripDetailPage({ params }: { params: Promise<{ id:
       <section className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-2xl font-bold mb-4 text-[#14432a]">At a Glance</h2>
+            <h2 className="text-2xl font-bold mb-4 text-[#33361f]">At a Glance</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
               <div>
                 <div className="font-semibold text-gray-700">Duration</div>
@@ -79,7 +79,7 @@ export default async function TripDetailPage({ params }: { params: Promise<{ id:
               <div className="font-semibold text-gray-700 mb-2">Focus Areas</div>
               <div className="flex flex-wrap gap-2">
                 {trip.focus.map((focus, idx) => (
-                  <span key={idx} className="bg-[#15803d] text-white text-xs px-3 py-1 rounded">
+                  <span key={idx} className="bg-[#5b6b3a] text-white text-xs px-3 py-1 rounded">
                     {focus}
                   </span>
                 ))}
@@ -108,11 +108,11 @@ export default async function TripDetailPage({ params }: { params: Promise<{ id:
       {/* Highlights */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-6 text-[#14432a]">Trip Highlights</h2>
+          <h2 className="text-3xl font-bold mb-6 text-[#33361f]">Trip Highlights</h2>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {trip.highlights.map((highlight, idx) => (
               <li key={idx} className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-[#ea580c] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#b5651d] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
                 <span className="text-gray-700">{highlight}</span>
@@ -125,11 +125,11 @@ export default async function TripDetailPage({ params }: { params: Promise<{ id:
       {/* Itinerary */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#14432a]">Daily Guided Plan</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#33361f]">Daily Guided Plan</h2>
           <div className="space-y-6">
             {trip.itinerary.map((day) => (
               <div key={day.day} className="bg-white rounded-lg p-6 shadow-md">
-                <h3 className="text-xl font-semibold mb-2 text-[#15803d]">
+                <h3 className="text-xl font-semibold mb-2 text-[#5b6b3a]">
                   Day {day.day}: {day.title}
                 </h3>
                 <p className="text-gray-700">{day.description}</p>
@@ -144,7 +144,7 @@ export default async function TripDetailPage({ params }: { params: Promise<{ id:
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-[#14432a]">What&apos;s Included</h2>
+              <h2 className="text-3xl font-bold mb-6 text-[#33361f]">What&apos;s Included</h2>
               <ul className="space-y-2">
                 {trip.included.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2">
@@ -157,11 +157,11 @@ export default async function TripDetailPage({ params }: { params: Promise<{ id:
               </ul>
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-[#14432a]">What to Bring</h2>
+              <h2 className="text-3xl font-bold mb-6 text-[#33361f]">What to Bring</h2>
               <ul className="space-y-2">
                 {trip.toBring.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2">
-                    <svg className="w-5 h-5 text-[#ea580c] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#b5651d] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                     <span className="text-gray-700">{item}</span>
@@ -176,12 +176,12 @@ export default async function TripDetailPage({ params }: { params: Promise<{ id:
       {/* Experience Rhythm */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-6 text-[#14432a]">What You Will Experience</h2>
+          <h2 className="text-3xl font-bold mb-6 text-[#33361f]">What You Will Experience</h2>
           <p className="text-gray-700 mb-4">The trip is built around field time, rest, scenery, food, and expert guiding:</p>
           <ul className="space-y-2">
             {trip.learningOutcomes.map((outcome, idx) => (
               <li key={idx} className="flex items-start gap-2">
-                <svg className="w-5 h-5 text-[#15803d] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-[#5b6b3a] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span className="text-gray-700">{outcome}</span>
@@ -194,10 +194,10 @@ export default async function TripDetailPage({ params }: { params: Promise<{ id:
       {/* Suitable For */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-6 text-[#14432a]">Who Is This Trip Suitable For?</h2>
+          <h2 className="text-3xl font-bold mb-6 text-[#33361f]">Who Is This Trip Suitable For?</h2>
           <div className="flex flex-wrap gap-3">
             {trip.suitableFor.map((audience, idx) => (
-              <span key={idx} className="bg-[#15803d] text-white px-4 py-2 rounded-full">
+              <span key={idx} className="bg-[#5b6b3a] text-white px-4 py-2 rounded-full">
                 {audience}
               </span>
             ))}
@@ -206,12 +206,11 @@ export default async function TripDetailPage({ params }: { params: Promise<{ id:
       </section>
 
       {/* Pricing & Booking */}
-      <section className="py-12 bg-[#14432a] text-white">
+      <section className="py-12 bg-[#33361f] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Book?</h2>
           <div className="mb-6">
-            <div className="text-4xl font-bold text-[#ea580c]">{trip.price}</div>
-            {trip.priceUSD && <div className="text-sm text-gray-200 mt-2">{trip.priceUSD}</div>}
+            <div className="text-4xl font-bold text-[#b5651d]">{trip.price}</div>
           </div>
           <p className="text-lg mb-8 text-gray-200">
             Secure your spot for an unforgettable guided wildlife holiday in India
@@ -219,13 +218,13 @@ export default async function TripDetailPage({ params }: { params: Promise<{ id:
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-[#ea580c] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#c2410c] transition-colors"
+              className="bg-[#b5651d] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#8f4e14] transition-colors"
             >
               Book This Trip
             </Link>
             <Link
               href="/practical"
-              className="bg-white text-[#14432a] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-[#33361f] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               View FAQ
             </Link>

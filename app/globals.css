@@ -5,15 +5,15 @@
   --foreground: #1a1a1a;
 
   /* Wildora nature travel palette */
-  --forest-green: #14432a;   /* deep forest - headings, dark sections */
-  --fern-green: #15803d;     /* fern - icons, secondary accents */
-  --moss-green: #3f6212;     /* moss */
-  --earth-brown: #7c4a1e;    /* warm earth brown */
-  --sunrise-orange: #ea580c; /* Malabar Trogon accent - primary CTA */
-  --sunrise-orange-dark: #c2410c;
-  --bird-red: #dc2626;       /* trogon red - alerts, endemic tags */
-  --sand: #faf7f0;           /* warm off-white section background */
-  --canopy-gradient: linear-gradient(135deg, #14432a 0%, #1b5e3f 55%, #15803d 100%);
+  --forest-green: #33361f;   /* deep forest - headings, dark sections */
+  --fern-green: #5b6b3a;     /* fern - icons, secondary accents */
+  --moss-green: #3f4a1f;     /* moss */
+  --earth-brown: #8a6d4b;    /* warm earth brown */
+  --sunrise-orange: #b5651d; /* Malabar Trogon accent - primary CTA */
+  --sunrise-orange-dark: #8f4e14;
+  --bird-red: #9a3324;       /* trogon red - alerts, endemic tags */
+  --sand: #f3eedf;           /* warm off-white section background */
+  --canopy-gradient: linear-gradient(135deg, #33361f 0%, #4a5230 55%, #5b6b3a 100%);
 }
 
 @theme inline {
@@ -44,7 +44,7 @@ html {
 /* Leafy layered hero background */
 .hero-canopy {
   background:
-    linear-gradient(90deg, rgba(10, 34, 22, 0.92) 0%, rgba(20, 67, 42, 0.78) 44%, rgba(20, 67, 42, 0.24) 100%),
+    linear-gradient(90deg, rgba(38, 39, 20, 0.92) 0%, rgba(51, 54, 31, 0.78) 44%, rgba(51, 54, 31, 0.24) 100%),
     url("/nature_trip/india-wildlife-hero.png") center / cover no-repeat,
     var(--canopy-gradient);
 }
@@ -60,7 +60,7 @@ html {
 }
 .card-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -12px rgba(20, 67, 42, 0.35);
+  box-shadow: 0 20px 40px -12px rgba(51, 54, 31, 0.35);
 }
 
 /* Fade-up on load */
@@ -139,7 +139,7 @@ html {
   position: relative;
   overflow: hidden;
   border-radius: 0.75rem;
-  background: #0a2216;
+  background: #262714;
 }
 .photo-tile img {
   width: 100%;
@@ -155,7 +155,7 @@ html {
   inset-inline: 0;
   bottom: 0;
   padding: 1.5rem 0.85rem 0.6rem;
-  background: linear-gradient(to top, rgba(6, 24, 15, 0.85), transparent);
+  background: linear-gradient(to top, rgba(28, 29, 16, 0.85), transparent);
   color: #fff;
   font-size: 0.78rem;
   font-weight: 600;

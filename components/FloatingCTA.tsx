@@ -19,7 +19,7 @@ export default function FloatingCTA() {
       </a>
       <Link
         href="/contact"
-        className="flex items-center gap-2 rounded-full bg-[#ea580c] text-white shadow-lg hover:bg-[#c2410c] transition-all pl-3 pr-4 py-3"
+        className="flex items-center gap-2 rounded-full bg-[#b5651d] text-white shadow-lg hover:bg-[#8f4e14] transition-all pl-3 pr-4 py-3"
         aria-label="Enquire about a trip"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

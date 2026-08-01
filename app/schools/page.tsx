@@ -44,7 +44,7 @@ const customOptions = [
 export default function CustomGroupsPage() {
   return (
     <div className="min-h-screen">
-      <section className="bg-gradient-to-r from-[#14432a] to-[#15803d] text-white py-20">
+      <section className="bg-gradient-to-r from-[#33361f] to-[#5b6b3a] text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">Custom Guided Programmes</h1>
           <p className="text-xl text-gray-100">
@@ -66,11 +66,11 @@ export default function CustomGroupsPage() {
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center text-[#14432a]">Who We Build For</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-[#33361f]">Who We Build For</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {groupTypes.map((group) => (
               <div key={group.title} className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3 text-[#15803d]">{group.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-[#5b6b3a]">{group.title}</h3>
                 <p className="text-gray-700 text-sm leading-relaxed">{group.body}</p>
               </div>
             ))}
@@ -80,12 +80,12 @@ export default function CustomGroupsPage() {
 
       <section className="py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#14432a]">What Can Be Customized</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#33361f]">What Can Be Customized</h2>
           <div className="bg-white rounded-lg shadow-md p-6 border border-gray-100">
             <ul className="space-y-4">
               {customOptions.map((option) => (
                 <li key={option} className="flex items-start gap-3 text-gray-700">
-                  <svg className="w-5 h-5 text-[#ea580c] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#b5651d] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>{option}</span>
@@ -96,13 +96,13 @@ export default function CustomGroupsPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#faf7f0]">
+      <section className="py-16 bg-[#f3eedf]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#14432a]">Sample Leisure Group Day</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#33361f]">Sample Leisure Group Day</h2>
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-left">
-                <thead className="bg-[#14432a] text-white">
+                <thead className="bg-[#33361f] text-white">
                   <tr>
                     <th className="p-4">Time</th>
                     <th className="p-4">Experience</th>
@@ -145,18 +145,18 @@ export default function CustomGroupsPage() {
 
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-center text-[#14432a]">Academic Options When Needed</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center text-[#33361f]">Academic Options When Needed</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-3 text-[#15803d]">Short Modules</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#5b6b3a]">Short Modules</h3>
               <p className="text-gray-700 text-sm">Three to five day programmes introducing tropical ecology, species observation, and conservation stories through field time.</p>
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-3 text-[#15803d]">Field Courses</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#5b6b3a]">Field Courses</h3>
               <p className="text-gray-700 text-sm">Longer programmes for colleges and universities with field methods, data recording, student projects, and review sessions.</p>
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-3 text-[#15803d]">Youth Camps</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#5b6b3a]">Youth Camps</h3>
               <p className="text-gray-700 text-sm">Safe, structured camps with age-appropriate nature walks, activities, observation skills, and guided group reflection.</p>
             </div>
           </div>
@@ -165,13 +165,13 @@ export default function CustomGroupsPage() {
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#14432a]">Safety & Logistics</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#33361f]">Safety & Logistics</h2>
           <div className="space-y-4 text-gray-700">
             <p>
               Every custom programme is planned around group size, age range, walking ability, weather, forest access, transport time, food needs, and safe wildlife observation.
             </p>
-            <div className="bg-white border-l-4 border-[#15803d] p-4">
-              <h3 className="font-semibold text-[#14432a] mb-2">We can arrange:</h3>
+            <div className="bg-white border-l-4 border-[#5b6b3a] p-4">
+              <h3 className="font-semibold text-[#33361f] mb-2">We can arrange:</h3>
               <ul className="space-y-1 text-sm">
                 <li>- Airport or rail pick-up where practical</li>
                 <li>- Internal transport between field sites</li>
@@ -185,7 +185,7 @@ export default function CustomGroupsPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#14432a] text-white">
+      <section className="py-16 bg-[#33361f] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Tell Us What Your Group Wants</h2>
           <p className="text-lg mb-8 text-gray-200">
@@ -193,7 +193,7 @@ export default function CustomGroupsPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-[#ea580c] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#c2410c] transition-colors"
+            className="inline-block bg-[#b5651d] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#8f4e14] transition-colors"
           >
             Request a Custom Plan
           </Link>

@@ -2,13 +2,13 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#14432a] text-white mt-20">
+    <footer className="bg-[#33361f] text-white mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div>
             <h3 className="text-lg font-semibold mb-1">Wildora Expeditions</h3>
-            <p className="text-[#ea580c] text-sm font-medium mb-4">Discover Nature. Experience the wild.</p>
+            <p className="text-[#b5651d] text-sm font-medium mb-4">Discover Nature. Experience the wild.</p>
             <p className="text-gray-300 text-sm">
               Leisure-first guided wildlife holidays across India, covering forests, deserts, wetlands, mountains, rainforests, coasts, and custom group routes.
             </p>
@@ -71,7 +71,7 @@ export default function Footer() {
               <li>Phone: +91 98765 43210</li>
               <li>WhatsApp: +91 98765 43210</li>
               <li className="pt-2">
-                <Link href="/contact" className="text-[#ea580c] hover:text-[#c2410c] font-medium">
+                <Link href="/contact" className="text-[#b5651d] hover:text-[#8f4e14] font-medium">
                   Send us a message -&gt;
                 </Link>
               </li>

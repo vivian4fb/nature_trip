@@ -12,7 +12,7 @@ export default function ExpertsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-r from-[#14432a] to-[#15803d] text-white py-20">
+      <section className="bg-gradient-to-r from-[#33361f] to-[#5b6b3a] text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">Our Experts</h1>
           <p className="text-xl text-gray-100">
@@ -51,12 +51,12 @@ export default function ExpertsPage() {
                       className="w-48 h-48 rounded-full mx-auto object-cover shadow-md"
                     />
                   ) : (
-                    <div className="w-48 h-48 bg-gradient-to-br from-[#15803d] to-[#14432a] rounded-full mx-auto"></div>
+                    <div className="w-48 h-48 bg-gradient-to-br from-[#5b6b3a] to-[#33361f] rounded-full mx-auto"></div>
                   )}
                 </div>
                 <div className="md:w-2/3">
-                  <h3 className="text-3xl font-bold mb-2 text-[#14432a]">{expert.name}</h3>
-                  <p className="text-lg text-[#15803d] font-semibold mb-2">{expert.qualifications}</p>
+                  <h3 className="text-3xl font-bold mb-2 text-[#33361f]">{expert.name}</h3>
+                  <p className="text-lg text-[#5b6b3a] font-semibold mb-2">{expert.qualifications}</p>
                   <p className="text-md text-gray-600 mb-4">
                     <span className="font-semibold">Specialization:</span> {expert.specialization}
                   </p>
@@ -74,10 +74,10 @@ export default function ExpertsPage() {
       {/* Why Expert Guides Matter */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-center text-[#14432a]">Why Expert Guides Matter</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center text-[#33361f]">Why Expert Guides Matter</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-[#15803d] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#5b6b3a] rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
@@ -88,7 +88,7 @@ export default function ExpertsPage() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-[#15803d] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#5b6b3a] rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
@@ -99,7 +99,7 @@ export default function ExpertsPage() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-[#15803d] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#5b6b3a] rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
@@ -114,7 +114,7 @@ export default function ExpertsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#14432a] text-white">
+      <section className="py-16 bg-[#33361f] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Travel with Expert Eyes</h2>
           <p className="text-lg mb-8 text-gray-200">
@@ -123,13 +123,13 @@ export default function ExpertsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/trips"
-              className="bg-[#ea580c] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#c2410c] transition-colors"
+              className="bg-[#b5651d] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#8f4e14] transition-colors"
             >
               View Our Trips
             </Link>
             <Link
               href="/contact"
-              className="bg-white text-[#14432a] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-[#33361f] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Ask a Question
             </Link>

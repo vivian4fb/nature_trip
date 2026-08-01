@@ -53,7 +53,10 @@ export default function HomeHero() {
   }, []);
 
   return (
-    <section className="relative h-[88vh] min-h-[640px] max-h-[980px] w-full overflow-hidden text-white">
+    <section
+      className="relative min-h-[420px] sm:min-h-[480px] md:min-h-[640px] max-h-[900px] w-full overflow-hidden text-white"
+      style={{ height: 'min(82vh, 124vw)' }}
+    >
       <div className="absolute inset-0">
         {SLIDES.map((slide, i) => (
           <img
@@ -69,7 +72,7 @@ export default function HomeHero() {
 
       {/* Scrims for text legibility over any photo */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#050e09]/75 via-[#050e09]/15 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#15150c]/75 via-[#15150c]/15 to-transparent" />
 
       {/* Vertical slide nav, clear of the fixed WhatsApp/Enquire buttons in the bottom-right corner */}
       <div
@@ -85,7 +88,7 @@ export default function HomeHero() {
             aria-selected={i === index}
             aria-label={`Show photo: ${slide.alt}`}
             onClick={() => goTo(i)}
-            className={`w-1.5 rounded-full transition-all ${i === index ? 'h-6 bg-[#ea580c]' : 'h-1.5 bg-white/40 hover:bg-white/70'}`}
+            className={`w-1.5 rounded-full transition-all ${i === index ? 'h-6 bg-[#b5651d]' : 'h-1.5 bg-white/40 hover:bg-white/70'}`}
           />
         ))}
       </div>
@@ -95,7 +98,7 @@ export default function HomeHero() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-2xl fade-up">
               <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/25 rounded-full px-4 py-1.5 text-xs md:text-sm font-semibold uppercase tracking-wider mb-6">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#ea580c]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#b5651d]" />
                 25+ years of India wildlife expeditions
               </span>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6">
@@ -107,7 +110,7 @@ export default function HomeHero() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/trips"
-                  className="bg-[#ea580c] hover:bg-[#c2410c] transition-colors text-white px-8 py-4 rounded-full text-base md:text-lg font-semibold shadow-lg shadow-black/30"
+                  className="bg-[#b5651d] hover:bg-[#8f4e14] transition-colors text-white px-8 py-4 rounded-full text-base md:text-lg font-semibold shadow-lg shadow-black/30"
                 >
                   View Upcoming Trips
                 </Link>
